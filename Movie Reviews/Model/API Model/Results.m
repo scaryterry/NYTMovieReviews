@@ -20,6 +20,7 @@
 @dynamic headline;
 @dynamic thousandBest;
 @dynamic byline;
+@dynamic dvdReleaseDate;
 @dynamic mpaaRating;
 @dynamic publicationDate;
 @dynamic openingDate;

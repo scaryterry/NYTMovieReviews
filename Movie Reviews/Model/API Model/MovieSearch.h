@@ -7,10 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "JSONModel.h"
 
 @class Results;
-
+@class NYTMovieSearch;
 @interface MovieSearch : NSManagedObject
 
 @property (nonatomic, retain) NSString *status;
@@ -22,7 +21,7 @@
 @end
 
 @interface MovieSearch (JSONModelerGeneratedAccessors)
-
++ (MovieSearch *)initFromModel:(NYTMovieSearch *)model;
 - (void)addResultsObject:(Results *)value;
 - (void)removeResultsObject:(Results *)value;
 - (void)addResults:(NSSet *)value;

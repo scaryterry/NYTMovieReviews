@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <AFNetworking.h>
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"Model"];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+
+//    MovieSearch *search = [MovieSearch MR_createEntity];
+//    [search searchNYTForMovies:@"Avengers" completion:^(MovieSearch *searchResults, NSError *error) {
+//        if (error)
+//        {
+//            NSLog(@"error: %@",[error localizedDescription]);
+//        }
+//        else if (searchResults)
+//        {
+//            NSLog(@"results : %@",searchResults);
+////            search = searchResults;
+//            
+//        }
+//            }];
     return YES;
 }
 

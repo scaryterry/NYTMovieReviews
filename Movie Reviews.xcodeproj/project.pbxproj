@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		320EBE8299917BBC16D49AF4 /* libPods-Movie Reviews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F15EE6641F552F8CB6D0DC91 /* libPods-Movie Reviews.a */; };
+		433807411B74D52A00EB9122 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807401B74D52A00EB9122 /* NSDictionary+Additions.m */; };
+		433807441B74D61D00EB9122 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807431B74D61D00EB9122 /* NSError+Additions.m */; };
+		433807521B74E67D00EB9122 /* NYTLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807471B74E67D00EB9122 /* NYTLink.m */; };
+		433807531B74E67D00EB9122 /* NYTMovieSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807491B74E67D00EB9122 /* NYTMovieSearch.m */; };
+		433807541B74E67D00EB9122 /* NYTMultimedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338074B1B74E67D00EB9122 /* NYTMultimedia.m */; };
+		433807551B74E67D00EB9122 /* NYTRelatedUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338074D1B74E67D00EB9122 /* NYTRelatedUrls.m */; };
+		433807561B74E67D00EB9122 /* NYTResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338074F1B74E67D00EB9122 /* NYTResource.m */; };
+		433807571B74E67D00EB9122 /* NYTResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807511B74E67D00EB9122 /* NYTResults.m */; };
+		4338075C1B74EE9100EB9122 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433807581B74EE9100EB9122 /* LaunchScreen.xib */; };
+		4338075D1B74EE9100EB9122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4338075A1B74EE9100EB9122 /* Main.storyboard */; };
+		4338075F1B74EEA200EB9122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4338075E1B74EEA200EB9122 /* Images.xcassets */; };
+		433807651B7508ED00EB9122 /* InteractWithAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807641B7508ED00EB9122 /* InteractWithAPI.m */; };
+		433807681B75206F00EB9122 /* MovieSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807671B75206F00EB9122 /* MovieSearchTableViewController.m */; };
 		4394F7DF1B74BD44008D4B35 /* Movie_ReviewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7DE1B74BD44008D4B35 /* Movie_ReviewsTests.m */; };
-		4394F7EA1B74BFB6008D4B35 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4394F7E81B74BFB6008D4B35 /* Info.plist */; };
 		4394F7EB1B74BFB6008D4B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7E91B74BFB6008D4B35 /* main.m */; };
-		4394F7F41B74C009008D4B35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4394F7F31B74C009008D4B35 /* Images.xcassets */; };
-		4394F7F91B74C013008D4B35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4394F7F51B74C013008D4B35 /* LaunchScreen.xib */; };
-		4394F7FA1B74C013008D4B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4394F7F71B74C013008D4B35 /* Main.storyboard */; };
 		4394F7FD1B74C02A008D4B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7FC1B74C02A008D4B35 /* AppDelegate.m */; };
-		4394F8061B74C03D008D4B35 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F8001B74C03D008D4B35 /* FirstViewController.m */; };
-		4394F8071B74C03D008D4B35 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F8021B74C03D008D4B35 /* SecondViewController.m */; };
-		4394F80B1B74C101008D4B35 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4394F80A1B74C101008D4B35 /* Podfile */; };
 		4394F81A1B74C6D6008D4B35 /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F80D1B74C6D6008D4B35 /* Link.m */; };
 		4394F81B1B74C6D6008D4B35 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4394F80E1B74C6D6008D4B35 /* Model.xcdatamodeld */; };
 		4394F81C1B74C6D6008D4B35 /* MovieSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F8111B74C6D6008D4B35 /* MovieSearch.m */; };
@@ -39,21 +45,38 @@
 
 /* Begin PBXFileReference section */
 		09ED700E6D2FC8436BF01579 /* Pods-Movie Reviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Reviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Reviews/Pods-Movie Reviews.debug.xcconfig"; sourceTree = "<group>"; };
+		4338073F1B74D52A00EB9122 /* NSDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Additions.h"; sourceTree = "<group>"; };
+		433807401B74D52A00EB9122 /* NSDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additions.m"; sourceTree = "<group>"; };
+		433807421B74D61D00EB9122 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Additions.h"; sourceTree = "<group>"; };
+		433807431B74D61D00EB9122 /* NSError+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Additions.m"; sourceTree = "<group>"; };
+		433807451B74E67D00EB9122 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		433807461B74E67D00EB9122 /* NYTLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTLink.h; sourceTree = "<group>"; };
+		433807471B74E67D00EB9122 /* NYTLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTLink.m; sourceTree = "<group>"; };
+		433807481B74E67D00EB9122 /* NYTMovieSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTMovieSearch.h; sourceTree = "<group>"; };
+		433807491B74E67D00EB9122 /* NYTMovieSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTMovieSearch.m; sourceTree = "<group>"; };
+		4338074A1B74E67D00EB9122 /* NYTMultimedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTMultimedia.h; sourceTree = "<group>"; };
+		4338074B1B74E67D00EB9122 /* NYTMultimedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTMultimedia.m; sourceTree = "<group>"; };
+		4338074C1B74E67D00EB9122 /* NYTRelatedUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTRelatedUrls.h; sourceTree = "<group>"; };
+		4338074D1B74E67D00EB9122 /* NYTRelatedUrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTRelatedUrls.m; sourceTree = "<group>"; };
+		4338074E1B74E67D00EB9122 /* NYTResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTResource.h; sourceTree = "<group>"; };
+		4338074F1B74E67D00EB9122 /* NYTResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTResource.m; sourceTree = "<group>"; };
+		433807501B74E67D00EB9122 /* NYTResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTResults.h; sourceTree = "<group>"; };
+		433807511B74E67D00EB9122 /* NYTResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTResults.m; sourceTree = "<group>"; };
+		433807591B74EE9100EB9122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Supporting Files/Base.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		4338075B1B74EE9100EB9122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Supporting Files/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		4338075E1B74EEA200EB9122 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Supporting Files/Images.xcassets"; sourceTree = "<group>"; };
+		433807631B7508ED00EB9122 /* InteractWithAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractWithAPI.h; sourceTree = "<group>"; };
+		433807641B7508ED00EB9122 /* InteractWithAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractWithAPI.m; sourceTree = "<group>"; };
+		433807661B75206F00EB9122 /* MovieSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchTableViewController.h; sourceTree = "<group>"; };
+		433807671B75206F00EB9122 /* MovieSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchTableViewController.m; sourceTree = "<group>"; };
 		4394F7BC1B74BD44008D4B35 /* Movie Reviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Reviews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394F7D81B74BD44008D4B35 /* Movie ReviewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie ReviewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394F7DD1B74BD44008D4B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4394F7DE1B74BD44008D4B35 /* Movie_ReviewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie_ReviewsTests.m; sourceTree = "<group>"; };
 		4394F7E81B74BFB6008D4B35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		4394F7E91B74BFB6008D4B35 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
-		4394F7F31B74C009008D4B35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Supporting Files/Images.xcassets"; sourceTree = "<group>"; };
-		4394F7F61B74C013008D4B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Supporting Files/Base.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
-		4394F7F81B74C013008D4B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Supporting Files/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		4394F7FB1B74C02A008D4B35 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Supporting Files/AppDelegate.h"; sourceTree = "<group>"; };
 		4394F7FC1B74C02A008D4B35 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Supporting Files/AppDelegate.m"; sourceTree = "<group>"; };
-		4394F7FF1B74C03D008D4B35 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		4394F8001B74C03D008D4B35 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		4394F8011B74C03D008D4B35 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		4394F8021B74C03D008D4B35 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		4394F80A1B74C101008D4B35 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		4394F80C1B74C6D6008D4B35 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		4394F80D1B74C6D6008D4B35 /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
@@ -127,11 +150,11 @@
 		4394F7BF1B74BD44008D4B35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4394F7F31B74C009008D4B35 /* Images.xcassets */,
+				4338075E1B74EEA200EB9122 /* Images.xcassets */,
+				433807581B74EE9100EB9122 /* LaunchScreen.xib */,
+				4338075A1B74EE9100EB9122 /* Main.storyboard */,
 				4394F7FB1B74C02A008D4B35 /* AppDelegate.h */,
 				4394F7FC1B74C02A008D4B35 /* AppDelegate.m */,
-				4394F7F51B74C013008D4B35 /* LaunchScreen.xib */,
-				4394F7F71B74C013008D4B35 /* Main.storyboard */,
 				4394F7E81B74BFB6008D4B35 /* Info.plist */,
 				4394F7E91B74BFB6008D4B35 /* main.m */,
 			);
@@ -158,10 +181,8 @@
 		4394F7FE1B74C03D008D4B35 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4394F7FF1B74C03D008D4B35 /* FirstViewController.h */,
-				4394F8001B74C03D008D4B35 /* FirstViewController.m */,
-				4394F8011B74C03D008D4B35 /* SecondViewController.h */,
-				4394F8021B74C03D008D4B35 /* SecondViewController.m */,
+				433807661B75206F00EB9122 /* MovieSearchTableViewController.h */,
+				433807671B75206F00EB9122 /* MovieSearchTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				4394F8041B74C03D008D4B35 /* API Model */,
+				433807631B7508ED00EB9122 /* InteractWithAPI.h */,
+				433807641B7508ED00EB9122 /* InteractWithAPI.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +200,7 @@
 		4394F8041B74C03D008D4B35 /* API Model */ = {
 			isa = PBXGroup;
 			children = (
+				433807451B74E67D00EB9122 /* DataModels.h */,
 				4394F80C1B74C6D6008D4B35 /* Link.h */,
 				4394F80D1B74C6D6008D4B35 /* Link.m */,
 				4394F80E1B74C6D6008D4B35 /* Model.xcdatamodeld */,
@@ -184,6 +208,18 @@
 				4394F8111B74C6D6008D4B35 /* MovieSearch.m */,
 				4394F8121B74C6D6008D4B35 /* Multimedia.h */,
 				4394F8131B74C6D6008D4B35 /* Multimedia.m */,
+				433807461B74E67D00EB9122 /* NYTLink.h */,
+				433807471B74E67D00EB9122 /* NYTLink.m */,
+				433807481B74E67D00EB9122 /* NYTMovieSearch.h */,
+				433807491B74E67D00EB9122 /* NYTMovieSearch.m */,
+				4338074A1B74E67D00EB9122 /* NYTMultimedia.h */,
+				4338074B1B74E67D00EB9122 /* NYTMultimedia.m */,
+				4338074C1B74E67D00EB9122 /* NYTRelatedUrls.h */,
+				4338074D1B74E67D00EB9122 /* NYTRelatedUrls.m */,
+				4338074E1B74E67D00EB9122 /* NYTResource.h */,
+				4338074F1B74E67D00EB9122 /* NYTResource.m */,
+				433807501B74E67D00EB9122 /* NYTResults.h */,
+				433807511B74E67D00EB9122 /* NYTResults.m */,
 				4394F8141B74C6D6008D4B35 /* RelatedUrls.h */,
 				4394F8151B74C6D6008D4B35 /* RelatedUrls.m */,
 				4394F8161B74C6D6008D4B35 /* Resource.h */,
@@ -213,6 +249,10 @@
 		4394F8091B74C0A6008D4B35 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				4338073F1B74D52A00EB9122 /* NSDictionary+Additions.h */,
+				433807401B74D52A00EB9122 /* NSDictionary+Additions.m */,
+				433807421B74D61D00EB9122 /* NSError+Additions.h */,
+				433807431B74D61D00EB9122 /* NSError+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -316,11 +356,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4394F80B1B74C101008D4B35 /* Podfile in Resources */,
-				4394F7EA1B74BFB6008D4B35 /* Info.plist in Resources */,
-				4394F7F91B74C013008D4B35 /* LaunchScreen.xib in Resources */,
-				4394F7F41B74C009008D4B35 /* Images.xcassets in Resources */,
-				4394F7FA1B74C013008D4B35 /* Main.storyboard in Resources */,
+				4338075F1B74EEA200EB9122 /* Images.xcassets in Resources */,
+				4338075C1B74EE9100EB9122 /* LaunchScreen.xib in Resources */,
+				4338075D1B74EE9100EB9122 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,17 +409,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433807541B74E67D00EB9122 /* NYTMultimedia.m in Sources */,
+				433807411B74D52A00EB9122 /* NSDictionary+Additions.m in Sources */,
 				4394F81C1B74C6D6008D4B35 /* MovieSearch.m in Sources */,
+				433807551B74E67D00EB9122 /* NYTRelatedUrls.m in Sources */,
 				4394F81A1B74C6D6008D4B35 /* Link.m in Sources */,
 				4394F81D1B74C6D6008D4B35 /* Multimedia.m in Sources */,
 				4394F81E1B74C6D6008D4B35 /* RelatedUrls.m in Sources */,
-				4394F8071B74C03D008D4B35 /* SecondViewController.m in Sources */,
+				433807571B74E67D00EB9122 /* NYTResults.m in Sources */,
 				4394F7EB1B74BFB6008D4B35 /* main.m in Sources */,
 				4394F8201B74C6D6008D4B35 /* Results.m in Sources */,
-				4394F8061B74C03D008D4B35 /* FirstViewController.m in Sources */,
 				4394F81F1B74C6D6008D4B35 /* Resource.m in Sources */,
 				4394F7FD1B74C02A008D4B35 /* AppDelegate.m in Sources */,
+				433807441B74D61D00EB9122 /* NSError+Additions.m in Sources */,
 				4394F81B1B74C6D6008D4B35 /* Model.xcdatamodeld in Sources */,
+				433807651B7508ED00EB9122 /* InteractWithAPI.m in Sources */,
+				433807531B74E67D00EB9122 /* NYTMovieSearch.m in Sources */,
+				433807521B74E67D00EB9122 /* NYTLink.m in Sources */,
+				433807681B75206F00EB9122 /* MovieSearchTableViewController.m in Sources */,
+				433807561B74E67D00EB9122 /* NYTResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,18 +450,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4394F7F51B74C013008D4B35 /* LaunchScreen.xib */ = {
+		433807581B74EE9100EB9122 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4394F7F61B74C013008D4B35 /* Base */,
+				433807591B74EE9100EB9122 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		4394F7F71B74C013008D4B35 /* Main.storyboard */ = {
+		4338075A1B74EE9100EB9122 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4394F7F81B74C013008D4B35 /* Base */,
+				4338075B1B74EE9100EB9122 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

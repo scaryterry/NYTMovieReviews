@@ -7,7 +7,9 @@
 
 #import "MovieSearch.h"
 #import "Results.h"
-
+#import "NYTMovieSearch.h"
+#import "AppDelegate.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @implementation MovieSearch
 
@@ -15,5 +17,19 @@
 @dynamic copyright;
 @dynamic numResults;
 @dynamic results;
+
++ (MovieSearch *)initFromModel:(NYTMovieSearch *)model
+{
+    if ([model isKindOfClass:[NYTMovieSearch class]])
+    {
+        MovieSearch * returnedModel = [MovieSearch MR_createEntity];
+        returnedModel = (MovieSearch *)model;
+        return returnedModel;
+    }
+    else
+    {
+        return nil;
+    }
+}
 
 @end

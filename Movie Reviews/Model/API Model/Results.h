@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString *headline;
 @property (nonatomic, retain) NSString *thousandBest;
 @property (nonatomic, retain) NSString *byline;
+@property (nonatomic, retain) NSString *dvdReleaseDate;
 @property (nonatomic, retain) NSString *mpaaRating;
 @property (nonatomic, retain) NSString *publicationDate;
 @property (nonatomic, retain) NSString *openingDate;

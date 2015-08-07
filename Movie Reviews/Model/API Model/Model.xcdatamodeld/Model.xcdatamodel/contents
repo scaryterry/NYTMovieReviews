@@ -1,60 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Resource" syncable="YES" representedClassName="Resource">
-        <attribute name="src" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="width" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"></attribute>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"></attribute>
-        <relationship name="multimedia" optional="YES" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="resource" inverseEntity="Multimedia" syncable="YES"></relationship>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="suggestedLinkText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="results" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Results" inverseName="link" inverseEntity="Results" syncable="YES"/>
     </entity>
-    <entity name="Results" syncable="YES" representedClassName="Results">
-        <attribute name="capsuleReview" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="summaryShort" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="headline" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="thousandBest" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="byline" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <relationship name="link" optional="YES" deletionRule="Nullify" destinationEntity="Link" inverseName="results" inverseEntity="Link" syncable="YES"></relationship>
-        <attribute name="mpaaRating" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <relationship name="multimedia" optional="YES" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="results" inverseEntity="Multimedia" syncable="YES"></relationship>
-        <attribute name="publicationDate" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="openingDate" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="displayTitle" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <relationship name="relatedUrls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RelatedUrls" inverseName="results" inverseEntity="RelatedUrls" syncable="YES"></relationship>
-        <attribute name="sortName" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="seoName" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="criticsPick" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"></attribute>
-        <attribute name="nytMovieId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"></attribute>
-        <relationship name="movieSearch" optional="YES" deletionRule="Nullify" destinationEntity="MovieSearch" inverseName="results" inverseEntity="MovieSearch" syncable="YES"></relationship>
+    <entity name="MovieSearch" representedClassName="MovieSearch" syncable="YES">
+        <attribute name="copyright" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numResults" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="movieSearch" inverseEntity="Results" syncable="YES"/>
     </entity>
-    <entity name="RelatedUrls" syncable="YES" representedClassName="RelatedUrls">
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="url" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="suggestedLinkText" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <relationship name="results" optional="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="relatedUrls" inverseEntity="Results" syncable="YES"></relationship>
+    <entity name="Multimedia" representedClassName="Multimedia" syncable="YES">
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resource" inverseName="multimedia" inverseEntity="Resource" syncable="YES"/>
+        <relationship name="results" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Results" inverseName="multimedia" inverseEntity="Results" syncable="YES"/>
     </entity>
-    <entity name="Multimedia" syncable="YES" representedClassName="Multimedia">
-        <relationship name="resource" optional="YES" deletionRule="Nullify" destinationEntity="Resource" inverseName="multimedia" inverseEntity="Resource" syncable="YES"></relationship>
-        <relationship name="results" optional="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="multimedia" inverseEntity="Results" syncable="YES"></relationship>
+    <entity name="RelatedUrls" representedClassName="RelatedUrls" syncable="YES">
+        <attribute name="suggestedLinkText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="results" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Results" inverseName="relatedUrls" inverseEntity="Results" syncable="YES"/>
     </entity>
-    <entity name="MovieSearch" syncable="YES" representedClassName="MovieSearch">
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="movieSearch" inverseEntity="Results" syncable="YES"></relationship>
-        <attribute name="copyright" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="numResults" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"></attribute>
+    <entity name="Resource" representedClassName="Resource" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="src" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="multimedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="resource" inverseEntity="Multimedia" syncable="YES"/>
     </entity>
-    <entity name="Link" syncable="YES" representedClassName="Link">
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="url" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <attribute name="suggestedLinkText" optional="YES" attributeType="String" syncable="YES"></attribute>
-        <relationship name="results" optional="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="link" inverseEntity="Results" syncable="YES"></relationship>
+    <entity name="Results" representedClassName="Results" syncable="YES">
+        <attribute name="byline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="capsuleReview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="criticsPick" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dvdReleaseDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mpaaRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nytMovieId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="openingDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicationDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seoName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summaryShort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thousandBest" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="link" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Link" inverseName="results" inverseEntity="Link" syncable="YES"/>
+        <relationship name="movieSearch" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MovieSearch" inverseName="results" inverseEntity="MovieSearch" syncable="YES"/>
+        <relationship name="multimedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="results" inverseEntity="Multimedia" syncable="YES"/>
+        <relationship name="relatedUrls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RelatedUrls" inverseName="results" inverseEntity="RelatedUrls" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Resource" positionX="0" positionY="0" width="135" height="120"></element>
-        <element name="Results" positionX="200" positionY="0" width="135" height="315"></element>
-        <element name="RelatedUrls" positionX="400" positionY="0" width="135" height="105"></element>
-        <element name="Multimedia" positionX="600" positionY="0" width="135" height="75"></element>
-        <element name="MovieSearch" positionX="800" positionY="0" width="135" height="105"></element>
-        <element name="Link" positionX="1000" positionY="0" width="135" height="105"></element>
+        <element name="Resource" positionX="0" positionY="0" width="135" height="120"/>
+        <element name="Results" positionX="200" positionY="0" width="135" height="330"/>
+        <element name="RelatedUrls" positionX="400" positionY="0" width="135" height="105"/>
+        <element name="Multimedia" positionX="600" positionY="0" width="135" height="75"/>
+        <element name="MovieSearch" positionX="800" positionY="0" width="135" height="105"/>
+        <element name="Link" positionX="1000" positionY="0" width="135" height="105"/>
     </elements>
 </model>
