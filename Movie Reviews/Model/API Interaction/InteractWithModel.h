@@ -11,8 +11,12 @@
 @interface InteractWithModel : NSObject
 
 + (NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow;
++ (Results *)selectionFromFavourites:(MovieSearch *)results selectedRow:(NSInteger)selectedRow;
 
++ (Results *)initResultFromModel:(NYTResults *)result;
 + (Results *)initResultFromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch;
+//+ (Results *)initResult:(Results *)resultForCoreData fromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch;
+
 + (MovieSearch *)initMovieSearchFromModel:(NYTMovieSearch *)movieSearch;;
 + (Multimedia *)initMultimediaFromModel:(NYTMultimedia *)model;
 + (RelatedUrls *)initRelatedUrlsFromModel:(NYTRelatedUrls *)relatedUrlsOrigin;

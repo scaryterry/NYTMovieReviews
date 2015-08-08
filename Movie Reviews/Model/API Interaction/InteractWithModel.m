@@ -14,6 +14,19 @@
 {
     return results.results[selectedRow];
 }
+
++ (Results *)selectionFromFavourites:(MovieSearch *)results selectedRow:(NSInteger)selectedRow
+{
+    NSArray *temp = results.results.allObjects;
+    return temp[selectedRow];
+}
+
+//+ (Results *)initResult:(Results *)resultForCoreData fromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch
++ (Results *)initResultFromModel:(NYTResults *)result
+{
+    return  [[self class] initResultFromModel:result originatingSearch:nil];
+}
+
 + (Results *)initResultFromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch
 {
     Results *resultForCoreData = [Results MR_createEntity];
@@ -64,6 +77,7 @@
 
 }
 
+
 + (MovieSearch *)initMovieSearchFromModel:(NYTMovieSearch *)movieSearch;
 {
     MovieSearch *resultForCoreData = [MovieSearch MR_createEntity];
@@ -76,7 +90,7 @@
         NSMutableSet *results = [NSMutableSet new];
         for (NYTResults *result in movieSearch.results)
         {
-            Results *resultDestination = [[self class] initResultFromModel:result originatingSearch:nil];
+            Results *resultDestination = [[self class] initResultFromModel:result];
             [results addObject:resultDestination];
         }
         resultForCoreData.results = results;

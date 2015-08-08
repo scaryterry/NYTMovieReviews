@@ -25,11 +25,12 @@
 @property (nonatomic, strong) NSArray *oldSearch;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NYTMovieSearch *searchResults;
+@property (nonatomic, strong) MovieSearch *saved;
 @property (nonatomic, strong)NSString *searchTerm;
 @property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;
 @property (nonatomic, readonly,getter=getAlertPosition)CGPoint alertPosition;
 @property (nonatomic, strong) NSManagedObjectContext *savingContext;
-
+@property (nonatomic, readonly, getter=shouldDisplayFavourites)BOOL displayFavourites;
 @end
 
 @implementation MovieSearchTableViewController
@@ -37,25 +38,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.oldSearch = [MovieSearch MR_findAll];
+    [self setupInterface];
+
+    self.oldSearch = [Results MR_findAll];
     self.result = [Results MR_createEntity];
+    NSMutableArray *savedStuff = [NSMutableArray new];
     if (self.oldSearch.count > 0)
     {
         {
-            MovieSearch *oldSearch = [MovieSearch MR_createEntity];
-            for (Results *result in [MovieSearch MR_findAll]) {
-                NSLog(@"old result : %@",result);
-
-            }
-            NSLog(@"old movie : %@",[MovieSearch MR_findAll]);
-            NSLog(@"old results : %@",[Results MR_findAll]);
+            self.saved = [MovieSearch MR_createEntity];
             
+            for (Results *result in [Results MR_findAll]) {
+                if ([result isKindOfClass:[Results class]])
+                {
+                    if (result.displayTitle)
+                    {
+                        [savedStuff addObject:result];
+                    }
+                    NSLog(@"old result : %@",result.displayTitle);
+                }
+                
+            }
+            self.saved.results = [NSSet setWithArray:savedStuff];
+            [self.tableView reloadData];
+//            self.searchResults = [NYTMovieSearch modelObjectWithDictionary:savedStuff];
+
             //        Results *result = [Results MR_createEntity];
             
         }
-        
+        NSLog(@"old result : %@",savedStuff);
+
     }
-    [self setupInterface];
     //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
     [self performSelector:@selector(setupConnectivityCheck) withObject:nil afterDelay:0.3f];
     
@@ -79,7 +92,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.searchResults.results.count;
+    NSInteger count = (self.shouldDisplayFavourites) ? self.saved.results.count :self.searchResults.results.count;
+    
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,8 +109,16 @@
     }
     cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    if (self.shouldDisplayFavourites)
+    {
+        Results *result = [InteractWithModel selectionFromFavourites:self.saved selectedRow:indexPath.row];
+        [cell configureWithFavourite:result];
+    }
+    else
+    {
     NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
     [cell configureWithResult:result];
+    }
     return cell;
 }
 
@@ -103,12 +126,14 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (!self.shouldDisplayFavourites)
+    {
     NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
-
-    self.result = [Results MR_createEntityInContext:self.savingContext];
-    self.result = [InteractWithModel initResultFromModel:result originatingSearch:self.searchResults];
+//    [NSManagedObjectContext MR_resetDefaultContext];
+    self.result = [InteractWithModel initResultFromModel:result];
     NSLog(@"self.result :%@",self.result);
     [self saveContext];
+    }
     return indexPath;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -217,10 +242,10 @@
         NSString *message = @"Internet Required To Search";
         [self.activeTable showTableMessage:message atPosition:self.alertPosition];
     }
-//    else
-//    {
-//        self.activeTable.tableFooterView = [UIView new];
-//    }
+    else
+    {
+        self.activeTable.tableFooterView = [UIView new];
+    }
     //we need to use the property self.searchTerm when calling the method to search or when attempting to cancel it
     //so that we can ensure that the cancel operation uses the same object as the previously called search method,
     //otherwise if the objects arent identical the cancelling fails and we keep getting search results for every typed letter
@@ -262,10 +287,14 @@
     return CGPointMake(self.activeTable.bounds.size.width/2, self.activeTable.bounds.size.height/4);
 }
 
+-(BOOL)shouldDisplayFavourites
+{
+    return  (self.searchResults.results.count==0) ? true :false;
+}
 - (void)saveContext
 {
     //    NSLog(@"seoname:2 %@",self.result.seoName);
-    [self.savingContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
         if (success) {
             NSLog(@"You successfully saved your context.");
         } else if (error) {
@@ -285,7 +314,7 @@
     self.tableView.emptyDataSetDelegate = self;
 //    self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 44.0f;
 //    self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
-self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
+//self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
 
 }
 
