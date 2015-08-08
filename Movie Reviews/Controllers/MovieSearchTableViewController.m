@@ -17,8 +17,10 @@
 #import <AFNetworking.h>
 #import "UITableView+Additions.h"
 #import "UITableViewCell+APICell.h"
+#import "UIScrollView+EmptyDataSet.h"
 
-@interface MovieSearchTableViewController ()
+@interface MovieSearchTableViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+
 @property (nonatomic, strong) Results *result;
 @property (nonatomic, strong) NSArray *oldSearch;
 @property (nonatomic, strong) NSArray *dataSource;
@@ -26,6 +28,7 @@
 @property (nonatomic, strong)NSString *searchTerm;
 @property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;
 @property (nonatomic, readonly,getter=getAlertPosition)CGPoint alertPosition;
+@property (nonatomic, strong) NSManagedObjectContext *savingContext;
 
 @end
 
@@ -36,22 +39,29 @@
     [super viewDidLoad];
     self.oldSearch = [MovieSearch MR_findAll];
     self.result = [Results MR_createEntity];
-    if ([self.oldSearch[0] isKindOfClass:[MovieSearch class]])
+    if (self.oldSearch.count > 0)
     {
-        MovieSearch *oldSearch = [MovieSearch MR_createEntity];
-        oldSearch = self.oldSearch[0];
-        NSLog(@"old result : %@",[oldSearch description]);
-        NSLog(@"old results : %@",oldSearch.results);
-        
+        {
+            MovieSearch *oldSearch = [MovieSearch MR_createEntity];
+            for (Results *result in [MovieSearch MR_findAll]) {
+                NSLog(@"old result : %@",result);
+
+            }
+            NSLog(@"old movie : %@",[MovieSearch MR_findAll]);
+            NSLog(@"old results : %@",[Results MR_findAll]);
+            
+            //        Results *result = [Results MR_createEntity];
+            
+        }
         
     }
     [self setupInterface];
     //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
     [self performSelector:@selector(setupConnectivityCheck) withObject:nil afterDelay:0.3f];
-
+    
     //    NSLog(@"old results : %@",[self.oldSearch description]);
-
-
+    
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -84,10 +94,35 @@
     }
     cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    Results *result = self.searchResults.results[indexPath.row];
+    NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
     [cell configureWithResult:result];
     return cell;
 }
+
+#pragma mark - UITableViewDelegate Methods
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
+
+    self.result = [Results MR_createEntityInContext:self.savingContext];
+    self.result = [InteractWithModel initResultFromModel:result originatingSearch:self.searchResults];
+    NSLog(@"self.result :%@",self.result);
+    [self saveContext];
+    return indexPath;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+#pragma mark - UITableViewDelegate Helper Methods
+//-(NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow
+//{
+////    NYTResults *selection = [NYTResults new];
+////    selection = results.results[selectedRow];
+//    return results.results[selectedRow];
+//}
+
 //-(void)configureCell:(UITableViewCell *)cell withResult:(Results *)result
 //{
 //    NSString *details;
@@ -148,6 +183,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 #pragma mark - UISearchDisplayDelegate Methods
 - (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView
 {
@@ -180,10 +217,10 @@
         NSString *message = @"Internet Required To Search";
         [self.activeTable showTableMessage:message atPosition:self.alertPosition];
     }
-    else
-    {
-        self.activeTable.tableFooterView = [UIView new];
-    }
+//    else
+//    {
+//        self.activeTable.tableFooterView = [UIView new];
+//    }
     //we need to use the property self.searchTerm when calling the method to search or when attempting to cancel it
     //so that we can ensure that the cancel operation uses the same object as the previously called search method,
     //otherwise if the objects arent identical the cancelling fails and we keep getting search results for every typed letter
@@ -228,7 +265,7 @@
 - (void)saveContext
 {
     //    NSLog(@"seoname:2 %@",self.result.seoName);
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+    [self.savingContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
         if (success) {
             NSLog(@"You successfully saved your context.");
         } else if (error) {
@@ -239,12 +276,17 @@
 
 
 #pragma mark - Setup Methods
-
 -(void)setupInterface
 {
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
     self.tableView.estimatedRowHeight = 44.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+//    self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 44.0f;
+//    self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
+self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
+
 }
 
 - (void)setupConnectivityCheck
@@ -280,6 +322,37 @@
      }];
 }
 
+#pragma mark - Empty TableView methods - DZNEmptyDataSetDelegate methods
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"empty_placeholder"];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"Please Allow Photo Access";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+-(NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"This allows you to share photos from your library and save photos to your camera roll.";
+    
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14.0],
+                                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
+                                 NSParagraphStyleAttributeName: paragraph};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
 
 
 @end

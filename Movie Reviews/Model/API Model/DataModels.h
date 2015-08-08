@@ -18,3 +18,4 @@
 #import "Multimedia.h"
 #import "Link.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "InteractWithModel.h"

@@ -35,6 +35,7 @@
 		4394F81E1B74C6D6008D4B35 /* RelatedUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F8151B74C6D6008D4B35 /* RelatedUrls.m */; };
 		4394F81F1B74C6D6008D4B35 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F8171B74C6D6008D4B35 /* Resource.m */; };
 		4394F8201B74C6D6008D4B35 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F8191B74C6D6008D4B35 /* Results.m */; };
+		43F1A3761B75EF0000823C3A /* InteractWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F1A3751B75EF0000823C3A /* InteractWithModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		4394F8171B74C6D6008D4B35 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
 		4394F8181B74C6D6008D4B35 /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
 		4394F8191B74C6D6008D4B35 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
+		43F1A3741B75EF0000823C3A /* InteractWithModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractWithModel.h; sourceTree = "<group>"; };
+		43F1A3751B75EF0000823C3A /* InteractWithModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractWithModel.m; sourceTree = "<group>"; };
 		A309AFB8B24D5230AF27604A /* Pods-Movie Reviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Reviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Reviews/Pods-Movie Reviews.release.xcconfig"; sourceTree = "<group>"; };
 		F15EE6641F552F8CB6D0DC91 /* libPods-Movie Reviews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movie Reviews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +136,8 @@
 				438287CE1B758FD700EBA58D /* InteractWithAPI.m */,
 				438287CF1B758FD700EBA58D /* UITableViewCell+APICell.h */,
 				438287D01B758FD700EBA58D /* UITableViewCell+APICell.m */,
+				43F1A3741B75EF0000823C3A /* InteractWithModel.h */,
+				43F1A3751B75EF0000823C3A /* InteractWithModel.m */,
 			);
 			path = "API Interaction";
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				433807531B74E67D00EB9122 /* NYTMovieSearch.m in Sources */,
 				433807521B74E67D00EB9122 /* NYTLink.m in Sources */,
 				438287B81B7567B500EBA58D /* AlertUser.m in Sources */,
+				43F1A3761B75EF0000823C3A /* InteractWithModel.m in Sources */,
 				433807681B75206F00EB9122 /* MovieSearchTableViewController.m in Sources */,
 				433807561B74E67D00EB9122 /* NYTResource.m in Sources */,
 			);

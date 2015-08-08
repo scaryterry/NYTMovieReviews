@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Results;
+@class Results,NYTResults;
 
 @interface RelatedUrls : NSManagedObject
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSString *suggestedLinkText;
 @property (nonatomic, retain) Results *results;
+
 
 
 @end

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 static NSString *const CellIdentifierNormal = @"normalCell";
 static NSString *const CellIdentifierSearch = @"resultCell";
-@class Results;
+@class NYTResults;
 @interface UITableViewCell (APICell)
--(void)configureWithResult:(Results *)result;
+-(void)configureWithResult:(NYTResults *)result;
 
 @end

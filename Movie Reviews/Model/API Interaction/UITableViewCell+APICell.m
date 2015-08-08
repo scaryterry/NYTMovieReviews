@@ -10,7 +10,7 @@
 #import "DataModels.h"
 
 @implementation UITableViewCell (APICell)
--(void)configureWithResult:(Results *)result
+-(void)configureWithResult:(NYTResults *)result
 {
     NSString *details;
     //check reuseIdentifier so that we can display different content for each cell

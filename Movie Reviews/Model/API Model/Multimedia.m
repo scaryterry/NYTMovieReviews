@@ -9,10 +9,12 @@
 #import "Resource.h"
 #import "Results.h"
 
-
+#import "DataModels.h"
 @implementation Multimedia
 
 @dynamic resource;
 @dynamic results;
+
+
 
 @end

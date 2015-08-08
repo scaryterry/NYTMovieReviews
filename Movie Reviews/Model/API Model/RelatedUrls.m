@@ -7,7 +7,7 @@
 
 #import "RelatedUrls.h"
 #import "Results.h"
-
+#import "DataModels.h"
 
 @implementation RelatedUrls
 
@@ -15,5 +15,6 @@
 @dynamic url;
 @dynamic suggestedLinkText;
 @dynamic results;
+
 
 @end
