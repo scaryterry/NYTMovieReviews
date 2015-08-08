@@ -11,13 +11,21 @@
 #import "InteractWithAPI.h"
 #import "DataModels.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import <libextobjc/EXTScope.h>
+#import "AlertUser.h"
+#import "UIView+Additions.h"
+#import <AFNetworking.h>
+#import "UITableView+Additions.h"
+#import "UITableViewCell+APICell.h"
 
-static NSString *const cellIdentifier = @"resultCell";
 @interface MovieSearchTableViewController ()
 @property (nonatomic, strong) Results *result;
 @property (nonatomic, strong) NSArray *oldSearch;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NYTMovieSearch *searchResults;
+@property (nonatomic, strong)NSString *searchTerm;
+@property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;
+@property (nonatomic, readonly,getter=getAlertPosition)CGPoint alertPosition;
 
 @end
 
@@ -37,43 +45,15 @@ static NSString *const cellIdentifier = @"resultCell";
         
         
     }
+    [self setupInterface];
+    //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
+    [self performSelector:@selector(setupConnectivityCheck) withObject:nil afterDelay:0.3f];
+
     //    NSLog(@"old results : %@",[self.oldSearch description]);
-    
-    [InteractWithAPI searchNYTForMovies:@"Avengers" completion:^(NYTMovieSearch *searchResults, NSError *error) {
-        if (error)
-        {
-            NSLog(@"error: %@",[error localizedDescription]);
-        }
-        else if (searchResults)
-        {
-            self.searchResults = searchResults;
-            [self.tableView reloadData];
-            //          MovieSearch *search = [MovieSearch initFromModel:searchResults];
-            
-            //            self.result = (Results *)search.results.anyObject;
-            
-            //            search = nil;
-//            [self saveContext];
-            
-            
-            //            ((NYTResults *)searchResults.results[0]).seoName
-            //            search = searchResults;
-            
-        }
-    }];
+
+
     
     // Do any additional setup after loading the view, typically from a nib.
-}
-- (void)saveContext
-{
-    //    NSLog(@"seoname:2 %@",self.result.seoName);
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-        if (success) {
-            NSLog(@"You successfully saved your context.");
-        } else if (error) {
-            NSLog(@"Error saving context: %@", error.description);
-        }
-    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -89,19 +69,41 @@ static NSString *const cellIdentifier = @"resultCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.searchResults.numResults integerValue];
+    return self.searchResults.results.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    Results *result = self.searchResults.results[indexPath.row];
-    cell.textLabel.text = result.sortName;
+    UITableViewCell *cell;
+    NSString *reuseIdentifier = CellIdentifierNormal;
     // Configure the cell...
+    //with the check below we can easily change the type of cell we want to display
+    //by changing the reuseIdentifier we want the cell use
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        reuseIdentifier = CellIdentifierSearch;
+    }
+    cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    Results *result = self.searchResults.results[indexPath.row];
+    [cell configureWithResult:result];
     return cell;
 }
-
+//-(void)configureCell:(UITableViewCell *)cell withResult:(Results *)result
+//{
+//    NSString *details;
+//    //check reuseIdentifier so that we can display different content for each cell
+//    if ([cell.reuseIdentifier isEqualToString:CellIdentifierNormal])
+//    {
+//        details = result.capsuleReview;
+//    }
+//    else
+//    {
+//        details = result.openingDate;
+//    }
+//    cell.textLabel.text = result.sortName;
+//    cell.detailTextLabel.text = details;
+//    
+//}
 
 /*
 // Override to support conditional editing of the table view.
@@ -146,5 +148,138 @@ static NSString *const cellIdentifier = @"resultCell";
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - UISearchDisplayDelegate Methods
+- (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView
+{
+    //with this call here we enable the regular tableview to update so that it can also display the search results
+    [self.tableView reloadData];
+}
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
+{
+    searchBar.placeholder=@"Search For Movie By Name";
+    return true;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    // Tells the table data source to reload when text changes
+       [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    // Return YES to cause the search result table view to be reloaded.
+    // We want it to be no so that we reload it only after the asynchronous movie search has finished
+    return NO;
+}
+
+#pragma mark - UISearchDisplayController Helper Methods
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    self.searchResults = nil;
+    if (![AFNetworkReachabilityManager sharedManager].reachable)
+    {
+        NSString *message = @"Internet Required To Search";
+        [self.activeTable showTableMessage:message atPosition:self.alertPosition];
+    }
+    else
+    {
+        self.activeTable.tableFooterView = [UIView new];
+    }
+    //we need to use the property self.searchTerm when calling the method to search or when attempting to cancel it
+    //so that we can ensure that the cancel operation uses the same object as the previously called search method,
+    //otherwise if the objects arent identical the cancelling fails and we keep getting search results for every typed letter
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(searchForMovie:) object:self.searchTerm];
+    self.searchTerm = searchText;
+    [self performSelector:@selector(searchForMovie:) withObject:self.searchTerm afterDelay:0.3f];
+}
+
+- (void)searchForMovie:(NSString *)movieName
+{
+    @weakify(self);
+    [self.activeTable showActivityIndicatorWithCenter:self.alertPosition];
+    [InteractWithAPI searchNYTForMovie:movieName completion:^(NYTMovieSearch *searchResults, NSError *error)
+     {
+         @strongify(self);
+         [self.activeTable hideActivityIndicator];
+         if (error)
+         {
+             NSLog(@"error: %@",[error localizedDescription]);
+         }
+         else if (searchResults)
+         {
+             self.searchResults = searchResults;
+             self.searchTerm = movieName;
+             [self.activeTable reloadData];
+         }
+     }];
+}
+
+#pragma mark - General Helper Methods
+
+-(UITableView *)getActiveTable
+{
+    return (self.searchDisplayController.active) ? self.searchDisplayController.searchResultsTableView:self.tableView;
+}
+
+-(CGPoint)getAlertPosition
+{
+    return CGPointMake(self.activeTable.bounds.size.width/2, self.activeTable.bounds.size.height/4);
+}
+
+- (void)saveContext
+{
+    //    NSLog(@"seoname:2 %@",self.result.seoName);
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+        if (success) {
+            NSLog(@"You successfully saved your context.");
+        } else if (error) {
+            NSLog(@"Error saving context: %@", error.description);
+        }
+    }];
+}
+
+
+#pragma mark - Setup Methods
+
+-(void)setupInterface
+{
+    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
+    self.tableView.estimatedRowHeight = 44.0f;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+- (void)setupConnectivityCheck
+{
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
+     {
+         NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+         // Check the reachability status and show an alert if the internet connection is not available
+         switch (status)
+         {
+             case AFNetworkReachabilityStatusUnknown:
+                 // AFNetworkReachabilityStatusUnknown = -1,
+                 NSLog(@"The reachability status is Unknown");
+//                 break;
+                 
+             case AFNetworkReachabilityStatusNotReachable:
+                 NSLog(@"The reachability status is not reachable");
+                 [AlertUser showError:[[[NSError new] returnErrorNoInternet] localizedDescription] customTitle:nil];
+                 break;
+                 
+             case AFNetworkReachabilityStatusReachableViaWWAN:
+                 // AFNetworkReachabilityStatusReachableViaWWAN = 1
+                 NSLog(@"The reachability status is reachable via WWAN");
+                 break;
+                 
+             case AFNetworkReachabilityStatusReachableViaWiFi:
+                 NSLog(@"The reachability status is reachable via WiFi");
+                 break;
+                 
+             default:
+                 break;
+         }
+     }];
+}
+
+
 
 @end

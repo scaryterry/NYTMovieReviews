@@ -11,6 +11,7 @@ pod 'VTAcknowledgementsViewController'
 pod "AFNetworking", "~> 2.0"
 pod 'MagicalRecord'
 pod 'DZNEmptyDataSet'
+pod 'TSMessages'
 
 end
 post_install do | installer |

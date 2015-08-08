@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8A596A1CEA6D913F2326F27"
+               BlueprintIdentifier = "AA99AAC05877CDC1D394F8AF"
                BuildableName = "liblibextobjc.a"
                BlueprintName = "libextobjc"
                ReferencedContainer = "container:Pods.xcodeproj">

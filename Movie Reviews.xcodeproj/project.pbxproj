@@ -19,8 +19,12 @@
 		4338075C1B74EE9100EB9122 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433807581B74EE9100EB9122 /* LaunchScreen.xib */; };
 		4338075D1B74EE9100EB9122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4338075A1B74EE9100EB9122 /* Main.storyboard */; };
 		4338075F1B74EEA200EB9122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4338075E1B74EEA200EB9122 /* Images.xcassets */; };
-		433807651B7508ED00EB9122 /* InteractWithAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807641B7508ED00EB9122 /* InteractWithAPI.m */; };
 		433807681B75206F00EB9122 /* MovieSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807671B75206F00EB9122 /* MovieSearchTableViewController.m */; };
+		438287B81B7567B500EBA58D /* AlertUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287B71B7567B500EBA58D /* AlertUser.m */; };
+		438287BB1B75682F00EBA58D /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287BA1B75682F00EBA58D /* UIView+Additions.m */; };
+		438287BE1B75754400EBA58D /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287BD1B75754400EBA58D /* UITableView+Additions.m */; };
+		438287D11B758FD700EBA58D /* InteractWithAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287CE1B758FD700EBA58D /* InteractWithAPI.m */; };
+		438287D21B758FD700EBA58D /* UITableViewCell+APICell.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287D01B758FD700EBA58D /* UITableViewCell+APICell.m */; };
 		4394F7DF1B74BD44008D4B35 /* Movie_ReviewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7DE1B74BD44008D4B35 /* Movie_ReviewsTests.m */; };
 		4394F7EB1B74BFB6008D4B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7E91B74BFB6008D4B35 /* main.m */; };
 		4394F7FD1B74C02A008D4B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7FC1B74C02A008D4B35 /* AppDelegate.m */; };
@@ -65,10 +69,18 @@
 		433807591B74EE9100EB9122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Supporting Files/Base.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
 		4338075B1B74EE9100EB9122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Supporting Files/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		4338075E1B74EEA200EB9122 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Supporting Files/Images.xcassets"; sourceTree = "<group>"; };
-		433807631B7508ED00EB9122 /* InteractWithAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractWithAPI.h; sourceTree = "<group>"; };
-		433807641B7508ED00EB9122 /* InteractWithAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractWithAPI.m; sourceTree = "<group>"; };
 		433807661B75206F00EB9122 /* MovieSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchTableViewController.h; sourceTree = "<group>"; };
 		433807671B75206F00EB9122 /* MovieSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchTableViewController.m; sourceTree = "<group>"; };
+		438287B61B7567B500EBA58D /* AlertUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUser.h; sourceTree = "<group>"; };
+		438287B71B7567B500EBA58D /* AlertUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUser.m; sourceTree = "<group>"; };
+		438287B91B75682F00EBA58D /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		438287BA1B75682F00EBA58D /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		438287BC1B75754400EBA58D /* UITableView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Additions.h"; sourceTree = "<group>"; };
+		438287BD1B75754400EBA58D /* UITableView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Additions.m"; sourceTree = "<group>"; };
+		438287CD1B758FD700EBA58D /* InteractWithAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractWithAPI.h; sourceTree = "<group>"; };
+		438287CE1B758FD700EBA58D /* InteractWithAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractWithAPI.m; sourceTree = "<group>"; };
+		438287CF1B758FD700EBA58D /* UITableViewCell+APICell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+APICell.h"; sourceTree = "<group>"; };
+		438287D01B758FD700EBA58D /* UITableViewCell+APICell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+APICell.m"; sourceTree = "<group>"; };
 		4394F7BC1B74BD44008D4B35 /* Movie Reviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Reviews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394F7D81B74BD44008D4B35 /* Movie ReviewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie ReviewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394F7DD1B74BD44008D4B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +89,7 @@
 		4394F7E91B74BFB6008D4B35 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		4394F7FB1B74C02A008D4B35 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Supporting Files/AppDelegate.h"; sourceTree = "<group>"; };
 		4394F7FC1B74C02A008D4B35 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Supporting Files/AppDelegate.m"; sourceTree = "<group>"; };
-		4394F80A1B74C101008D4B35 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		4394F80A1B74C101008D4B35 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4394F80C1B74C6D6008D4B35 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		4394F80D1B74C6D6008D4B35 /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
 		4394F80F1B74C6D6008D4B35 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -114,6 +126,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		438287CC1B758FD700EBA58D /* API Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				438287CD1B758FD700EBA58D /* InteractWithAPI.h */,
+				438287CE1B758FD700EBA58D /* InteractWithAPI.m */,
+				438287CF1B758FD700EBA58D /* UITableViewCell+APICell.h */,
+				438287D01B758FD700EBA58D /* UITableViewCell+APICell.m */,
+			);
+			path = "API Interaction";
+			sourceTree = "<group>";
+		};
 		4394F7B31B74BD44008D4B35 = {
 			isa = PBXGroup;
 			children = (
@@ -190,9 +213,8 @@
 		4394F8031B74C03D008D4B35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				438287CC1B758FD700EBA58D /* API Interaction */,
 				4394F8041B74C03D008D4B35 /* API Model */,
-				433807631B7508ED00EB9122 /* InteractWithAPI.h */,
-				433807641B7508ED00EB9122 /* InteractWithAPI.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				4394F8091B74C0A6008D4B35 /* Categories */,
+				438287B61B7567B500EBA58D /* AlertUser.h */,
+				438287B71B7567B500EBA58D /* AlertUser.m */,
 			);
 			name = "Helper Classes";
 			path = "Movie Reviews/Helper Classes";
@@ -253,6 +277,10 @@
 				433807401B74D52A00EB9122 /* NSDictionary+Additions.m */,
 				433807421B74D61D00EB9122 /* NSError+Additions.h */,
 				433807431B74D61D00EB9122 /* NSError+Additions.m */,
+				438287B91B75682F00EBA58D /* UIView+Additions.h */,
+				438287BA1B75682F00EBA58D /* UIView+Additions.m */,
+				438287BC1B75754400EBA58D /* UITableView+Additions.h */,
+				438287BD1B75754400EBA58D /* UITableView+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -409,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438287D11B758FD700EBA58D /* InteractWithAPI.m in Sources */,
 				433807541B74E67D00EB9122 /* NYTMultimedia.m in Sources */,
 				433807411B74D52A00EB9122 /* NSDictionary+Additions.m in Sources */,
 				4394F81C1B74C6D6008D4B35 /* MovieSearch.m in Sources */,
@@ -417,15 +446,18 @@
 				4394F81D1B74C6D6008D4B35 /* Multimedia.m in Sources */,
 				4394F81E1B74C6D6008D4B35 /* RelatedUrls.m in Sources */,
 				433807571B74E67D00EB9122 /* NYTResults.m in Sources */,
+				438287D21B758FD700EBA58D /* UITableViewCell+APICell.m in Sources */,
 				4394F7EB1B74BFB6008D4B35 /* main.m in Sources */,
 				4394F8201B74C6D6008D4B35 /* Results.m in Sources */,
 				4394F81F1B74C6D6008D4B35 /* Resource.m in Sources */,
 				4394F7FD1B74C02A008D4B35 /* AppDelegate.m in Sources */,
+				438287BB1B75682F00EBA58D /* UIView+Additions.m in Sources */,
 				433807441B74D61D00EB9122 /* NSError+Additions.m in Sources */,
 				4394F81B1B74C6D6008D4B35 /* Model.xcdatamodeld in Sources */,
-				433807651B7508ED00EB9122 /* InteractWithAPI.m in Sources */,
+				438287BE1B75754400EBA58D /* UITableView+Additions.m in Sources */,
 				433807531B74E67D00EB9122 /* NYTMovieSearch.m in Sources */,
 				433807521B74E67D00EB9122 /* NYTLink.m in Sources */,
+				438287B81B7567B500EBA58D /* AlertUser.m in Sources */,
 				433807681B75206F00EB9122 /* MovieSearchTableViewController.m in Sources */,
 				433807561B74E67D00EB9122 /* NYTResource.m in Sources */,
 			);

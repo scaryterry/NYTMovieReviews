@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TSMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VTAcknowledgementsViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>450A93DD5339FC87C7E76F2B29711695</key>
+		<key>18A4BA8BFD66F76A5A3AE5290D46B994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>495E91947E97B5B26D97CBBD652F427A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C19E5163A43F5C22EDA9938ECA6E931</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FCA6B069B1CD380BF5C3E136C8EE9CC</key>
+		<key>6613EAB02887E3639AF6F63849780D44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A6293C6362D59F83E5CC21A5C328451</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2FD1068C3281758DDF0948694C0B4A2</key>
+		<key>B9890E343165764E13CE7D21154A3FFB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7D3A2B615401180062DD420BC935541</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE563BA50D09F1B471FC575620F0BABA</key>
+		<key>EE0D9064FD6394FCAD65C2BF6E5EA101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
