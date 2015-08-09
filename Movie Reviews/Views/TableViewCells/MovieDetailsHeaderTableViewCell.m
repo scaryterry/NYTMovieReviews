@@ -8,6 +8,7 @@
 
 #import "MovieDetailsHeaderTableViewCell.h"
 #import "NYTResults.h"
+#import "UITableViewCell+APICell.h"
 
 @implementation MovieDetailsHeaderTableViewCell
 
@@ -33,6 +34,7 @@
     [self addText:result.byline toLabel:self.labelReviewer];
     
     [self addText:result.mpaaRating toLabel:self.labelRating];
+    [self fixCellLayout];
 }
 -(void)addText:(NSString *)text toLabel:(UILabel *)label
 {

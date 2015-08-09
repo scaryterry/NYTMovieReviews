@@ -49,26 +49,38 @@
     resultForCoreData.link = nil;
     if (result.link)
     {
+        if (![[result.link dictionaryRepresentation] isEqual:[NSDictionary new]])
+        {
         [[self class]setLinkForDataModel:resultForCoreData fromModel:result];
+        }
     }
 
     
     resultForCoreData.multimedia = nil;
     if (result.multimedia)
     {
-        [[self class]setMultimediaForDataModel:resultForCoreData fromModel:result];
+        if (![[result.multimedia dictionaryRepresentation] isEqual:[NSDictionary new]])
+        {
+            [[self class]setMultimediaForDataModel:resultForCoreData fromModel:result];
+        }
     }
     
     resultForCoreData.relatedUrls = nil;
     if (result.relatedUrls)
     {
+        if (![result.relatedUrls  isEqual:[NSArray new]])
+        {
         [[self class] addRelatedUrlsToCoreDataModel:resultForCoreData fromModel:result];
+        }
     }
     
     resultForCoreData.movieSearch = nil;
     if (movieSearch)
     {
+        if (![[movieSearch dictionaryRepresentation] isEqual:[NSDictionary new]])
+        {
         resultForCoreData.movieSearch = [InteractWithModel initMovieSearchFromModel:movieSearch];
+        }
     }
         resultForCoreData.multimedia.results = resultForCoreData;
         resultForCoreData.link.results = resultForCoreData;
@@ -112,19 +124,21 @@
 
 + (void)setLinkForDataModel:(Results *)coreDataModel fromModel:(NYTResults *)result
 {
+    coreDataModel.link = [Link MR_createEntity];
     coreDataModel.link.type = result.link.type;
     coreDataModel.link.url = result.link.url;
     coreDataModel.link.suggestedLinkText = result.link.suggestedLinkText;
-
 }
 
 + (void)setMultimediaForDataModel:(Results *)coreDataModel fromModel:(NYTResults *)result
 {
+    coreDataModel.multimedia = [Multimedia MR_createEntity];
     [[self class] setResourcesForDataModel:coreDataModel.multimedia fromModel:result];
 }
 
 + (void)setResourcesForDataModel:(Multimedia *)multimediaModel fromModel:(NYTResults *)result
 {
+    multimediaModel.resource = [Resource MR_createEntity];
     multimediaModel.resource.src = result.multimedia.resource.src;
     multimediaModel.resource.width = result.multimedia.resource.width;
     multimediaModel.resource.type = result.multimedia.resource.type;

@@ -126,15 +126,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.shouldDisplayFavourites)
-    {
     NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
 //    [NSManagedObjectContext MR_resetDefaultContext];
     self.result = [InteractWithModel initResultFromModel:result];
     NSLog(@"self.result :%@",self.result);
 
-    [self saveContext];
-    }
+//    [self saveContext];
     
 
 }

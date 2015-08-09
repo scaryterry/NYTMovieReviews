@@ -43,8 +43,6 @@
 		4396F1FB1B771CB4000C5A4E /* MovieDetailsReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4396F1F91B771CB4000C5A4E /* MovieDetailsReviewTableViewCell.xib */; };
 		4396F1FF1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396F1FD1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.m */; };
 		4396F2001B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4396F1FE1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.xib */; };
-		4396F2041B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396F2021B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.m */; };
-		4396F2051B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4396F2031B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.xib */; };
 		4396F2091B7756F4000C5A4E /* MovieListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396F2071B7756F4000C5A4E /* MovieListTableViewCell.m */; };
 		4396F20A1B7756F4000C5A4E /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4396F2081B7756F4000C5A4E /* MovieListTableViewCell.xib */; };
 		43F1A3761B75EF0000823C3A /* InteractWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F1A3751B75EF0000823C3A /* InteractWithModel.m */; };
@@ -129,9 +127,6 @@
 		4396F1FC1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsDescriptionTableViewCell.h; sourceTree = "<group>"; };
 		4396F1FD1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsDescriptionTableViewCell.m; sourceTree = "<group>"; };
 		4396F1FE1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailsDescriptionTableViewCell.xib; sourceTree = "<group>"; };
-		4396F2011B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsOverviewTableViewCell.h; sourceTree = "<group>"; };
-		4396F2021B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsOverviewTableViewCell.m; sourceTree = "<group>"; };
-		4396F2031B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailsOverviewTableViewCell.xib; sourceTree = "<group>"; };
 		4396F2061B7756F4000C5A4E /* MovieListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListTableViewCell.h; sourceTree = "<group>"; };
 		4396F2071B7756F4000C5A4E /* MovieListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListTableViewCell.m; sourceTree = "<group>"; };
 		4396F2081B7756F4000C5A4E /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
@@ -338,9 +333,6 @@
 				4396F1FC1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.h */,
 				4396F1FD1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.m */,
 				4396F1FE1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.xib */,
-				4396F2011B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.h */,
-				4396F2021B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.m */,
-				4396F2031B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.xib */,
 				4396F2061B7756F4000C5A4E /* MovieListTableViewCell.h */,
 				4396F2071B7756F4000C5A4E /* MovieListTableViewCell.m */,
 				4396F2081B7756F4000C5A4E /* MovieListTableViewCell.xib */,
@@ -454,7 +446,6 @@
 				4338075D1B74EE9100EB9122 /* Main.storyboard in Resources */,
 				4396F2001B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.xib in Resources */,
 				4396F1FB1B771CB4000C5A4E /* MovieDetailsReviewTableViewCell.xib in Resources */,
-				4396F2051B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +510,6 @@
 				4396F1FA1B771CB4000C5A4E /* MovieDetailsReviewTableViewCell.m in Sources */,
 				4396F1FF1B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.m in Sources */,
 				433807571B74E67D00EB9122 /* NYTResults.m in Sources */,
-				4396F2041B771D9E000C5A4E /* MovieDetailsOverviewTableViewCell.m in Sources */,
 				438287D21B758FD700EBA58D /* UITableViewCell+APICell.m in Sources */,
 				4394F7EB1B74BFB6008D4B35 /* main.m in Sources */,
 				4394F8201B74C6D6008D4B35 /* Results.m in Sources */,

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Results,NYTResults;
 
 @interface MovieDetailsTableViewController : UITableViewController
 
+@property (strong, nonatomic) NYTResults *onlineSelection;
+@property (strong, nonatomic) Results *offlineSelection;
 @end

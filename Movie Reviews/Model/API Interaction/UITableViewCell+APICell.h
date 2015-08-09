@@ -14,6 +14,9 @@
 static NSString *const CellIdentifierNormal = @"NormalCell";
 static NSString *const CellIdentifierSearch = @"ResultCell";
 static NSString *const CellIdentifierMovieDetailsHeader = @"MovieDetailsHeaderTableViewCell";
+static NSString *const CellIdentifierMovieDetailsReviewTableViewCell = @"MovieDetailsReviewTableViewCell";
+static NSString *const CellIdentifierMovieDetailsDescriptionTableViewCell = @"MovieDetailsDescriptionTableViewCell";
+
 static NSString *const CellIdentifierMovieList = @"MovieListTableViewCell";
 
 @class NYTResults,Results;
