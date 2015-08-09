@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-static NSString *const CellIdentifierNormal = @"normalCell";
-static NSString *const CellIdentifierSearch = @"resultCell";
+#import "MovieDetailsHeaderTableViewCell.h"
+#import "MovieListTableViewCell.h"
+#import "UITableViewCell+Additions.h"
+
+static NSString *const CellIdentifierNormal = @"NormalCell";
+static NSString *const CellIdentifierSearch = @"ResultCell";
+static NSString *const CellIdentifierMovieDetailsHeader = @"MovieDetailsHeaderTableViewCell";
+static NSString *const CellIdentifierMovieList = @"MovieListTableViewCell";
+
 @class NYTResults,Results;
 @interface UITableViewCell (APICell)
 -(void)configureWithResult:(NYTResults *)result;

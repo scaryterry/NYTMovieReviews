@@ -40,7 +40,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="normalCell" textLabel="FO6-CA-908" detailTextLabel="tLY-gV-wGU" style="IBUITableViewCellStyleSubtitle" id="TmW-b6-SBw">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NormalCell" textLabel="FO6-CA-908" detailTextLabel="tLY-gV-wGU" style="IBUITableViewCellStyleSubtitle" id="TmW-b6-SBw">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TmW-b6-SBw" id="xNh-fR-Y72">
                                     <autoresizingMask key="autoresizingMask"/>

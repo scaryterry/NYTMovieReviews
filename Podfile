@@ -4,7 +4,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
 
 target 'Movie Reviews' do
-pod 'SDWebImage'
 pod 'MBProgressHUD'
 pod 'libextobjc'
 pod 'VTAcknowledgementsViewController'
@@ -12,6 +11,7 @@ pod "AFNetworking", "~> 2.0"
 pod 'MagicalRecord'
 pod 'DZNEmptyDataSet'
 pod 'TSMessages'
+pod 'KINWebBrowser'
 
 end
 post_install do | installer |

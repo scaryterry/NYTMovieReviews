@@ -9,12 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ARChromeActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DZNEmptyDataSet.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KINWebBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,12 +44,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TSMessages.xcscheme</key>
+		<key>TUSafariActivity-TUSafariActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TUSafariActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>495E91947E97B5B26D97CBBD652F427A</key>
+		<key>2421D6F58DEB90BDDFD3CAD3D7445408</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C19E5163A43F5C22EDA9938ECA6E931</key>
+		<key>34470CD711237A19CC25E5BDBC7D3E04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,17 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5352D432641F0656C90741034E32F31E</key>
+		<key>5011975CCFB35535E79A4C758CD93CF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6613EAB02887E3639AF6F63849780D44</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6A6293C6362D59F83E5CC21A5C328451</key>
+		<key>6A4ABD230F57EA35C93C7E0CEE8ADC58</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +107,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9890E343165764E13CE7D21154A3FFB</key>
+		<key>80FF06C10BB22B4C8DB18787122820D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE0D9064FD6394FCAD65C2BF6E5EA101</key>
+		<key>AB01AC1E73965EF7EE34F8FE343665F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8DBD4B1443A00D42AE9EB1F7A2D3BA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D09F46E371608B7332BF8D49F21F2EC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E36D8163308AAC980EA20ED27AF51600</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F85CE5BE8A66B18BFE6D6D4CEC85AF4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

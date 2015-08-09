@@ -38,40 +38,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self setupInterface];
-
-    self.oldSearch = [Results MR_findAll];
-    self.result = [Results MR_createEntity];
-    NSMutableArray *savedStuff = [NSMutableArray new];
-    if (self.oldSearch.count > 0)
-    {
-        {
-            self.saved = [MovieSearch MR_createEntity];
-            
-            for (Results *result in [Results MR_findAll]) {
-                if ([result isKindOfClass:[Results class]])
-                {
-                    if (result.displayTitle)
-                    {
-                        [savedStuff addObject:result];
-                    }
-                    NSLog(@"old result : %@",result.displayTitle);
-                }
-                
-            }
-            self.saved.results = [NSSet setWithArray:savedStuff];
-            [self.tableView reloadData];
-//            self.searchResults = [NYTMovieSearch modelObjectWithDictionary:savedStuff];
-
-            //        Results *result = [Results MR_createEntity];
-            
-        }
-        NSLog(@"old result : %@",savedStuff);
-
-    }
-    //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
     [self performSelector:@selector(setupConnectivityCheck) withObject:nil afterDelay:0.3f];
-    
+    //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
+
+//    self.oldSearch = [Results MR_findAll];
+//    self.result = [Results MR_createEntity];
+//    NSMutableArray *savedStuff = [NSMutableArray new];
+//    if (self.oldSearch.count > 0)
+//    {
+//        {
+//            self.saved = [MovieSearch MR_createEntity];
+//            
+//            for (Results *result in [Results MR_findAll]) {
+//                if ([result isKindOfClass:[Results class]])
+//                {
+//                    if (result.displayTitle)
+//                    {
+//                        [savedStuff addObject:result];
+//                    }
+//                    NSLog(@"old result : %@",result.displayTitle);
+//                }
+//                
+//            }
+//            self.saved.results = [NSSet setWithArray:savedStuff];
+//            [self.tableView reloadData];
+////            self.searchResults = [NYTMovieSearch modelObjectWithDictionary:savedStuff];
+//
+//            //        Results *result = [Results MR_createEntity];
+//            
+//        }
+//        NSLog(@"old result : %@",savedStuff);
+//
+//    }
+
     //    NSLog(@"old results : %@",[self.oldSearch description]);
     
     
@@ -92,33 +93,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    NSInteger count = (self.shouldDisplayFavourites) ? self.saved.results.count :self.searchResults.results.count;
+//    NSInteger count = (self.shouldDisplayFavourites) ? self.saved.results.count :self.searchResults.results.count;
     
-    return count;
+    return self.searchResults.results.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    NSString *reuseIdentifier = CellIdentifierNormal;
+    NSString *reuseIdentifier = CellIdentifierMovieList;
     // Configure the cell...
     //with the check below we can easily change the type of cell we want to display
     //by changing the reuseIdentifier we want the cell use
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        reuseIdentifier = CellIdentifierSearch;
-    }
-    cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    if (self.shouldDisplayFavourites)
-    {
-        Results *result = [InteractWithModel selectionFromFavourites:self.saved selectedRow:indexPath.row];
-        [cell configureWithFavourite:result];
-    }
-    else
-    {
-    NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
-    [cell configureWithResult:result];
-    }
+#warning Search cell change 1/3
+    //uncomment the following 5 lines  to use the default search cells
+//    if (tableView == self.searchDisplayController.searchResultsTableView)
+//    {
+//        reuseIdentifier = CellIdentifierSearch;
+//
+//    }
+            cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+        NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
+        [cell configureWithResult:result];
+
     return cell;
 }
 
@@ -126,19 +122,21 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+        return indexPath;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (!self.shouldDisplayFavourites)
     {
     NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
 //    [NSManagedObjectContext MR_resetDefaultContext];
     self.result = [InteractWithModel initResultFromModel:result];
     NSLog(@"self.result :%@",self.result);
+
     [self saveContext];
     }
-    return indexPath;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
     
+
 }
 #pragma mark - UITableViewDelegate Helper Methods
 //-(NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow
@@ -307,19 +305,28 @@
 #pragma mark - Setup Methods
 -(void)setupInterface
 {
-    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
-    self.tableView.estimatedRowHeight = 44.0f;
+#warning Search cell change 2/3
+    [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
+    //to use the default search cells uncomment below and delete the above line
+//    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
+    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
+
+    self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
-//    self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 44.0f;
-//    self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
+#warning Search cell change 3/3
+//unessesary with default search cell so delete below
+    self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 100.0f;
+    self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
 //self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
 
 }
 
 - (void)setupConnectivityCheck
 {
+    [self.tableView reloadData];
+    //the reload operation is neccessary to ensure that the backround message displayed is correct - it changes if no internet is detected and without the reloadData above on the first launch it always displays the no internet message
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
      {
          NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
@@ -360,8 +367,7 @@
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = @"Please Allow Photo Access";
-    
+    NSString *text = ([AFNetworkReachabilityManager sharedManager].isReachable)?@"Start Typing In The Search Box ":@"Please Connect to the Internet";
     NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0],
                                  NSForegroundColorAttributeName: [UIColor darkGrayColor]};
     
@@ -370,7 +376,7 @@
 
 -(NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = @"This allows you to share photos from your library and save photos to your camera roll.";
+    NSString *text = ([AFNetworkReachabilityManager sharedManager].isReachable)?@"And as you type the results get updated ":@"If you want to search for a movie, otherwise switch to your favourites to search offline";
     
     NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;
