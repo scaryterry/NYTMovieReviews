@@ -10,7 +10,10 @@
 #import "DataModels.h"
 #import "UITableViewCell+APICell.h"
 #import "AlertUser.h"
-@interface MovieDetailsTableViewController ()
+#import <KINWebBrowser/KINWebBrowserViewController.h>
+#import <AFNetworking.h>
+
+@interface MovieDetailsTableViewController ()<KINWebBrowserDelegate>
 @property (nonatomic,readonly,getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable;
 @property (nonatomic,readonly,getter=isUsingFavourites) BOOL usingFavourites;
 
@@ -56,7 +59,14 @@
         }
         case 1:
         {
-            
+            if (self.isUsingFavourites)
+            {
+                rowCount = self.offlineSelection.relatedUrls.count;
+            }
+            else
+            {
+                rowCount = self.onlineSelection.relatedUrls.count;
+            }
             break;
         }
         default:
@@ -81,14 +91,47 @@
     {
         resultToDisplay = self.onlineSelection;
     }
+
+    if (indexPath.section == 0)
+    {
+
     [cell configureWithResult:resultToDisplay];
+
+    }
+    else
+    {
+        [self configureOverviewSectionWithResult:resultToDisplay forCell:cell atIndexPath:indexPath];
+    }
     
     // Configure the cell...
     
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 1)
+    {
+        NYTResults *result;
+        if (self.isUsingFavourites)
+        {
+            result = (NYTResults*) self.onlineSelection;
+        }
+        else
+        {
+            result = self.onlineSelection;
+        }
+
+        NSString *urlToLoad = ((RelatedUrls *)result.relatedUrls[indexPath.row]).url;
+        [self performOpenMovieLink:urlToLoad];
+    }
+}
 
 #pragma mark - UITableViewController Delegate Helper Methods
+-(void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    cell.textLabel.text = ((RelatedUrls *)result.relatedUrls[indexPath.row]).suggestedLinkText;
+}
 
 -(BOOL)isCapsuleReviewAvailable
 {
@@ -163,6 +206,8 @@
 #pragma Setup Methods
 -(void)setupInterface
 {
+    self.tableView.tableFooterView = [UIView new];// trick to remove the empty cells at the bottom of the view
+    
     self.title = @"Movie Details";
     // register the custom tableview cells we want to use
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsHeader bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsHeader];
@@ -193,7 +238,32 @@
     
 }
 
-
+- (void)performOpenMovieLink:(NSString *)link
+{
+    if ([[AFNetworkReachabilityManager sharedManager] isReachable]) // has internet connection?
+    {
+        KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
+        webBrowser.barTintColor = self.navigationController.navigationBar.barTintColor;
+        webBrowser.tintColor = self.navigationController.navigationBar.tintColor;
+        [webBrowser setDelegate:self];
+        webBrowser.hidesBottomBarWhenPushed = true;
+        [webBrowser loadURLString:link];
+        [self.navigationController pushViewController:webBrowser animated:YES];
+        
+    }
+    else
+    {
+        [AlertUser showError:@"No Internet Connection Available" customTitle:@"Can't Open Website"];
+    }
+    
+    
+    
+    //                            webBrowser.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    //                            webBrowser.modalPresentationStyle = UIModalPresentationFullScreen;
+    //
+    //                            [self presentViewController:webBrowser animated:YES completion:NULL];
+    
+}
 - (void)saveContext
 {
     //    NSLog(@"seoname:2 %@",self.result.seoName);

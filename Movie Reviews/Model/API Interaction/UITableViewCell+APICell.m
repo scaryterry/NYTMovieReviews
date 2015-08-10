@@ -37,10 +37,6 @@
     {
         [((MovieDetailsDescriptionTableViewCell *)self) configureDescriptionCellWithResult:result];
     }
-    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsOverview])
-    {
-        [self configureOverviewSectionWithResult:result];
-    }
     //    else
     //    {
     //        self.textLabel.text = result.displayTitle;
@@ -64,10 +60,6 @@
     }
     self.textLabel.text = result.displayTitle;
     self.detailTextLabel.text = details;
-    
-}
--(void)configureOverviewSectionWithResult:(NYTResults *)result
-{
     
 }
 @end
