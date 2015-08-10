@@ -256,7 +256,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     //otherwise if the objects arent identical the cancelling fails and we keep getting search results for every typed letter
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(searchForMovie:) object:self.searchTerm];
     self.searchTerm = searchText;
-    [self performSelector:@selector(searchForMovie:) withObject:self.searchTerm afterDelay:0.3f];
+    [self performSelector:@selector(searchForMovie:) withObject:self.searchTerm afterDelay:0.4f];
 }
 
 - (void)searchForMovie:(NSString *)movieName
