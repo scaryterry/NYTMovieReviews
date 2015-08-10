@@ -30,7 +30,8 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupInterface];
-    [self setupFavourites];
+        [self setupFavourites];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -48,10 +49,18 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
+    _fetchedResultsController.fetchRequest.returnsDistinctResults = true;
+    _fetchedResultsController = [Results MR_fetchAllSortedBy:@"displayTitle" ascending:true withPredicate:nil groupBy:nil delegate:self];
     
-    _fetchedResultsController = [Results MR_fetchAllSortedBy:@"displayTitle" ascending:NO withPredicate:nil groupBy:nil delegate:self];
     return _fetchedResultsController;
 }
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    //by registering for the _fetchedResultsControllerDelegate whenever an update happens the table gets reloaded so that it always displays current data
+    
+    [self.tableView reloadData];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [[_fetchedResultsController sections] count];
 }
@@ -150,11 +159,12 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
 -(void)setupInterface
 {
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
-    
+    self.tableView.tableFooterView = [UIView new];// trick to hide empty cells
     self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
+    self.fetchedResultsController.delegate = self;
 #warning Search cell change 3/3
     //unessesary with default search cell so delete below
     self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 100.0f;
@@ -185,7 +195,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
 
 -(NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = @"To add to your favourites switch tabs and search for a movie, then in its details tap on 'Save'";
+    NSString *text = @"To add to your favourites switch tabs and search for a movie, then in its details tap on 'Add Favourite'";
     
     NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;

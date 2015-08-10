@@ -10,6 +10,7 @@
 @class NYTMovieSearch;
 @interface InteractWithAPI : NSObject
 typedef void (^RetrievalCompleteBlock)(NYTMovieSearch *searchResults, NSError *error);
+
 + (void)searchNYTForMovie:(NSString *)movieName completion:(RetrievalCompleteBlock)completion;
 
 @end

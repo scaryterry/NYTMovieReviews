@@ -10,11 +10,14 @@
 
 @class Resource, Results;
 
-@interface Multimedia : NSManagedObject
+@interface Multimedia : NSManagedObject <NSCoding, NSCopying>
 
 @property (nonatomic, retain) Resource *resource;
 @property (nonatomic, retain) Results *results;
 
++ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionaryRepresentation;
 
 @end
 

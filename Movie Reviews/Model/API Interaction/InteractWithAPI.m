@@ -69,9 +69,4 @@ static NSString *const kNYTMovieAPIOptionAPIKey = @"3fa8af7ecec8dfcd325cfbb8a804
 }
 
 
-- (BOOL)hasInternetConnection
-{
-    return [AFNetworkReachabilityManager sharedManager].reachable;
-}
-
 @end

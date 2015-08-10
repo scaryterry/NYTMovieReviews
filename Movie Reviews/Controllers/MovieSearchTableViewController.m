@@ -21,11 +21,8 @@
 static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 
 @interface MovieSearchTableViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
-@property (nonatomic, strong) Results *result;
-@property (nonatomic, strong) NSArray *oldSearch;
-@property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NYTMovieSearch *searchResults;
-@property (nonatomic, strong) MovieSearch *saved;
+//@property (nonatomic, strong) MovieSearch *searchResults;
 @property (nonatomic, strong)NSString *searchTerm;
 @property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;
 @property (nonatomic, readonly,getter=getAlertPosition)CGPoint alertPosition;
@@ -296,6 +293,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 #pragma mark - Setup Methods
 -(void)setupInterface
 {
+    self.tableView.tableFooterView = [UIView new];// trick to remove the empty cells at the bottom of the view
 #warning Search cell change 2/3
     [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
     //to use the default search cells uncomment below and delete the above line

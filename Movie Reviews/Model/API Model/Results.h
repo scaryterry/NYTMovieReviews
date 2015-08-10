@@ -10,7 +10,7 @@
 
 @class Link, Multimedia, RelatedUrls, MovieSearch;
 
-@interface Results : NSManagedObject
+@interface Results : NSManagedObject <NSCoding, NSCopying>
 
 @property (nonatomic, retain) NSString *capsuleReview;
 @property (nonatomic, retain) NSString *dateUpdated;
@@ -41,5 +41,8 @@
 - (void)removeRelatedUrlsObject:(RelatedUrls *)value;
 - (void)addRelatedUrls:(NSSet *)value;
 - (void)removeRelatedUrls:(NSSet *)value;
++ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionaryRepresentation;
 
 @end

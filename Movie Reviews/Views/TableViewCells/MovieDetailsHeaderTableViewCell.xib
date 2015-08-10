@@ -25,8 +25,8 @@
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noah" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-AZ-ULj">
-                        <rect key="frame" x="116" y="36" width="39" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-AZ-ULj">
+                        <rect key="frame" x="112" y="36" width="39" height="20"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -38,13 +38,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R (Profanity)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-yx-dPy">
-                        <rect key="frame" x="68" y="64" width="89" height="20"/>
+                        <rect key="frame" x="64" y="64" width="89" height="20"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYT Critics Pick" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udJ-tb-2wa">
-                        <rect key="frame" x="228" y="67" width="84" height="14"/>
+                        <rect key="frame" x="228" y="70" width="84" height="14"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,13 +52,12 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="udJ-tb-2wa" firstAttribute="centerY" secondItem="Ddg-yx-dPy" secondAttribute="centerY" id="4mI-lQ-VH0"/>
                     <constraint firstItem="udJ-tb-2wa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ddg-yx-dPy" secondAttribute="trailing" constant="1" id="6a5-cx-6pZ"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="udJ-tb-2wa" secondAttribute="bottom" constant="8" id="6fe-3h-zYe"/>
+                    <constraint firstAttribute="bottom" secondItem="udJ-tb-2wa" secondAttribute="bottom" constant="8" id="6fe-3h-zYe"/>
                     <constraint firstItem="O2c-Sw-kRu" firstAttribute="top" secondItem="bKa-Vp-rgG" secondAttribute="bottom" constant="8" id="9qu-18-yvl"/>
                     <constraint firstAttribute="bottom" secondItem="Qi1-5l-wvv" secondAttribute="bottom" constant="8" id="Fg3-Yd-tH3"/>
                     <constraint firstItem="O2c-Sw-kRu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="G7i-xg-AYv"/>
-                    <constraint firstItem="e1o-AZ-ULj" firstAttribute="leading" secondItem="O2c-Sw-kRu" secondAttribute="trailing" constant="8" id="LBD-ZL-9Xi"/>
+                    <constraint firstItem="e1o-AZ-ULj" firstAttribute="leading" secondItem="O2c-Sw-kRu" secondAttribute="trailing" constant="4" id="LBD-ZL-9Xi"/>
                     <constraint firstItem="Ddg-yx-dPy" firstAttribute="top" secondItem="e1o-AZ-ULj" secondAttribute="bottom" constant="8" id="MIg-4z-ebi"/>
                     <constraint firstItem="bKa-Vp-rgG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Qli-jm-DSY"/>
                     <constraint firstAttribute="trailing" secondItem="udJ-tb-2wa" secondAttribute="trailing" constant="8" id="V6I-Ok-Vmm"/>
@@ -66,14 +65,20 @@
                     <constraint firstItem="e1o-AZ-ULj" firstAttribute="top" secondItem="bKa-Vp-rgG" secondAttribute="bottom" constant="8" id="XHY-us-6Ub"/>
                     <constraint firstItem="bKa-Vp-rgG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="c9T-H7-Opg"/>
                     <constraint firstItem="Qi1-5l-wvv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="g2c-RZ-PUZ"/>
-                    <constraint firstItem="Qi1-5l-wvv" firstAttribute="centerY" secondItem="Ddg-yx-dPy" secondAttribute="centerY" id="gwU-j7-Vtg"/>
+                    <constraint firstItem="Qi1-5l-wvv" firstAttribute="top" secondItem="e1o-AZ-ULj" secondAttribute="bottom" constant="8" id="gWO-rC-DcP"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e1o-AZ-ULj" secondAttribute="bottom" constant="8" id="kIP-q4-4Te"/>
+                    <constraint firstAttribute="bottom" secondItem="Ddg-yx-dPy" secondAttribute="bottom" constant="8" id="sdT-60-nwt"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e1o-AZ-ULj" secondAttribute="trailing" constant="8" id="uNO-R8-Zgi"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O2c-Sw-kRu" secondAttribute="bottom" constant="8" id="v1h-5x-l27"/>
-                    <constraint firstItem="udJ-tb-2wa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e1o-AZ-ULj" secondAttribute="bottom" constant="8" id="wbK-an-8Bp"/>
+                    <constraint firstItem="udJ-tb-2wa" firstAttribute="top" secondItem="e1o-AZ-ULj" secondAttribute="bottom" constant="14" id="wbK-an-8Bp"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bKa-Vp-rgG" secondAttribute="bottom" constant="8" id="xTN-eW-eTb"/>
-                    <constraint firstItem="Ddg-yx-dPy" firstAttribute="leading" secondItem="Qi1-5l-wvv" secondAttribute="trailing" constant="8" id="ybv-Ie-ufO"/>
+                    <constraint firstItem="Ddg-yx-dPy" firstAttribute="leading" secondItem="Qi1-5l-wvv" secondAttribute="trailing" constant="4" id="ybv-Ie-ufO"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="v1h-5x-l27"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
             <connections>

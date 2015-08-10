@@ -15,6 +15,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+//    self.translatesAutoresizingMaskIntoConstraints = false;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -50,6 +51,7 @@
     [self addText:result.byline toLabel:self.labelReviewer];
     
     [self addText:result.mpaaRating toLabel:self.labelRating];
+
     [self fixCellLayout];
 }
 

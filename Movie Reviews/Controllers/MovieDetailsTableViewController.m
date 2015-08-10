@@ -15,7 +15,9 @@
 
 @interface MovieDetailsTableViewController ()<KINWebBrowserDelegate>
 @property (nonatomic,readonly,getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable;
-@property (nonatomic,readonly,getter=isUsingFavourites) BOOL usingFavourites;
+@property (nonatomic,readonly,getter=isMovieInFavourites) BOOL movieInFavourites;
+@property (nonatomic,assign) BOOL const initialCheckIsMovieInFavourites;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonAddRemove;
 
 @end
 
@@ -29,6 +31,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //we do this in willAppear so that if the favourite is removed via the favourites screen then this button will change accordingly
+    [self setupBarButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,7 +67,7 @@
         }
         case 1:
         {
-            if (self.isUsingFavourites)
+            if (self.offlineSelection)
             {
                 rowCount = self.offlineSelection.relatedUrls.count;
             }
@@ -81,20 +89,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getMovieCellReuseIdentifierForRowAtIndexPath:indexPath] forIndexPath:indexPath];
-    NYTResults *resultToDisplay;
-    if (self.isUsingFavourites)
-    {
-        resultToDisplay = (NYTResults*) self.onlineSelection;
-        // simply casting it seems to be enough since both objects have identical properties and core data is smart enough to fetch all properties you are attempting to use
-    }
-    else
-    {
-        resultToDisplay = self.onlineSelection;
-    }
 
     if (indexPath.section == 0)
     {
-        if (self.isUsingFavourites)
+        if (self.offlineSelection)
         {
             [cell configureWithFavourite:self.offlineSelection];
         }
@@ -107,7 +105,7 @@
     }
     else
     {
-        if (self.isUsingFavourites)
+        if (self.offlineSelection)
         {
             [self configureOverviewSectionWithFavourite:self.offlineSelection forCell:cell atIndexPath:indexPath];
         }
@@ -128,17 +126,17 @@
     
     if (indexPath.section == 1)
     {
-        NYTResults *result;
-        if (self.isUsingFavourites)
+        NSString *urlToLoad;
+
+        if (self.offlineSelection)
         {
-            result = (NYTResults*) self.onlineSelection;
+           urlToLoad = ((RelatedUrls *)self.offlineSelection.relatedUrls.allObjects[indexPath.row]).url;
         }
         else
         {
-            result = self.onlineSelection;
+            urlToLoad = ((NYTRelatedUrls *)self.onlineSelection.relatedUrls[indexPath.row]).url;
         }
 
-        NSString *urlToLoad = ((RelatedUrls *)result.relatedUrls[indexPath.row]).url;
         [self performOpenMovieLink:urlToLoad];
     }
 }
@@ -150,14 +148,14 @@
 }
 -(void)configureOverviewSectionWithFavourite:(Results *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    cell.textLabel.text = ((RelatedUrls *)[result.relatedUrls allObjects][indexPath.row]).suggestedLinkText;
+    cell.textLabel.text = ((RelatedUrls *)result.relatedUrls.allObjects[indexPath.row]).suggestedLinkText;
 }
 
 -(BOOL)isCapsuleReviewAvailable
 {
     NSString *capsuleReview;
     BOOL isAvailable = false;
-    if (self.isUsingFavourites)
+    if (self.offlineSelection)
     {
         capsuleReview = self.offlineSelection.capsuleReview;
     }
@@ -210,24 +208,24 @@
     return reuseIdentifier;
 }
 #pragma Helper Methods
--(BOOL)isUsingFavourites
-{
-    BOOL usingFavourites = false;
-    if (self.offlineSelection)
-    {
-        usingFavourites = true;
-    }
-    else if (self.onlineSelection)
-    {
-        usingFavourites = false;
-    }
-    return usingFavourites;
-}
+//-(BOOL)isUsingFavourites
+//{
+//    BOOL usingFavourites = false;
+//    if (self.offlineSelection)
+//    {
+//        usingFavourites = true;
+//    }
+//    else if (self.onlineSelection)
+//    {
+//        usingFavourites = false;
+//    }
+//    return usingFavourites;
+//}
 #pragma Setup Methods
 -(void)setupInterface
 {
     self.tableView.tableFooterView = [UIView new];// trick to remove the empty cells at the bottom of the view
-    
+    self.initialCheckIsMovieInFavourites = self.isMovieInFavourites;
     self.title = @"Movie Details";
     // register the custom tableview cells we want to use
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsHeader bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsHeader];
@@ -238,25 +236,71 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
 }
-
-#pragma mark - IBActions
-
-- (IBAction)performAddToFavourites:(id)sender
+-(void)setupBarButton
 {
-    Results *itemToSave;
-    if (self.onlineSelection) {
-        itemToSave = [InteractWithModel initResultFromModel:self.onlineSelection];
+    if (self.offlineSelection)
+    {
+        self.barButtonAddRemove.title = @"Remove Favourite";
     }
     else
     {
-        itemToSave = self.offlineSelection;
+        if (self.isMovieInFavourites)
+        {
+            self.barButtonAddRemove.title = @"Remove Favourite";
+        }
+        else
+        {
+            self.barButtonAddRemove.title = @"Add Favourite";
+        }
     }
-//    if (itemToSave is not in favourites)
-//    {
+
+}
+-(BOOL)isMovieInFavourites
+{
+    //check if any of the previously saved model objects has the same movieId, in that case it means we already saved it
+    if (self.onlineSelection)
+    {
+        return [[[Results MR_findAll] valueForKey:@"nytMovieId"] containsObject:self.onlineSelection.nytMovieId];
+    }
+    else
+    {
+        return [[[Results MR_findAll] valueForKey:@"nytMovieId"] containsObject:self.offlineSelection.nytMovieId];
+
+    }
+}
+
+
+#pragma mark - IBActions
+- (IBAction)performAddRemoveFavourite:(id)sender
+{
+    self.initialCheckIsMovieInFavourites = self.isMovieInFavourites;
+    if (self.onlineSelection) {
+        
+        //check if the selected movie already exists in our favourites, if not then a model object is created to be saved
+        if (!self.initialCheckIsMovieInFavourites)
+        {
+            //create the entity from the NYT model so that it gets added to the current context and its saved when the context is saved
+            Results *itemToSave = [InteractWithModel initResultFromModel:self.onlineSelection];
+        }
+        else
+        {
+            Results *existingMovie = [Results MR_findFirstByAttribute:@"nytMovieId" withValue:self.onlineSelection.nytMovieId];
+            NSLog(@"existing result: %@ opened result: %@",existingMovie.nytMovieId, self.onlineSelection.nytMovieId);
+            [existingMovie MR_deleteEntity];
+            
+        }
+    }
+    else
+    {
+        //delete the entity from the current context
+        [self.offlineSelection MR_deleteEntity];
+        self.navigationItem.rightBarButtonItem = nil;
+    }
     [self saveContext];
-//    }
     
 }
+
+
 
 - (void)performOpenMovieLink:(NSString *)link
 {
@@ -288,11 +332,31 @@
 {
     //    NSLog(@"seoname:2 %@",self.result.seoName);
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+        NSString *alertMsg;
         if (success) {
             NSLog(@"You successfully saved your context.");
-            [AlertUser showSuccess:@"Successfully added to favourites" customTitleMessage:nil];
+            if (!self.initialCheckIsMovieInFavourites)
+            {
+                alertMsg = @"Successfully added to favourites";
+                self.barButtonAddRemove.title = @"Remove Favourite";
+            }
+            else
+            {
+                alertMsg = @"Successfully removed from favourites";
+                self.barButtonAddRemove.title = @"Add Favourite";
+            }
+            [AlertUser showSuccess:alertMsg customTitleMessage:nil];
         } else if (error) {
-            [AlertUser showError:error.description customTitle:@"Error Adding to favourites"];
+            if (!self.initialCheckIsMovieInFavourites)
+            {
+                alertMsg = @"Error Adding To Favourites";
+            }
+            else
+            {
+                alertMsg = @"Error Removing From Favourites";
+            }
+
+            [AlertUser showError:error.description customTitle:alertMsg];
             NSLog(@"Error saving context: %@", error.description);
         }
     }];

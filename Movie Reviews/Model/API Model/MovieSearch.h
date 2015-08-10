@@ -10,7 +10,7 @@
 
 @class Results;
 @class NYTMovieSearch;
-@interface MovieSearch : NSManagedObject
+@interface MovieSearch : NSManagedObject <NSCoding, NSCopying>
 
 @property (nonatomic, retain) NSString *status;
 @property (nonatomic, retain) NSString *copyright;
@@ -26,5 +26,8 @@
 - (void)removeResultsObject:(Results *)value;
 - (void)addResults:(NSSet *)value;
 - (void)removeResults:(NSSet *)value;
++ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionaryRepresentation;
 
 @end

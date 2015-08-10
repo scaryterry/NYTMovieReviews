@@ -74,18 +74,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="54r-2p-lcj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="YJO-Z2-cDn">
+                        <barButtonItem key="rightBarButtonItem" title="Add Favourite" id="YJO-Z2-cDn">
                             <connections>
-                                <action selector="performAddToFavourites:" destination="IL6-Xj-l6K" id="im9-RG-MC7"/>
+                                <action selector="performAddRemoveFavourite:" destination="IL6-Xj-l6K" id="JcO-3b-rvx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barButtonAddRemove" destination="YJO-Z2-cDn" id="Ncs-bJ-t7T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyq-LR-sS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2257" y="178"/>
         </scene>
-        <!--Movie Offline Favourites Table View Controller-->
+        <!--My Favourites-->
         <scene sceneID="buC-dX-o88">
             <objects>
                 <tableViewController id="u6M-yR-Hts" customClass="MovieOfflineFavouritesTableViewController" sceneMemberID="viewController">
@@ -106,7 +109,7 @@
                             <outlet property="delegate" destination="u6M-yR-Hts" id="vAp-0u-3B5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Nq0-Ai-Mg8"/>
+                    <navigationItem key="navigationItem" title="My Favourites" id="Nq0-Ai-Mg8"/>
                     <connections>
                         <segue destination="IL6-Xj-l6K" kind="show" identifier="openFavouriteDetails" id="o8K-sl-d7h"/>
                     </connections>
