@@ -21,23 +21,34 @@
     // Override point for customization after application launch.
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"Model"];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-
-//    MovieSearch *search = [MovieSearch MR_createEntity];
-//    [search searchNYTForMovies:@"Avengers" completion:^(MovieSearch *searchResults, NSError *error) {
-//        if (error)
-//        {
-//            NSLog(@"error: %@",[error localizedDescription]);
-//        }
-//        else if (searchResults)
-//        {
-//            NSLog(@"results : %@",searchResults);
-////            search = searchResults;
-//            
-//        }
-//            }];
+    [self setupGlobalUIPreferences];
     return YES;
 }
 
+-(void)setupGlobalUIPreferences
+{
+    //set title colour for all navigation contollers
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName,nil]];
+
+    //set button colour for all navigation contollers
+    [[UINavigationBar appearance] setTintColor: [UIColor whiteColor] ];
+    
+     //set the colour for all navigation bars
+    [[UINavigationBar appearance ] setBarTintColor:[UIColor orangeColor] ];
+    // set seperator insets for all tableviews
+    [[UITableView appearance] setSeparatorInset:UIEdgeInsetsZero];
+    [[UITableViewCell appearance] setSeparatorInset:UIEdgeInsetsZero];
+    // iOS 8:
+    if ([UITableView instancesRespondToSelector:@selector(setLayoutMargins:)])
+    {
+        [[UINavigationBar appearance] setTranslucent:false];
+        [[UITabBar appearance] setTranslucent:false];
+        
+        [[UITableView appearance] setLayoutMargins:UIEdgeInsetsZero];
+        [[UITableViewCell appearance] setLayoutMargins:UIEdgeInsetsZero];
+        [[UITableViewCell appearance] setPreservesSuperviewLayoutMargins:NO];
+    }
+}
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [MagicalRecord cleanUp];

@@ -13,29 +13,34 @@
 @implementation UITableViewCell (APICell)
 -(void)configureWithResult:(NYTResults *)result
 {
-    //    NSString *details;
     //check reuseIdentifier so that we can display different content for each cell
-    //    if ([self.reuseIdentifier isEqualToString:CellIdentifierNormal])
-    //    {
-    //        details = result.capsuleReview;
-    //    }
-    //    else
-    if ([self.reuseIdentifier isEqualToString:CellIdentifierSearch])
+       if ([self.reuseIdentifier isEqualToString:CellIdentifierSearch])
     {
         //        details = result.openingDate;
         self.textLabel.text = result.displayTitle;
         self.detailTextLabel.text = result.openingDate;
     }
     
-    if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsHeader])
+    if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieList])
     {
-        [((MovieDetailsHeaderTableViewCell *)self) configureCellWithResult:result];
+        [((MovieListTableViewCell *)self) configureListCellWithResult:result];
     }
-    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieList])
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsHeader])
     {
-        [((MovieListTableViewCell *)self) configureCellWithResult:result];
+        [((MovieDetailsHeaderTableViewCell *)self) configureHeaderCellWithResult:result];
     }
-    
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsReview])
+    {
+        [((MovieDetailsReviewTableViewCell *)self) configureReviewCellWithResult:result];
+    }
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsDescription])
+    {
+        [((MovieDetailsDescriptionTableViewCell *)self) configureDescriptionCellWithResult:result];
+    }
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsOverview])
+    {
+        [self configureOverviewSectionWithResult:result];
+    }
     //    else
     //    {
     //        self.textLabel.text = result.displayTitle;
@@ -61,5 +66,8 @@
     self.detailTextLabel.text = details;
     
 }
-
+-(void)configureOverviewSectionWithResult:(NYTResults *)result
+{
+    
+}
 @end

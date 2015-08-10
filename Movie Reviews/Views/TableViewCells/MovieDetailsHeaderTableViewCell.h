@@ -19,6 +19,6 @@
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 
--(void)configureCellWithResult:(NYTResults *)result;
+-(void)configureHeaderCellWithResult:(NYTResults *)result;
 
 @end

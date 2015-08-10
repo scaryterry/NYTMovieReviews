@@ -18,9 +18,10 @@
 #import "UITableView+Additions.h"
 #import "UITableViewCell+APICell.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "MovieDetailsTableViewController.h"
+static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 
 @interface MovieSearchTableViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
-
 @property (nonatomic, strong) Results *result;
 @property (nonatomic, strong) NSArray *oldSearch;
 @property (nonatomic, strong) NSArray *dataSource;
@@ -128,9 +129,9 @@
 {
     NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
 //    [NSManagedObjectContext MR_resetDefaultContext];
-    self.result = [InteractWithModel initResultFromModel:result];
-    NSLog(@"self.result :%@",self.result);
-
+//    self.result = [InteractWithModel initResultFromModel:result];
+//    NSLog(@"self.result :%@",self.result);
+    [self performSegueWithIdentifier:SegueIdentifierOpenSearchDetails sender:result];
 //    [self saveContext];
     
 
@@ -194,15 +195,19 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:SegueIdentifierOpenSearchDetails])
+    {
+        MovieDetailsTableViewController *detailsController = segue.destinationViewController;
+        detailsController.onlineSelection = sender;
+        
+    }
 }
-*/
 
 
 #pragma mark - UISearchDisplayDelegate Methods
@@ -285,17 +290,6 @@
 -(BOOL)shouldDisplayFavourites
 {
     return  (self.searchResults.results.count==0) ? true :false;
-}
-- (void)saveContext
-{
-    //    NSLog(@"seoname:2 %@",self.result.seoName);
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-        if (success) {
-            NSLog(@"You successfully saved your context.");
-        } else if (error) {
-            NSLog(@"Error saving context: %@", error.description);
-        }
-    }];
 }
 
 

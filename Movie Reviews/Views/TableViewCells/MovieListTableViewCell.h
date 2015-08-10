@@ -22,6 +22,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewLabelToDate;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintCrtiticsToReviewer;
--(void)configureCellWithResult:(NYTResults *)result;
+-(void)configureListCellWithResult:(NYTResults *)result;
 
 @end

@@ -21,7 +21,7 @@
     
     // Configure the view for the selected state
 }
--(void)configureCellWithResult:(NYTResults *)result
+-(void)configureHeaderCellWithResult:(NYTResults *)result
 {
     [self addText:result.displayTitle toLabel:self.labelTitle];
     

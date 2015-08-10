@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieDetailsHeaderTableViewCell.h"
+#import "MovieDetailsReviewTableViewCell.h"
+#import "MovieDetailsDescriptionTableViewCell.h"
+
 #import "MovieListTableViewCell.h"
+
 #import "UITableViewCell+Additions.h"
 
 static NSString *const CellIdentifierNormal = @"NormalCell";
 static NSString *const CellIdentifierSearch = @"ResultCell";
 static NSString *const CellIdentifierMovieDetailsHeader = @"MovieDetailsHeaderTableViewCell";
-static NSString *const CellIdentifierMovieDetailsReviewTableViewCell = @"MovieDetailsReviewTableViewCell";
-static NSString *const CellIdentifierMovieDetailsDescriptionTableViewCell = @"MovieDetailsDescriptionTableViewCell";
+static NSString *const CellIdentifierMovieDetailsReview  = @"MovieDetailsReviewTableViewCell";
+static NSString *const CellIdentifierMovieDetailsDescription = @"MovieDetailsDescriptionTableViewCell";
+static NSString *const CellIdentifierMovieDetailsOverview = @"MovieDetailsOverviewTableViewCell";
 
 static NSString *const CellIdentifierMovieList = @"MovieListTableViewCell";
 

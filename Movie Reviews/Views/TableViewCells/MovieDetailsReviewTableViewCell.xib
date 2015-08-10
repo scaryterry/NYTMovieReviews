@@ -15,39 +15,40 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-lq-03f">
-                        <rect key="frame" x="8" y="8" width="143" height="21"/>
+                        <rect key="frame" x="8" y="8" width="304" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Cxx-Bh-1Fl"/>
-                            <constraint firstAttribute="width" constant="143" id="VZo-z7-hGv"/>
                         </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Sample" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oG-cy-vbs">
                         <rect key="frame" x="8" y="29" width="304" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nE3-EV-5x2">
                         <rect key="frame" x="8" y="58" width="15" height="15"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviewer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTb-JH-NI3">
                         <rect key="frame" x="27" y="58" width="52" height="15"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="4oG-cy-vbs" firstAttribute="top" secondItem="iwi-lq-03f" secondAttribute="bottom" id="4Cg-Mt-kw1"/>
                     <constraint firstItem="iwi-lq-03f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Ij9-vh-xva"/>
                     <constraint firstItem="4oG-cy-vbs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="QfX-fD-d7I"/>
                     <constraint firstItem="nE3-EV-5x2" firstAttribute="top" secondItem="4oG-cy-vbs" secondAttribute="bottom" constant="8" id="Qgk-38-AvE"/>
+                    <constraint firstAttribute="trailing" secondItem="iwi-lq-03f" secondAttribute="trailing" constant="8" id="Wve-uZ-1uI"/>
                     <constraint firstItem="iwi-lq-03f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ayw-gb-KJo"/>
                     <constraint firstItem="nE3-EV-5x2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="bLr-gF-JgX"/>
                     <constraint firstItem="LTb-JH-NI3" firstAttribute="leading" secondItem="nE3-EV-5x2" secondAttribute="trailing" constant="4" id="c58-8R-n6N"/>
@@ -57,7 +58,17 @@
                     <constraint firstAttribute="trailing" secondItem="4oG-cy-vbs" secondAttribute="trailing" constant="8" id="vnJ-6H-XWo"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="297" y="383.5"/>
+            <connections>
+                <outlet property="labelReviewSummary" destination="4oG-cy-vbs" id="Vka-rU-Md3"/>
+                <outlet property="labelReviewer" destination="LTb-JH-NI3" id="6Bn-sd-OOK"/>
+                <outlet property="labelStaticHeader" destination="iwi-lq-03f" id="VRF-lD-BiH"/>
+                <outlet property="labelStaticReviewer" destination="nE3-EV-5x2" id="3e9-g1-7Sz"/>
+                <outletCollection property="allLabels" destination="iwi-lq-03f" id="Txs-AB-b7w"/>
+                <outletCollection property="allLabels" destination="4oG-cy-vbs" id="yxW-Sv-ZuS"/>
+                <outletCollection property="allLabels" destination="nE3-EV-5x2" id="RVO-Iq-cvz"/>
+                <outletCollection property="allLabels" destination="LTb-JH-NI3" id="eZF-EE-BN7"/>
+            </connections>
+            <point key="canvasLocation" x="297" y="383"/>
         </tableViewCell>
     </objects>
 </document>
