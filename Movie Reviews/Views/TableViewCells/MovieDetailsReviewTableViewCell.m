@@ -8,6 +8,7 @@
 
 #import "MovieDetailsReviewTableViewCell.h"
 #import "NYTResults.h"
+#import "Results.h"
 #import "UITableViewCell+Additions.h"
 @implementation MovieDetailsReviewTableViewCell
 
@@ -29,6 +30,16 @@
     
     [self fixCellLayout];
 }
+-(void)configureReviewCellWithFavourite:(Results *)result
+{
+    
+    [self addText:result.capsuleReview toLabel:self.labelReviewSummary];
+    
+    [self addText:result.byline toLabel:self.labelReviewer];
+    
+    [self fixCellLayout];
+}
+
 -(void)addText:(NSString *)text toLabel:(UILabel *)label
 {
     BOOL shouldHideLabel;

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class NYTResults;
+@class NYTResults,Results;
 @interface MovieDetailsDescriptionTableViewCell : UITableViewCell
--(void)configureDescriptionCellWithResult:(NYTResults *)result;
+
+
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticHeader;
@@ -19,5 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelReleaseDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticDVDReleaseDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelDVDReleaseDate;
+
+-(void)configureDescriptionCellWithResult:(NYTResults *)result;
+-(void)configureDescriptionCellWithFavourite:(Results *)result;
 
 @end

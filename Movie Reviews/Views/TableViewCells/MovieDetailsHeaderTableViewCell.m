@@ -8,6 +8,7 @@
 
 #import "MovieDetailsHeaderTableViewCell.h"
 #import "NYTResults.h"
+#import "Results.h"
 #import "UITableViewCell+APICell.h"
 
 @implementation MovieDetailsHeaderTableViewCell
@@ -36,6 +37,22 @@
     [self addText:result.mpaaRating toLabel:self.labelRating];
     [self fixCellLayout];
 }
+-(void)configureHeaderCellWithFavourite:(Results *)result
+{
+    [self addText:result.displayTitle toLabel:self.labelTitle];
+    
+    self.labelCriticsPick.hidden = ([result.criticsPick boolValue]) ? false :true;
+    if (![result.criticsPick boolValue])
+    {
+        [self.labelCriticsPick removeFromSuperview];
+    }
+    
+    [self addText:result.byline toLabel:self.labelReviewer];
+    
+    [self addText:result.mpaaRating toLabel:self.labelRating];
+    [self fixCellLayout];
+}
+
 -(void)addText:(NSString *)text toLabel:(UILabel *)label
 {
     BOOL shouldHideLabel;

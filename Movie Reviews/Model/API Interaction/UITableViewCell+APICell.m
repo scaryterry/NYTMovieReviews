@@ -48,18 +48,35 @@
 
 -(void)configureWithFavourite:(Results *)result
 {
-    NSString *details;
     //check reuseIdentifier so that we can display different content for each cell
-    if ([self.reuseIdentifier isEqualToString:CellIdentifierNormal])
+    if ([self.reuseIdentifier isEqualToString:CellIdentifierSearch])
     {
-        details = result.capsuleReview;
+        //        details = result.openingDate;
+        self.textLabel.text = result.displayTitle;
+        self.detailTextLabel.text = result.openingDate;
     }
-    else
+    
+    if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieList])
     {
-        details = result.openingDate;
+        [((MovieListTableViewCell *)self) configureListCellWithFavourite:result];
     }
-    self.textLabel.text = result.displayTitle;
-    self.detailTextLabel.text = details;
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsHeader])
+    {
+        [((MovieDetailsHeaderTableViewCell *)self) configureHeaderCellWithFavourite:result];
+    }
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsReview])
+    {
+        [((MovieDetailsReviewTableViewCell *)self) configureReviewCellWithFavourite:result];
+    }
+    else if ([self.reuseIdentifier isEqualToString:CellIdentifierMovieDetailsDescription])
+    {
+        [((MovieDetailsDescriptionTableViewCell *)self) configureDescriptionCellWithFavourite:result];
+    }
+    //    else
+    //    {
+    //        self.textLabel.text = result.displayTitle;
+    //        self.detailTextLabel.text = details;
+    //    }
     
 }
 @end

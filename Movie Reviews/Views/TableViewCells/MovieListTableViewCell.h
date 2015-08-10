@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class NYTResults;
+@class NYTResults,Results;
 @interface MovieListTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticReview;
@@ -23,5 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintCrtiticsToReviewer;
 -(void)configureListCellWithResult:(NYTResults *)result;
+-(void)configureListCellWithFavourite:(Results *)result;
 
 @end

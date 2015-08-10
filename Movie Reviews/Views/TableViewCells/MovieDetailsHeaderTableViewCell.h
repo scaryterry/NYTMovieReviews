@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class NYTResults;
-
+@class Results;
 @interface MovieDetailsHeaderTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick;
@@ -20,5 +20,6 @@
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 
 -(void)configureHeaderCellWithResult:(NYTResults *)result;
+-(void)configureHeaderCellWithFavourite:(Results *)result;
 
 @end

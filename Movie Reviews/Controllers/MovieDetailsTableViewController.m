@@ -15,6 +15,7 @@
 
 @interface MovieDetailsTableViewController ()<KINWebBrowserDelegate>
 @property (nonatomic,readonly,getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable;
+@property (nonatomic,readonly,getter=isUsingFavourites) BOOL usingFavourites;
 
 @end
 
@@ -58,7 +59,14 @@
         }
         case 1:
         {
-            rowCount = self.selectedMovie.relatedUrls.count;
+            if (self.isUsingFavourites)
+            {
+                rowCount = self.offlineSelection.relatedUrls.count;
+            }
+            else
+            {
+                rowCount = self.onlineSelection.relatedUrls.count;
+            }
             break;
         }
         default:
@@ -73,15 +81,42 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getMovieCellReuseIdentifierForRowAtIndexPath:indexPath] forIndexPath:indexPath];
+    NYTResults *resultToDisplay;
+    if (self.isUsingFavourites)
+    {
+        resultToDisplay = (NYTResults*) self.onlineSelection;
+        // simply casting it seems to be enough since both objects have identical properties and core data is smart enough to fetch all properties you are attempting to use
+    }
+    else
+    {
+        resultToDisplay = self.onlineSelection;
+    }
+
     if (indexPath.section == 0)
     {
+        if (self.isUsingFavourites)
+        {
+            [cell configureWithFavourite:self.offlineSelection];
+        }
+        else
+        {
+            [cell configureWithResult:self.onlineSelection];
 
-    [cell configureWithResult:self.selectedMovie];
+        }
 
     }
     else
     {
-        [self configureOverviewSectionWithResult:self.selectedMovie forCell:cell atIndexPath:indexPath];
+        if (self.isUsingFavourites)
+        {
+            [self configureOverviewSectionWithFavourite:self.offlineSelection forCell:cell atIndexPath:indexPath];
+        }
+        else
+        {
+            [self configureOverviewSectionWithResult:self.onlineSelection forCell:cell atIndexPath:indexPath];
+            
+        }
+
     }
     
     // Configure the cell...
@@ -93,8 +128,17 @@
     
     if (indexPath.section == 1)
     {
+        NYTResults *result;
+        if (self.isUsingFavourites)
+        {
+            result = (NYTResults*) self.onlineSelection;
+        }
+        else
+        {
+            result = self.onlineSelection;
+        }
 
-        NSString *urlToLoad = ((RelatedUrls *)self.selectedMovie.relatedUrls[indexPath.row]).url;
+        NSString *urlToLoad = ((RelatedUrls *)result.relatedUrls[indexPath.row]).url;
         [self performOpenMovieLink:urlToLoad];
     }
 }
@@ -102,15 +146,26 @@
 #pragma mark - UITableViewController Delegate Helper Methods
 -(void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    cell.textLabel.text = ((RelatedUrls *)result.relatedUrls[indexPath.row]).suggestedLinkText;
+    cell.textLabel.text = ((NYTRelatedUrls *)result.relatedUrls[indexPath.row]).suggestedLinkText;
+}
+-(void)configureOverviewSectionWithFavourite:(Results *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    cell.textLabel.text = ((RelatedUrls *)[result.relatedUrls allObjects][indexPath.row]).suggestedLinkText;
 }
 
 -(BOOL)isCapsuleReviewAvailable
 {
     NSString *capsuleReview;
     BOOL isAvailable = false;
+    if (self.isUsingFavourites)
+    {
+        capsuleReview = self.offlineSelection.capsuleReview;
+    }
+    else
+    {
+        capsuleReview = self.onlineSelection.capsuleReview;
+    }
     
-    capsuleReview = self.selectedMovie.capsuleReview;
     if (capsuleReview && capsuleReview.length > 0 )
     {
         isAvailable = true;
@@ -155,6 +210,19 @@
     return reuseIdentifier;
 }
 #pragma Helper Methods
+-(BOOL)isUsingFavourites
+{
+    BOOL usingFavourites = false;
+    if (self.offlineSelection)
+    {
+        usingFavourites = true;
+    }
+    else if (self.onlineSelection)
+    {
+        usingFavourites = false;
+    }
+    return usingFavourites;
+}
 #pragma Setup Methods
 -(void)setupInterface
 {
@@ -175,9 +243,15 @@
 
 - (IBAction)performAddToFavourites:(id)sender
 {
-    Results *itemToSave = [InteractWithModel initResultFromModel:self.selectedMovie];
-#warning add check if its in favourites
-    //    if (itemToSave is not in favourites)
+    Results *itemToSave;
+    if (self.onlineSelection) {
+        itemToSave = [InteractWithModel initResultFromModel:self.onlineSelection];
+    }
+    else
+    {
+        itemToSave = self.offlineSelection;
+    }
+//    if (itemToSave is not in favourites)
 //    {
     [self saveContext];
 //    }

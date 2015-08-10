@@ -127,7 +127,8 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     {
         MovieDetailsTableViewController *detailsController = segue.destinationViewController;
         Results *result = [self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
-        detailsController.selectedMovie = [InteractWithModel initResultFromCoreDataModel:result];
+//        detailsController.selectedMovie = [InteractWithModel initResultFromCoreDataModel:result] ;
+        detailsController.offlineSelection = result;
 //        detailsController.selectedMovie = (NYTResults *)result;
 
 //        NSMutableArray *urlArray = [NSMutableArray new];

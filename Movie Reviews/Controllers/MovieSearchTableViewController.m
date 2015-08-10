@@ -203,7 +203,8 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     if ([segue.identifier isEqualToString:SegueIdentifierOpenSearchDetails])
     {
         MovieDetailsTableViewController *detailsController = segue.destinationViewController;
-        detailsController.selectedMovie = sender;
+//        detailsController.selectedMovie = sender;
+        detailsController.onlineSelection = sender;
         
     }
 }

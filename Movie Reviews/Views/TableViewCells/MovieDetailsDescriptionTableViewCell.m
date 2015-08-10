@@ -7,6 +7,7 @@
 //
 
 #import "NYTResults.h"
+#import "Results.h"
 #import "MovieDetailsDescriptionTableViewCell.h"
 #import "UITableViewCell+Additions.h"
 @implementation MovieDetailsDescriptionTableViewCell
@@ -29,6 +30,15 @@
 
     [self fixCellLayout];
 }
+-(void)configureDescriptionCellWithFavourite:(Results *)result
+{
+    [self addText:result.displayTitle toLabel:self.labelTitle];
+    [self addText:result.openingDate toLabel:self.labelReleaseDate];
+    [self addText:result.dvdReleaseDate toLabel:self.labelDVDReleaseDate];
+    
+    [self fixCellLayout];
+}
+
 -(void)addText:(NSString *)text toLabel:(UILabel *)label
 {
     BOOL shouldHideLabel;

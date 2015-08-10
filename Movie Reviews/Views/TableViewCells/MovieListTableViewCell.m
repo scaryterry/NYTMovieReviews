@@ -8,6 +8,7 @@
 
 #import "MovieListTableViewCell.h"
 #import "NYTResults.h"
+#import "Results.h"
 #import "UITableViewCell+APICell.h"
 @implementation MovieListTableViewCell
 
@@ -41,6 +42,28 @@
     }
     [self fixCellLayout];
 }
+-(void)configureListCellWithFavourite:(Results *)result
+{
+    [self addText:result.displayTitle toLabel:self.labelTitle];
+    
+    [self addText:result.capsuleReview toLabel:self.labelReview];
+    
+    [self addText:result.byline toLabel:self.labelReviewer];
+    
+    [self addText:result.publicationDate toLabel:self.labelReviewDate];
+    //    self.labelCriticsPick.hidden = ([result.criticsPick boolValue]) ? false :true;
+    if ([result.criticsPick boolValue]) {
+        self.labelCriticsPick.hidden = false;
+        self.constraintCrtiticsToReviewer.constant = 0;
+    }
+    else
+    {
+        self.labelCriticsPick.hidden = true;
+        self.constraintCrtiticsToReviewer.constant = -self.labelCriticsPick.frame.size.width;
+    }
+    [self fixCellLayout];
+}
+
 -(void)addText:(NSString *)text toLabel:(UILabel *)label
 {
     BOOL shouldHideLabel;
