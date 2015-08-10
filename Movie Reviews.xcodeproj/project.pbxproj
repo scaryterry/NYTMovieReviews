@@ -26,6 +26,7 @@
 		438287BE1B75754400EBA58D /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287BD1B75754400EBA58D /* UITableView+Additions.m */; };
 		438287D11B758FD700EBA58D /* InteractWithAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287CE1B758FD700EBA58D /* InteractWithAPI.m */; };
 		438287D21B758FD700EBA58D /* UITableViewCell+APICell.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287D01B758FD700EBA58D /* UITableViewCell+APICell.m */; };
+		438CD7A41B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438CD7A31B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.m */; };
 		4394F7DF1B74BD44008D4B35 /* Movie_ReviewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7DE1B74BD44008D4B35 /* Movie_ReviewsTests.m */; };
 		4394F7EB1B74BFB6008D4B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7E91B74BFB6008D4B35 /* main.m */; };
 		4394F7FD1B74C02A008D4B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4394F7FC1B74C02A008D4B35 /* AppDelegate.m */; };
@@ -94,6 +95,8 @@
 		438287CE1B758FD700EBA58D /* InteractWithAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractWithAPI.m; sourceTree = "<group>"; };
 		438287CF1B758FD700EBA58D /* UITableViewCell+APICell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+APICell.h"; sourceTree = "<group>"; };
 		438287D01B758FD700EBA58D /* UITableViewCell+APICell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+APICell.m"; sourceTree = "<group>"; };
+		438CD7A21B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieOfflineFavouritesTableViewController.h; sourceTree = "<group>"; };
+		438CD7A31B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieOfflineFavouritesTableViewController.m; sourceTree = "<group>"; };
 		4394F7BC1B74BD44008D4B35 /* Movie Reviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Reviews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394F7D81B74BD44008D4B35 /* Movie ReviewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie ReviewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4394F7DD1B74BD44008D4B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				433807671B75206F00EB9122 /* MovieSearchTableViewController.m */,
 				4396F1EE1B771BF1000C5A4E /* MovieDetailsTableViewController.h */,
 				4396F1EF1B771BF1000C5A4E /* MovieDetailsTableViewController.m */,
+				438CD7A21B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.h */,
+				438CD7A31B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				433807551B74E67D00EB9122 /* NYTRelatedUrls.m in Sources */,
 				4394F81A1B74C6D6008D4B35 /* Link.m in Sources */,
 				4394F81D1B74C6D6008D4B35 /* Multimedia.m in Sources */,
+				438CD7A41B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.m in Sources */,
 				4396F2091B7756F4000C5A4E /* MovieListTableViewCell.m in Sources */,
 				434B85461B77910C00BE0F14 /* UITableViewCell+Additions.m in Sources */,
 				4394F81E1B74C6D6008D4B35 /* RelatedUrls.m in Sources */,

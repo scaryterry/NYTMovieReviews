@@ -11,6 +11,5 @@
 
 @interface MovieDetailsTableViewController : UITableViewController
 
-@property (strong, nonatomic) NYTResults *onlineSelection;
-@property (strong, nonatomic) Results *offlineSelection;
+@property (strong, nonatomic) NYTResults *selectedMovie;
 @end

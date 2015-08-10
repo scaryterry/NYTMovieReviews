@@ -26,4 +26,14 @@
 + (void)setResourcesForDataModel:(Multimedia *)multimediaModel fromModel:(NYTResults *)result;
 + (void)addRelatedUrlsToCoreDataModel:(Results *)coreDataModel fromModel:(NYTResults *)result;
 
+
++ (NYTResults *)initResultFromCoreDataModel:(Results *)result;
++ (NYTMovieSearch *)initMovieSearchFromCoreDataModel:(MovieSearch *)movieSearch;
++ (NYTMultimedia *)initMultimediaFromCoreDataModel:(Multimedia *)model;
++ (NYTRelatedUrls *)initRelatedUrlsFromCoreDataModel:(RelatedUrls *)relatedUrlsOrigin;
+
++ (void)setLinkForRegularModel:(NYTResults *)regularModel fromCoreDataModel:(Results *)result;
++ (void)setMultimediaForRegularModel:(NYTResults *)regularModel fromCoreDataModel:(Results *)result;
++ (void)setResourcesForRegularModel:(NYTMultimedia *)multimediaModel fromCoreDataModel:(Results *)result;
++ (void)addRelatedUrlsToRegularModel:(NYTResults *)regularModel fromCoreDataModel:(Results *)result;
 @end

@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 #import "InteractWithAPI.h"
 #import "DataModels.h"
-#import <MagicalRecord/MagicalRecord.h>
 #import <libextobjc/EXTScope.h>
 #import "AlertUser.h"
 #import "UIView+Additions.h"
@@ -204,7 +203,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     if ([segue.identifier isEqualToString:SegueIdentifierOpenSearchDetails])
     {
         MovieDetailsTableViewController *detailsController = segue.destinationViewController;
-        detailsController.onlineSelection = sender;
+        detailsController.selectedMovie = sender;
         
     }
 }
@@ -350,11 +349,6 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 }
 
 #pragma mark - Empty TableView methods - DZNEmptyDataSetDelegate methods
-
-- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
-{
-    return [UIImage imageNamed:@"empty_placeholder"];
-}
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {

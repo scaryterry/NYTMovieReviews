@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="2257" y="178"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Movie Offline Favourites Table View Controller-->
         <scene sceneID="buC-dX-o88">
             <objects>
-                <tableViewController id="u6M-yR-Hts" sceneMemberID="viewController">
+                <tableViewController id="u6M-yR-Hts" customClass="MovieOfflineFavouritesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PoA-ke-PKg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +219,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pui-HA-Zz4"/>
+        <segue reference="o8K-sl-d7h"/>
     </inferredMetricsTieBreakers>
 </document>
