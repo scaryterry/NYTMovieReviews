@@ -12,7 +12,7 @@
 #import "AlertUser.h"
 #import <KINWebBrowser/KINWebBrowserViewController.h>
 #import <AFNetworking.h>
-
+//#import "UITableViewCell+Additions.h"
 @interface MovieDetailsTableViewController ()<KINWebBrowserDelegate>
 @property (nonatomic,readonly,getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable;
 @property (nonatomic,readonly,getter=isMovieInFavourites) BOOL movieInFavourites;
@@ -140,6 +140,12 @@
         [self performOpenMovieLink:urlToLoad];
     }
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell animateCellScrolling];
+}
+
 
 #pragma mark - UITableViewController Delegate Helper Methods
 -(void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath

@@ -18,6 +18,7 @@
 #import "UITableViewCell+APICell.h"
 #import "UIScrollView+EmptyDataSet.h"
 #import "MovieDetailsTableViewController.h"
+//#import "UITableViewCell+Additions.h"
 static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDetails";
 
 @interface MovieOfflineFavouritesTableViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate,NSFetchedResultsControllerDelegate>
@@ -91,6 +92,138 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     [self performSegueWithIdentifier:SegueIdentifierOpenFavouritesDetails sender:nil];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell animateCellScrolling];
+}
+
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    CGFloat cachedHeight = [[self.cellHeightCache objectForKey:indexPath] floatValue];
+//    if (cachedHeight !=0)
+//    {
+//        //        NSString *outstr = [NSString stringWithFormat:@"return cached height for estimate:%f",cachedHeight];
+//        //        [GeneralMethods handleConsoleOutputMessage:nil outputMessage:outstr];
+//        return cachedHeight;
+//    }
+//    else
+//    {
+//        //        [GeneralMethods handleConsoleOutputMessage:nil outputMessage:@"retrun estimate"];
+//        switch (self.currentViewType)
+//        {
+//            case displayingBusiness://business
+//            {
+//                return 100.0f;
+//                break;
+//            }
+//            case displayingDeal://deal
+//            {
+//                return 140.0f;
+//                break;
+//            }
+//            case displayingJob://job *currently not being used, jobs reusing events cell
+//            case displayingEvent://event
+//            {
+//                return  175.0f;
+//                break;
+//            }
+//                
+//            default://invalid
+//            {
+//                return 50.0f;
+//                break;
+//            }
+//        }
+//    }
+//}
+//
+//
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    switch (self.currentViewType)
+//    {
+//        case displayingDeal:
+//        {
+//            return 140.0f;
+//            break;
+//        }
+//            
+//            //        case displayingEvent:
+//            //        {
+//            //            return 190.0f;
+//            //            break;
+//            //        }
+//            
+//        default:
+//        {
+//            CGFloat cachedHeight = [[self.cellHeightCache objectForKey:indexPath] floatValue];
+//            if (cachedHeight != tableView.estimatedRowHeight && cachedHeight!= 0 )
+//            {
+//                NSLog(@"return cached height:%f",cachedHeight);
+//                return cachedHeight;
+//                //            return (self.currentViewType == displayingBusiness)? cachedHeight:cachedHeight+1;
+//            }
+//            else
+//            {
+//                //            NSLog(@"return auto height");
+//                
+//                if ([UIDevice majorSystemVersion] >= 8)
+//                {
+//                    //                NSLog(@"return auto height");
+//                    return UITableViewAutomaticDimension;
+//                }
+//                else
+//                {
+//                    CGFloat cellHeight = [self tableViewCellHeightForiOS7:tableView calculateHeightForIndexPath:indexPath];
+//                    [CellConfiguration compareHeightOfCell:self.heightCell atIndexPath:indexPath cacheToUpdate:self.cellHeightCache];
+//                    
+//                    return cellHeight;
+//                }
+//            }
+//            
+//            break;
+//        }
+//    }
+//}
+//
+//- (CGFloat)tableViewCellHeightForiOS7:(UITableView *)tableView calculateHeightForIndexPath:(NSIndexPath *)indexPath
+//{
+//    switch (self.currentViewType)
+//    {
+//        case displayingBusiness://business
+//        {
+//#warning iOS7 autoheight step3
+//            [CellConfiguration configureBusinessCell:(BusinessTableViewCell *)self.heightCell forBusiness:self.dataSource[indexPath.section]]; //1
+//            break;
+//        }
+//        case displayingEvent://event
+//        {
+//            [CellConfiguration configureEventsCell:(EventsTableViewCell *)self.heightCell forEvent:self.dataSource[indexPath.section]]; //2
+//            break;
+//        }
+//        case displayingJob://job
+//        {
+//            [CellConfiguration configureJobsCell:(EventsTableViewCell *)self.heightCell forJob:self.dataSource[indexPath.section]];//3
+//            break;
+//        }
+//        default://invalid
+//        {
+//            return 150.0f;
+//            break;
+//        }
+//    }
+//    
+//#warning iOS7 autoheight step4
+//    CGFloat cellHeight = [self.heightCell returnCellAutoHeightForTableView:tableView];
+//    // Add an extra point to the height to account for the cell separator, which is added between the bottom
+//    // of the cell's contentView and the bottom of the table view cell.
+//    if (self.currentViewType == displayingBusiness)
+//    {
+//        cellHeight += 1;
+//    }
+//    
+//    return cellHeight;
+//}
 
 /*
 // Override to support conditional editing of the table view.

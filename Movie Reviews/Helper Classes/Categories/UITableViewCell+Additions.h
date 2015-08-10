@@ -10,5 +10,5 @@
 
 @interface UITableViewCell (Additions)
 -(void)fixCellLayout;
-
+-(void)animateCellScrolling;
 @end

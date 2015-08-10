@@ -18,6 +18,7 @@
 #import "UITableViewCell+APICell.h"
 #import "UIScrollView+EmptyDataSet.h"
 #import "MovieDetailsTableViewController.h"
+//#import "UITableViewCell+Additions.h"
 static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 
 @interface MovieSearchTableViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
@@ -132,6 +133,13 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     
 
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell animateCellScrolling];
+}
+
+
 #pragma mark - UITableViewDelegate Helper Methods
 //-(NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow
 //{
