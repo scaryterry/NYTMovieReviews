@@ -10,15 +10,12 @@
 
 @class Results,NYTResults;
 
-@interface RelatedUrls : NSManagedObject <NSCoding, NSCopying>
+@interface RelatedUrls : NSManagedObject
 
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSString *suggestedLinkText;
 @property (nonatomic, retain) Results *results;
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
-- (NSDictionary *)dictionaryRepresentation;
 
 
 

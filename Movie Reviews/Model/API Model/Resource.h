@@ -10,7 +10,7 @@
 
 @class Multimedia;
 
-@interface Resource : NSManagedObject <NSCoding, NSCopying>
+@interface Resource : NSManagedObject
 
 @property (nonatomic, retain) NSString *src;
 @property (nonatomic, retain) NSNumber *width;
@@ -18,9 +18,6 @@
 @property (nonatomic, retain) NSNumber *height;
 @property (nonatomic, retain) Multimedia *multimedia;
 
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
-- (NSDictionary *)dictionaryRepresentation;
 
 @end
 

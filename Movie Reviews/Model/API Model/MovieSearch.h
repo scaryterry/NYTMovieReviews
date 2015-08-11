@@ -10,7 +10,7 @@
 
 @class Results;
 @class NYTMovieSearch;
-@interface MovieSearch : NSManagedObject <NSCoding, NSCopying>
+@interface MovieSearch : NSManagedObject
 
 @property (nonatomic, retain) NSString *status;
 @property (nonatomic, retain) NSString *copyright;
@@ -21,13 +21,9 @@
 @end
 
 @interface MovieSearch (JSONModelerGeneratedAccessors)
-+ (MovieSearch *)initFromModel:(NYTMovieSearch *)model;
 - (void)addResultsObject:(Results *)value;
 - (void)removeResultsObject:(Results *)value;
 - (void)addResults:(NSSet *)value;
 - (void)removeResults:(NSSet *)value;
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
-- (NSDictionary *)dictionaryRepresentation;
 
 @end
