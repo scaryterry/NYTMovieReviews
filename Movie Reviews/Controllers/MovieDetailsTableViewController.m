@@ -12,12 +12,34 @@
 #import "AlertUser.h"
 #import <KINWebBrowser/KINWebBrowserViewController.h>
 #import <AFNetworking.h>
+#import "UIDevice+Additions.h"
+typedef NS_ENUM(NSUInteger, cellType) {
+    cellTypeHeader ,
+    cellTypeReview ,
+    cellTypeDetails ,
+};
+typedef NS_ENUM(NSUInteger, cellTypeCount) {
+    cellTypeCountAll = 3  ,
+    cellTypeCountNoReview = 2 ,
+};
+
+typedef NS_ENUM(NSUInteger, sectionType) {
+sectionTypeMovieInfo ,
+    sectionTypeMovieLinks ,
+};
 //#import "UITableViewCell+Additions.h"
 @interface MovieDetailsTableViewController ()<KINWebBrowserDelegate>
 @property (nonatomic,readonly,getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable;
 @property (nonatomic,readonly,getter=isMovieInFavourites) BOOL movieInFavourites;
 @property (nonatomic,assign) BOOL const initialCheckIsMovieInFavourites;
+
+@property (nonatomic,strong)Results *itemToSave;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonAddRemove;
+#warning iOS7 autoheight 1/4
+@property (strong, nonatomic) UITableViewCell *heightCellHeader;
+@property (strong, nonatomic) UITableViewCell *heightCellReviews;
+@property (strong, nonatomic) UITableViewCell *heightCellDetails;
+
 
 @end
 
@@ -25,6 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupTableViewCellType];
     [self setupInterface];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,17 +78,17 @@
     NSInteger rowCount = 0;
     switch (section)
     {
-        case 0:
+        case sectionTypeMovieInfo:
         {
-            rowCount = 3;
+            rowCount = cellTypeCountAll;
             if (!self.isCapsuleReviewAvailable)
             {
-                rowCount = 2;
+                rowCount = cellTypeCountNoReview;
             }
             
             break;
         }
-        case 1:
+        case sectionTypeMovieLinks:
         {
             if (self.offlineSelection)
             {
@@ -89,8 +112,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getMovieCellReuseIdentifierForRowAtIndexPath:indexPath] forIndexPath:indexPath];
-
-    if (indexPath.section == 0)
+    
+    if (indexPath.section == sectionTypeMovieInfo)
     {
         if (self.offlineSelection)
         {
@@ -99,9 +122,8 @@
         else
         {
             [cell configureWithResult:self.onlineSelection];
-
+            
         }
-
     }
     else
     {
@@ -114,7 +136,7 @@
             [self configureOverviewSectionWithResult:self.onlineSelection forCell:cell atIndexPath:indexPath];
             
         }
-
+        
     }
     
     // Configure the cell...
@@ -124,19 +146,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.section == 1)
+    if (indexPath.section == sectionTypeMovieLinks)
     {
         NSString *urlToLoad;
-
+        
         if (self.offlineSelection)
         {
-           urlToLoad = ((RelatedUrls *)self.offlineSelection.relatedUrls.allObjects[indexPath.row]).url;
+            urlToLoad = ((RelatedUrls *)self.offlineSelection.relatedUrls.allObjects[indexPath.row]).url;
         }
         else
         {
             urlToLoad = ((NYTRelatedUrls *)self.onlineSelection.relatedUrls[indexPath.row]).url;
         }
-
+        
         [self performOpenMovieLink:urlToLoad];
     }
 }
@@ -146,6 +168,77 @@
     [cell animateCellScrolling];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.0f;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([UIDevice majorSystemVersion] >= 8)
+    {
+        return UITableViewAutomaticDimension;
+    }
+    else if (indexPath.section == sectionTypeMovieInfo)
+    {
+#warning iOS7 autoheight 3/3
+        CGFloat cellHeight = [self tableViewCellHeightForiOS7:tableView calculateHeightForIndexPath:indexPath];
+        return cellHeight;
+    }
+    else // overview cells which use the default cells so we cant calculate it automatically like the rest of the cell types
+    {
+        return 60.0f;
+    }
+}
+
+- (CGFloat)tableViewCellHeightForiOS7:(UITableView *)tableView calculateHeightForIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat cellHeight = 100;
+    UITableViewCell *heightCell;
+    switch (indexPath.row)
+    {
+        case cellTypeHeader:
+        {
+            heightCell = self.heightCellHeader;
+            break;
+        }
+            
+        case cellTypeReview:
+        {
+            heightCell = self.heightCellReviews;
+            if (self.isCapsuleReviewAvailable) // if there isnt a capsule review then we dont break so that the cell will get configured as self.heightCellDetails from below
+            {
+                break;
+            }
+        }
+            
+        case cellTypeDetails:
+        {
+            heightCell = self.heightCellDetails;
+            break;
+        }
+        default:
+            break;
+    }
+    if (self.onlineSelection)
+    {
+        [heightCell configureWithResult:self.onlineSelection];
+    }
+    else
+    {
+        [heightCell configureWithFavourite:self.offlineSelection];
+        
+    }
+#warning iOS7 autoheight 4/4
+    cellHeight = [heightCell returnCellAutoHeightForTableView:tableView];
+
+    // Add an extra point to the height to account for the cell separator, which is added between the bottom
+    // of the cell's contentView and the bottom of the table view cell.
+    cellHeight += 1;
+    
+    return cellHeight;
+}
 
 #pragma mark - UITableViewController Delegate Helper Methods
 -(void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
@@ -213,7 +306,7 @@
     }
     return reuseIdentifier;
 }
-#pragma Helper Methods
+#pragma mark - Helper Methods
 //-(BOOL)isUsingFavourites
 //{
 //    BOOL usingFavourites = false;
@@ -227,21 +320,33 @@
 //    }
 //    return usingFavourites;
 //}
-#pragma Setup Methods
+#pragma mark - Setup Methods
 -(void)setupInterface
 {
     self.tableView.tableFooterView = [UIView new];// trick to remove the empty cells at the bottom of the view
     self.initialCheckIsMovieInFavourites = self.isMovieInFavourites;
     self.title = @"Movie Details";
-    // register the custom tableview cells we want to use
-    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsHeader bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsHeader];
-    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsReview bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsReview];
-    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsDescription bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsDescription];
     
     self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
 }
+- (void)setupTableViewCellType
+{
+    // register the custom tableview cells we want to use
+    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsHeader bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsHeader];
+    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsReview bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsReview];
+    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsDescription bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsDescription];
+#warning iOS7 autoheight 2/4
+    if ([UIDevice majorSystemVersion] < 8 )
+    {
+        self.heightCellHeader  = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifierMovieDetailsHeader];
+        self.heightCellReviews  = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifierMovieDetailsReview];
+        self.heightCellDetails  = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifierMovieDetailsDescription];
+
+    }
+}
+
 -(void)setupBarButton
 {
     if (self.offlineSelection)
@@ -259,20 +364,26 @@
             self.barButtonAddRemove.title = @"Add Favourite";
         }
     }
-
+    
 }
 -(BOOL)isMovieInFavourites
 {
-    //check if any of the previously saved model objects has the same movieId, in that case it means we already saved it
-    if (self.onlineSelection)
+    BOOL isInFavourites = false;
+    NSArray *favouriteMoviesIDs = [[Results MR_findAll] valueForKey:@"nytMovieId"];
+    //if array is empty we wont try and compare since that tells us that they dont have any favourites and if we try to compare using containsObject on a nil array - when no favourites are there - we will get a crash
+    if (favouriteMoviesIDs && favouriteMoviesIDs.count > 0)
     {
-        return [[[Results MR_findAll] valueForKey:@"nytMovieId"] containsObject:self.onlineSelection.nytMovieId];
+        //check if any of the previously saved model objects has the same movieId, in that case it means we already saved it
+        if (self.onlineSelection)
+        {
+            isInFavourites = [favouriteMoviesIDs containsObject:self.onlineSelection.nytMovieId];
+        }
+        else
+        {
+            isInFavourites = [favouriteMoviesIDs containsObject:self.offlineSelection.nytMovieId];
+        }
     }
-    else
-    {
-        return [[[Results MR_findAll] valueForKey:@"nytMovieId"] containsObject:self.offlineSelection.nytMovieId];
-
-    }
+    return isInFavourites;
 }
 
 
@@ -286,13 +397,13 @@
         if (!self.initialCheckIsMovieInFavourites)
         {
             //create the entity from the NYT model so that it gets added to the current context and its saved when the context is saved
-            Results *itemToSave = [InteractWithModel initResultFromModel:self.onlineSelection];
+            self.itemToSave = [InteractWithModel initResultFromModel:self.onlineSelection];
         }
         else
         {
-            Results *existingMovie = [Results MR_findFirstByAttribute:@"nytMovieId" withValue:self.onlineSelection.nytMovieId];
-            NSLog(@"existing result: %@ opened result: %@",existingMovie.nytMovieId, self.onlineSelection.nytMovieId);
-            [existingMovie MR_deleteEntity];
+            self.itemToSave = [Results MR_findFirstByAttribute:@"nytMovieId" withValue:self.onlineSelection.nytMovieId];
+            NSLog(@"existing result: %@ opened result: %@",self.itemToSave.nytMovieId, self.onlineSelection.nytMovieId);
+            [self.itemToSave MR_deleteEntity];
             
         }
     }
@@ -361,7 +472,7 @@
             {
                 alertMsg = @"Error Removing From Favourites";
             }
-
+            
             [AlertUser showError:error.description customTitle:alertMsg];
             NSLog(@"Error saving context: %@", error.description);
         }

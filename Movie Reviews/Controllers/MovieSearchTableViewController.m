@@ -19,16 +19,20 @@
 #import "UIScrollView+EmptyDataSet.h"
 #import "MovieDetailsTableViewController.h"
 //#import "UITableViewCell+Additions.h"
+#import "UIDevice+Additions.h"
+
 static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 
 @interface MovieSearchTableViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
-@property (nonatomic, strong) NYTMovieSearch *searchResults;
-//@property (nonatomic, strong) MovieSearch *searchResults;
+@property (nonatomic, strong) NYTMovieSearch *movieSearch;
+//@property (nonatomic, strong) NYTResults *searchResults;
 @property (nonatomic, strong)NSString *searchTerm;
 @property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;
 @property (nonatomic, readonly,getter=getAlertPosition)CGPoint alertPosition;
 @property (nonatomic, strong) NSManagedObjectContext *savingContext;
 @property (nonatomic, readonly, getter=shouldDisplayFavourites)BOOL displayFavourites;
+#warning iOS7 autoheight 1/4
+@property (strong, nonatomic) UITableViewCell *heightCell;
 @end
 
 @implementation MovieSearchTableViewController
@@ -36,7 +40,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self setupTableViewCellType];
     [self setupInterface];
     [self performSelector:@selector(setupConnectivityCheck) withObject:nil afterDelay:0.3f];
     //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
@@ -62,7 +66,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 //            }
 //            self.saved.results = [NSSet setWithArray:savedStuff];
 //            [self.tableView reloadData];
-////            self.searchResults = [NYTMovieSearch modelObjectWithDictionary:savedStuff];
+////            self.movieSearch = [NYTMovieSearch modelObjectWithDictionary:savedStuff];
 //
 //            //        Results *result = [Results MR_createEntity];
 //            
@@ -91,9 +95,9 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-//    NSInteger count = (self.shouldDisplayFavourites) ? self.saved.results.count :self.searchResults.results.count;
+//    NSInteger count = (self.shouldDisplayFavourites) ? self.saved.results.count :self.movieSearch.results.count;
     
-    return self.searchResults.results.count;
+    return self.movieSearch.results.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,7 +114,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 //
 //    }
             cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-        NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
+    NYTResults *result = self.movieSearch.results[indexPath.row];
         [cell configureWithResult:result];
 
     return cell;
@@ -124,11 +128,11 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NYTResults *result = [InteractWithModel selectionFromResults:self.searchResults selectedRow:indexPath.row];
+//    self.searchResults = self.movieSearch.results[indexPath.row];
 //    [NSManagedObjectContext MR_resetDefaultContext];
 //    self.result = [InteractWithModel initResultFromModel:result];
 //    NSLog(@"self.result :%@",self.result);
-    [self performSegueWithIdentifier:SegueIdentifierOpenSearchDetails sender:result];
+    [self performSegueWithIdentifier:SegueIdentifierOpenSearchDetails sender:nil];
 //    [self saveContext];
     
 
@@ -138,66 +142,41 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 {
     [cell animateCellScrolling];
 }
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.0f;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([UIDevice majorSystemVersion] >= 8)
+    {
+        return UITableViewAutomaticDimension;
+    }
+    else
+    {
+        CGFloat cellHeight = [self tableViewCellHeightForiOS7:tableView calculateHeightForIndexPath:indexPath];
+        return cellHeight;
+    }
+}
 
 
 #pragma mark - UITableViewDelegate Helper Methods
-//-(NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow
-//{
-////    NYTResults *selection = [NYTResults new];
-////    selection = results.results[selectedRow];
-//    return results.results[selectedRow];
-//}
+- (CGFloat)tableViewCellHeightForiOS7:(UITableView *)tableView calculateHeightForIndexPath:(NSIndexPath *)indexPath
+{
+#warning iOS7 autoheight 3/3
 
-//-(void)configureCell:(UITableViewCell *)cell withResult:(Results *)result
-//{
-//    NSString *details;
-//    //check reuseIdentifier so that we can display different content for each cell
-//    if ([cell.reuseIdentifier isEqualToString:CellIdentifierNormal])
-//    {
-//        details = result.capsuleReview;
-//    }
-//    else
-//    {
-//        details = result.openingDate;
-//    }
-//    cell.textLabel.text = result.sortName;
-//    cell.detailTextLabel.text = details;
-//    
-//}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    [self.heightCell configureWithResult:self.movieSearch.results[indexPath.row]];
+    
+#warning iOS7 autoheight 4/4
+    CGFloat cellHeight = [self.heightCell returnCellAutoHeightForTableView:tableView];
+    // Add an extra point to the height to account for the cell separator, which is added between the bottom
+    // of the cell's contentView and the bottom of the table view cell.
+    cellHeight += 1;
+    
+    return cellHeight;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Navigation
 
@@ -209,7 +188,8 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     {
         MovieDetailsTableViewController *detailsController = segue.destinationViewController;
 //        detailsController.selectedMovie = sender;
-        detailsController.onlineSelection = sender;
+        
+        detailsController.onlineSelection = self.movieSearch.results[self.activeTable.indexPathForSelectedRow.row];
         
     }
 }
@@ -241,7 +221,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 #pragma mark - UISearchDisplayController Helper Methods
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    self.searchResults = nil;
+    self.movieSearch = nil;
     if (![AFNetworkReachabilityManager sharedManager].reachable)
     {
         NSString *message = @"Internet Required To Search";
@@ -273,7 +253,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
          }
          else if (searchResults)
          {
-             self.searchResults = searchResults;
+             self.movieSearch = searchResults;
              self.searchTerm = movieName;
              [self.activeTable reloadData];
          }
@@ -294,7 +274,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 
 -(BOOL)shouldDisplayFavourites
 {
-    return  (self.searchResults.results.count==0) ? true :false;
+    return  (self.movieSearch.results.count==0) ? true :false;
 }
 
 
@@ -302,24 +282,32 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 -(void)setupInterface
 {
     self.tableView.tableFooterView = [UIView new];// trick to remove the empty cells at the bottom of the view
-#warning Search cell change 2/3
-    [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
-    //to use the default search cells uncomment below and delete the above line
-//    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
-    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
 
     self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
+    
 #warning Search cell change 3/3
-//unessesary with default search cell so delete below
+//unessesary with default search cell so delete below as well as their respective delegate methods
     self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 100.0f;
     self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
 //self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
 
 }
-
+- (void)setupTableViewCellType
+{
+#warning Search cell change 2/3
+    [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
+    //to use the default search cells uncomment below and delete the above line
+    //    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
+    [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
+#warning iOS7 autoheight 2/4
+    if ([UIDevice majorSystemVersion] < 8 )
+    {
+        self.heightCell  = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifierMovieList];
+    }
+}
 - (void)setupConnectivityCheck
 {
     [self.tableView reloadData];

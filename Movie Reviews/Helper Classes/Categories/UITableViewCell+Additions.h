@@ -10,5 +10,6 @@
 
 @interface UITableViewCell (Additions)
 -(void)fixCellLayout;
+-(CGFloat)returnCellAutoHeightForTableView:(UITableView *)tableView;
 -(void)animateCellScrolling;
 @end

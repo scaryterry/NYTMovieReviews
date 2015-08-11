@@ -10,10 +10,10 @@
 
 @interface NYTResource : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *src;
-@property (nonatomic, assign) NSNumber *width;
-@property (nonatomic, strong) NSString *type;
-@property (nonatomic, assign) NSNumber *height;
+@property (nonatomic, copy) NSString *src;
+@property (nonatomic, copy) NSNumber *width;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSNumber *height;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

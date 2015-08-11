@@ -10,8 +10,8 @@
 @class NYTResults, NYTMovieSearch,Results, MovieSearch,RelatedUrls,NYTRelatedUrls,Multimedia,NYTMultimedia;
 @interface InteractWithModel : NSObject
 
-+ (NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow;
-+ (Results *)selectionFromFavourites:(MovieSearch *)results selectedRow:(NSInteger)selectedRow;
+//+ (NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow;
+//+ (Results *)selectionFromFavourites:(MovieSearch *)results selectedRow:(NSInteger)selectedRow;
 
 + (Results *)initResultFromModel:(NYTResults *)result;
 + (Results *)initResultFromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch;

@@ -11,24 +11,24 @@
 
 @interface NYTResults : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *capsuleReview;
-@property (nonatomic, strong) NSString *dateUpdated;
-@property (nonatomic, strong) NSString *summaryShort;
-@property (nonatomic, strong) NSString *headline;
-@property (nonatomic, strong) NSString *thousandBest;
-@property (nonatomic, strong) NSString *byline;
-@property (nonatomic, strong) NSString *dvdReleaseDate;
-@property (nonatomic, strong) NYTLink *link;
-@property (nonatomic, strong) NSString *mpaaRating;
-@property (nonatomic, strong) NYTMultimedia *multimedia;
-@property (nonatomic, strong) NSString *publicationDate;
-@property (nonatomic, strong) NSString *openingDate;
-@property (nonatomic, strong) NSString *displayTitle;
-@property (nonatomic, strong) NSArray *relatedUrls;
-@property (nonatomic, strong) NSString *sortName;
-@property (nonatomic, strong) NSString *seoName;
-@property (nonatomic, assign) NSNumber *criticsPick;
-@property (nonatomic, assign) NSNumber *nytMovieId;
+@property (nonatomic, copy) NSString *capsuleReview;
+@property (nonatomic, copy) NSString *dateUpdated;
+@property (nonatomic, copy) NSString *summaryShort;
+@property (nonatomic, copy) NSString *headline;
+@property (nonatomic, copy) NSString *thousandBest;
+@property (nonatomic, copy) NSString *byline;
+@property (nonatomic, copy) NSString *dvdReleaseDate;
+@property (nonatomic, copy) NYTLink *link;
+@property (nonatomic, copy) NSString *mpaaRating;
+@property (nonatomic, copy) NYTMultimedia *multimedia;
+@property (nonatomic, copy) NSString *publicationDate;
+@property (nonatomic, copy) NSString *openingDate;
+@property (nonatomic, copy) NSString *displayTitle;
+@property (nonatomic, copy) NSArray *relatedUrls;
+@property (nonatomic, copy) NSString *sortName;
+@property (nonatomic, copy) NSString *seoName;
+@property (nonatomic, copy) NSNumber *criticsPick;
+@property (nonatomic, copy) NSNumber *nytMovieId;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

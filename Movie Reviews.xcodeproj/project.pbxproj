@@ -47,6 +47,7 @@
 		4396F2091B7756F4000C5A4E /* MovieListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396F2071B7756F4000C5A4E /* MovieListTableViewCell.m */; };
 		4396F20A1B7756F4000C5A4E /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4396F2081B7756F4000C5A4E /* MovieListTableViewCell.xib */; };
 		43F1A3761B75EF0000823C3A /* InteractWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F1A3751B75EF0000823C3A /* InteractWithModel.m */; };
+		43FCF1D01B79BC1600DE33EB /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FCF1CF1B79BC1600DE33EB /* UIDevice+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,8 @@
 		4396F2081B7756F4000C5A4E /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
 		43F1A3741B75EF0000823C3A /* InteractWithModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractWithModel.h; sourceTree = "<group>"; };
 		43F1A3751B75EF0000823C3A /* InteractWithModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractWithModel.m; sourceTree = "<group>"; };
+		43FCF1CE1B79BC1600DE33EB /* UIDevice+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Additions.h"; sourceTree = "<group>"; };
+		43FCF1CF1B79BC1600DE33EB /* UIDevice+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additions.m"; sourceTree = "<group>"; };
 		A309AFB8B24D5230AF27604A /* Pods-Movie Reviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Reviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Reviews/Pods-Movie Reviews.release.xcconfig"; sourceTree = "<group>"; };
 		F15EE6641F552F8CB6D0DC91 /* libPods-Movie Reviews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movie Reviews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -322,6 +325,8 @@
 				438287BD1B75754400EBA58D /* UITableView+Additions.m */,
 				434B85441B77910C00BE0F14 /* UITableViewCell+Additions.h */,
 				434B85451B77910C00BE0F14 /* UITableViewCell+Additions.m */,
+				43FCF1CE1B79BC1600DE33EB /* UIDevice+Additions.h */,
+				43FCF1CF1B79BC1600DE33EB /* UIDevice+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				4394F81C1B74C6D6008D4B35 /* MovieSearch.m in Sources */,
 				433807551B74E67D00EB9122 /* NYTRelatedUrls.m in Sources */,
 				4394F81A1B74C6D6008D4B35 /* Link.m in Sources */,
+				43FCF1D01B79BC1600DE33EB /* UIDevice+Additions.m in Sources */,
 				4394F81D1B74C6D6008D4B35 /* Multimedia.m in Sources */,
 				438CD7A41B78AE6A00F788DE /* MovieOfflineFavouritesTableViewController.m in Sources */,
 				4396F2091B7756F4000C5A4E /* MovieListTableViewCell.m in Sources */,

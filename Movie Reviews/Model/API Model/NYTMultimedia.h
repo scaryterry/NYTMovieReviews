@@ -11,7 +11,7 @@
 
 @interface NYTMultimedia : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NYTResource *resource;
+@property (nonatomic, copy) NYTResource *resource;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

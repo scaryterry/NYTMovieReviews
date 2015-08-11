@@ -9,10 +9,10 @@
 
 @interface NYTMovieSearch : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *status;
-@property (nonatomic, strong) NSArray *results;
-@property (nonatomic, strong) NSString *copyright;
-@property (nonatomic, assign) NSNumber *numResults;
+@property (nonatomic, copy) NSString *status;
+@property (nonatomic, copy) NSArray *results;
+@property (nonatomic, copy) NSString *copyright;
+@property (nonatomic, copy) NSNumber *numResults;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

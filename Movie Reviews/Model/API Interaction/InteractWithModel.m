@@ -10,16 +10,16 @@
 #import "DataModels.h"
 @implementation InteractWithModel
 
-+ (NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow
-{
-    return results.results[selectedRow];
-}
-
-+ (Results *)selectionFromFavourites:(MovieSearch *)results selectedRow:(NSInteger)selectedRow
-{
-    NSArray *temp = results.results.allObjects;
-    return temp[selectedRow];
-}
+//+ (NYTResults *)selectionFromResults:(NYTMovieSearch *)results selectedRow:(NSInteger)selectedRow
+//{
+//    return results.results[selectedRow];
+//}
+//
+//+ (Results *)selectionFromFavourites:(MovieSearch *)results selectedRow:(NSInteger)selectedRow
+//{
+//    NSArray *temp = results.results.allObjects;
+//    return temp[selectedRow];
+//}
 
 //+ (Results *)initResult:(Results *)resultForCoreData fromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch
 + (Results *)initResultFromModel:(NYTResults *)result

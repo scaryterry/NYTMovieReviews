@@ -11,9 +11,9 @@
 
 @interface NYTLink : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *type;
-@property (nonatomic, strong) NSString *url;
-@property (nonatomic, strong) NSString *suggestedLinkText;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *suggestedLinkText;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
