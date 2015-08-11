@@ -22,10 +22,13 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI5-oL-ldr">
                         <rect key="frame" x="8" y="36" width="36" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="KI9-Zi-5aR"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGQ-Cv-LZ4">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGQ-Cv-LZ4">
                         <rect key="frame" x="48" y="38" width="28" height="17"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <nil key="highlightedColor"/>
@@ -65,10 +68,11 @@
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nGQ-Cv-LZ4" secondAttribute="bottom" constant="11" id="1gr-5p-YaK"/>
                     <constraint firstItem="xb4-0u-dEA" firstAttribute="leading" secondItem="ukF-QT-JMM" secondAttribute="trailing" constant="4" id="5HM-98-nPl"/>
                     <constraint firstItem="TlD-Ss-Bo9" firstAttribute="leading" secondItem="OCX-ax-YXN" secondAttribute="trailing" constant="4" id="Aby-gj-v6m"/>
-                    <constraint firstItem="ukF-QT-JMM" firstAttribute="top" secondItem="OCX-ax-YXN" secondAttribute="bottom" constant="8" id="CL9-7F-9u1"/>
+                    <constraint firstItem="ukF-QT-JMM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OCX-ax-YXN" secondAttribute="bottom" constant="8" id="CL9-7F-9u1"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TlD-Ss-Bo9" secondAttribute="bottom" constant="11" id="HCa-il-Spc"/>
                     <constraint firstItem="OCX-ax-YXN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="IYl-QH-Vq4"/>
                     <constraint firstItem="xb4-0u-dEA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGQ-Cv-LZ4" secondAttribute="bottom" constant="11" id="L2f-4q-g27"/>
+                    <constraint firstItem="ukF-QT-JMM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGQ-Cv-LZ4" secondAttribute="bottom" constant="9" id="Msg-g4-fsi"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="nGQ-Cv-LZ4" secondAttribute="trailing" constant="8" id="OOX-OV-4l5"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="TlD-Ss-Bo9" secondAttribute="trailing" constant="8" id="STY-2h-X9Z"/>
                     <constraint firstAttribute="centerX" secondItem="OCX-ax-YXN" secondAttribute="centerX" constant="99.5" id="TeT-gE-oH0"/>
@@ -78,7 +82,7 @@
                     <constraint firstAttribute="bottom" secondItem="xb4-0u-dEA" secondAttribute="bottom" constant="9" id="gpv-eS-Urg"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5YE-jY-GJA" secondAttribute="trailing" constant="8" id="gwL-Gj-DAP"/>
                     <constraint firstItem="ukF-QT-JMM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kBZ-RE-EQo"/>
-                    <constraint firstItem="OCX-ax-YXN" firstAttribute="top" secondItem="jI5-oL-ldr" secondAttribute="bottom" constant="8" id="llh-6d-xqu"/>
+                    <constraint firstItem="OCX-ax-YXN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jI5-oL-ldr" secondAttribute="bottom" constant="8" id="llh-6d-xqu"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jI5-oL-ldr" secondAttribute="bottom" constant="8" id="lr5-Uf-0xw"/>
                     <constraint firstAttribute="centerY" secondItem="OCX-ax-YXN" secondAttribute="centerY" constant="-14" id="lsi-bQ-wEm"/>
                     <constraint firstItem="xb4-0u-dEA" firstAttribute="top" secondItem="TlD-Ss-Bo9" secondAttribute="bottom" constant="11" id="njk-fo-CWo"/>
@@ -90,6 +94,7 @@
                     <constraint firstAttribute="bottom" secondItem="ukF-QT-JMM" secondAttribute="bottom" constant="8" id="vc7-FQ-0ds"/>
                     <constraint firstItem="TlD-Ss-Bo9" firstAttribute="top" secondItem="nGQ-Cv-LZ4" secondAttribute="bottom" constant="11" id="w57-rV-cqg"/>
                     <constraint firstItem="jI5-oL-ldr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="yl5-Rn-fjD"/>
+                    <constraint firstItem="OCX-ax-YXN" firstAttribute="top" secondItem="nGQ-Cv-LZ4" secondAttribute="bottom" constant="9" id="z3o-qp-l8e"/>
                     <constraint firstItem="nGQ-Cv-LZ4" firstAttribute="top" secondItem="5YE-jY-GJA" secondAttribute="bottom" constant="10" id="zLg-Se-gg0"/>
                 </constraints>
                 <variation key="default">
