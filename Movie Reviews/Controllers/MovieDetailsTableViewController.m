@@ -13,29 +13,62 @@
 #import <KINWebBrowser/KINWebBrowserViewController.h>
 #import <AFNetworking.h>
 #import "UIDevice+Additions.h"
-typedef NS_ENUM(NSUInteger, cellType) {
-    cellTypeHeader ,
-    cellTypeReview ,
-    cellTypeDetails ,
-};
-typedef NS_ENUM(NSUInteger, cellTypeCount) {
-    cellTypeCountAll = 3  ,
-    cellTypeCountNoReview = 2 ,
+
+/**
+ *  Used to differentiate between the different custom cell types used in the MovieDetailsTableViewController
+ */
+typedef NS_ENUM(NSUInteger, cellType){
+    /**
+     *  Used for the header cell
+     */
+    cellTypeHeader,
+    /**
+     *  Used for the review cell
+     */
+    cellTypeReview,
+    /**
+     *  Used for the movie details cell
+     */
+    cellTypeDetails,
 };
 
-typedef NS_ENUM(NSUInteger, sectionType) {
-sectionTypeMovieInfo ,
-    sectionTypeMovieLinks ,
+/**
+ *  Used to indicate wether we will display all cell types or we wont show the reviews cell
+ */
+typedef NS_ENUM(NSUInteger, cellTypeCount){
+    /**
+     *  Indicates to use all cell types
+     */
+    cellTypeCountAll = 3,
+    /**
+     *  Indicates that the review cell wont be used
+     */
+    cellTypeCountNoReview = 2,
 };
-//#import "UITableViewCell+Additions.h"
+
+/**
+ *  Used to to define the type of section in the tableview
+ */
+typedef NS_ENUM(NSUInteger, sectionType){
+    /**
+     *  Indicates that the section is for the movie info that uses the custom cells
+     */
+    sectionTypeMovieInfo,
+    /**
+     *  Indicates that the section is for the movie links that uses a default tableviewcell
+     */
+    sectionTypeMovieLinks,
+};
+
 @interface MovieDetailsTableViewController ()<KINWebBrowserDelegate>
 @property (nonatomic,readonly,getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable;
 @property (nonatomic,readonly,getter=isMovieInFavourites) BOOL movieInFavourites;
-@property (nonatomic,assign) BOOL const initialCheckIsMovieInFavourites;
+@property (nonatomic,assign) BOOL const initialCheckIsMovieInFavourites;//we need this besides the above to store the value of above property so that this can be used by the saveContext method to determine what was supposed to happen - was it supposed to add or remove, this affects the message it displays. this gets assigned before the save context method fires because if we call the movieInFavourites instead the answer we will get wont be relevant
 
 @property (nonatomic,strong)Results *itemToSave;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonAddRemove;
 #warning iOS7 autoheight 1/4
+// The cells below will be used on iOS7 to calculate the cell height for each custom cell type
 @property (strong, nonatomic) UITableViewCell *heightCellHeader;
 @property (strong, nonatomic) UITableViewCell *heightCellReviews;
 @property (strong, nonatomic) UITableViewCell *heightCellDetails;
@@ -231,7 +264,7 @@ sectionTypeMovieInfo ,
         
     }
 #warning iOS7 autoheight 4/4
-    cellHeight = [heightCell returnCellAutoHeightForTableView:tableView];
+    cellHeight = [heightCell returnCellAutoHeight];
 
     // Add an extra point to the height to account for the cell separator, which is added between the bottom
     // of the cell's contentView and the bottom of the table view cell.
@@ -241,15 +274,36 @@ sectionTypeMovieInfo ,
 }
 
 #pragma mark - UITableViewController Delegate Helper Methods
+
+/**
+ *  Configures the overview section cells from online search results
+ *
+ *  @param result    The online search result with the movie we want to display information for
+ *  @param cell      The cell that will get configured
+ *  @param indexPath The indexPath of the cell we want to configure
+ */
 -(void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     cell.textLabel.text = ((NYTRelatedUrls *)result.relatedUrls[indexPath.row]).suggestedLinkText;
 }
+
+/**
+ *  Configures the overview section cells from favourites
+ *
+ *  @param result    The result from favourites with the movie we want to display information for
+ *  @param cell      The cell that will get configured
+ *  @param indexPath The indexPath of the cell we want to configure
+ */
 -(void)configureOverviewSectionWithFavourite:(Results *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     cell.textLabel.text = ((RelatedUrls *)result.relatedUrls.allObjects[indexPath.row]).suggestedLinkText;
 }
 
+/**
+ *  Using this we determine how many cells the table will display, if there isnt a capsule review available then we dont want to display a blank cell
+ *
+ *  @return Wether the selected movie has a small review available.
+ */
 -(BOOL)isCapsuleReviewAvailable
 {
     NSString *capsuleReview;
@@ -269,6 +323,14 @@ sectionTypeMovieInfo ,
     }
     return isAvailable;
 }
+
+/**
+ *  Is used to return the cell identifier the current indexPath is supposed to have
+ *
+ *  @param indexPath The indexPath of the cell about to be configured
+ *
+ *  @return The cell identifier for a cell based on the indexPath
+ */
 -(NSString *)getMovieCellReuseIdentifierForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *reuseIdentifier = CellIdentifierNormal;
@@ -306,37 +368,30 @@ sectionTypeMovieInfo ,
     }
     return reuseIdentifier;
 }
-#pragma mark - Helper Methods
-//-(BOOL)isUsingFavourites
-//{
-//    BOOL usingFavourites = false;
-//    if (self.offlineSelection)
-//    {
-//        usingFavourites = true;
-//    }
-//    else if (self.onlineSelection)
-//    {
-//        usingFavourites = false;
-//    }
-//    return usingFavourites;
-//}
+
 #pragma mark - Setup Methods
+/**
+ *  Sets up properties that relate to the user interface in general
+ */
 -(void)setupInterface
 {
     self.tableView.tableFooterView = [UIView new];// trick to remove the empty cells at the bottom of the view
     self.initialCheckIsMovieInFavourites = self.isMovieInFavourites;
     self.title = @"Movie Details";
-    
     self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
 }
+
+/**
+ *  Registers the custom cell types the tableview will use
+ */
 - (void)setupTableViewCellType
 {
     // register the custom tableview cells we want to use
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsHeader bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsHeader];
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsReview bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsReview];
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieDetailsDescription bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieDetailsDescription];
+    
 #warning iOS7 autoheight 2/4
     if ([UIDevice majorSystemVersion] < 8 )
     {
@@ -347,6 +402,9 @@ sectionTypeMovieInfo ,
     }
 }
 
+/**
+ *  Sets up the bar button that can be used to save or remove from favourites
+ */
 -(void)setupBarButton
 {
     if (self.offlineSelection)
@@ -366,6 +424,11 @@ sectionTypeMovieInfo ,
     }
     
 }
+/**
+ *  Custom getter for property that checks if the movie is in favourites already.
+ *
+ *  @return Yes Or No value depending if the movie is in favourites or not
+ */
 -(BOOL)isMovieInFavourites
 {
     BOOL isInFavourites = false;
@@ -388,6 +451,11 @@ sectionTypeMovieInfo ,
 
 
 #pragma mark - IBActions
+/**
+ *  Attempts to add or remove the movie from favourites depending if its in favourites or not
+ *
+ *  @param sender The button that triggered this
+ */
 - (IBAction)performAddRemoveFavourite:(id)sender
 {
     self.initialCheckIsMovieInFavourites = self.isMovieInFavourites;
@@ -418,7 +486,11 @@ sectionTypeMovieInfo ,
 }
 
 
-
+/**
+ *  Opens the selected link from the sectionTypeMovieLinks section in a browser within the app
+ *
+ *  @param link The string representation of the URL about to be displayed
+ */
 - (void)performOpenMovieLink:(NSString *)link
 {
     if ([[AFNetworkReachabilityManager sharedManager] isReachable]) // has internet connection?
@@ -436,18 +508,13 @@ sectionTypeMovieInfo ,
     {
         [AlertUser showError:@"No Internet Connection Available" customTitle:@"Can't Open Website"];
     }
-    
-    
-    
-    //                            webBrowser.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    //                            webBrowser.modalPresentationStyle = UIModalPresentationFullScreen;
-    //
-    //                            [self presentViewController:webBrowser animated:YES completion:NULL];
-    
 }
+
+/**
+ *  Is used to persist the current core data context to disk
+ */
 - (void)saveContext
 {
-    //    NSLog(@"seoname:2 %@",self.result.seoName);
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
         NSString *alertMsg;
         if (success) {
@@ -463,7 +530,9 @@ sectionTypeMovieInfo ,
                 self.barButtonAddRemove.title = @"Add Favourite";
             }
             [AlertUser showSuccess:alertMsg customTitleMessage:nil];
-        } else if (error) {
+        }
+        else if (error)
+        {
             if (!self.initialCheckIsMovieInFavourites)
             {
                 alertMsg = @"Error Adding To Favourites";

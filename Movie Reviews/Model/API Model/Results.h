@@ -9,7 +9,9 @@
 #import <CoreData/CoreData.h>
 
 @class Link, Multimedia, RelatedUrls, MovieSearch;
-
+/**
+ *  A Model object representing a movie that is associated with the user's favourites
+ */
 @interface Results : NSManagedObject
 
 @property (nonatomic, retain) NSString *capsuleReview;

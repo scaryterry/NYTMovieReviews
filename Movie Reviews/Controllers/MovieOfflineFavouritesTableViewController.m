@@ -24,37 +24,42 @@
 static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDetails";
 
 @interface MovieOfflineFavouritesTableViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate,NSFetchedResultsControllerDelegate>
+/**
+ *  Interfaces with core data to return the user's favourites
+ */
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-
 #warning iOS7 autoheight 1/4
+/**
+ *  Is used to automatically calculate the cell height on iOS7
+ */
 @property (strong, nonatomic) UITableViewCell *heightCell;
-
 @end
 
 @implementation MovieOfflineFavouritesTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self setupTableViewCellType];
     [self setupInterface];
-        [self setupFavourites];
-
+    [self setupFavourites];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSFetchedResultsController *)fetchedResultsController {
+- (NSFetchedResultsController *)fetchedResultsController
+{
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
@@ -62,60 +67,70 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     return _fetchedResultsController;
 }
 
+//Using the following delegate methods the tableview will automatically update itself with an animation to reflect the changes without updating the entire table
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView beginUpdates];
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
     //by registering for the _fetchedResultsControllerDelegate whenever an update happens the table gets reloaded so that it always displays current data
     [self.tableView endUpdates];
-//    [self.tableView reloadData];
+    //    [self.tableView reloadData];
 }
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
- atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+
+//Using the following delegate methods the tableview will automatically update itself with an animation to reflect the changes without updating the entire table
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
     
     switch(type)
     {
         case NSFetchedResultsChangeInsert:
+        {
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+        }
+            break;
+        case NSFetchedResultsChangeDelete:
+        {
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+        }
             break;
             
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            default:
             break;
     }
 }
 
-
+//Using the following delegate methods the tableview will automatically update itself with an animation to reflect the changes without updating the entire table
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)theIndexPath
      forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
 {
-//    UITableView *tableView = controller == self.fetchedResultsController ? self.tableView : self.searchDisplayController.searchResultsTableView;
-    
     switch(type)
     {
         case NSFetchedResultsChangeInsert:
+        {
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
             break;
-            
         case NSFetchedResultsChangeDelete:
+        {
             [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:theIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
             break;
-            
         case NSFetchedResultsChangeUpdate:
+        {
             [[self.tableView cellForRowAtIndexPath:theIndexPath] configureWithFavourite:anObject];
+        }
             break;
-            
         case NSFetchedResultsChangeMove:
+        {
             [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:theIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]withRowAnimation:UITableViewRowAnimationFade];
+        }
             break;
     }
 }
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.fetchedResultsController.sections.count;
@@ -147,7 +162,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     if (!tableView.isEditing)
     {
         [self performSegueWithIdentifier:SegueIdentifierOpenFavouritesDetails sender:nil];
-
+        
     }
 }
 
@@ -177,15 +192,16 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     }
 }
 
+
 - (CGFloat)tableViewCellHeightForiOS7:(UITableView *)tableView calculateHeightForIndexPath:(NSIndexPath *)indexPath
 {
     [self.heightCell configureWithFavourite:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     
 #warning iOS7 autoheight 4/4
-    CGFloat cellHeight = [self.heightCell returnCellAutoHeightForTableView:tableView];
+    CGFloat cellHeight = [self.heightCell returnCellAutoHeight];
     // Add an extra point to the height to account for the cell separator, which is added between the bottom
     // of the cell's contentView and the bottom of the table view cell.
-        cellHeight += 1;
+    cellHeight += 1;
     
     return cellHeight;
 }
@@ -207,7 +223,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
         [self saveContext];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 
@@ -221,7 +237,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     {
         MovieDetailsTableViewController *detailsController = segue.destinationViewController;
         Results *result = [self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
-//        detailsController.selectedMovie = [InteractWithModel initResultFromCoreDataModel:result] ;
+        //        detailsController.selectedMovie = [InteractWithModel initResultFromCoreDataModel:result] ;
         detailsController.offlineSelection = result;
     }
 }
@@ -253,7 +269,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
         // Update to handle the error appropriately.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }
-
+    
 }
 
 #pragma mark - Empty TableView methods - DZNEmptyDataSetDelegate methods
@@ -282,6 +298,9 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 
+/**
+ *  Is used to persist the current core data context to disk
+ */
 - (void)saveContext
 {
     //    NSLog(@"seoname:2 %@",self.result.seoName);

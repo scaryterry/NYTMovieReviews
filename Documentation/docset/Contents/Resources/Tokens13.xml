@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/NYTMovieSearch.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/NYTMovieSearch</TokenIdentifier>
+			<Abstract type="html">A Model object representing the search results parsed from the JSON response of the NYT Movie reviews API</Abstract>
+			<DeclaredIn>NYTMovieSearch.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

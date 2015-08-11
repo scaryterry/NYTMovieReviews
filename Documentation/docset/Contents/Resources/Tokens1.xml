@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/AlertUser.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/AlertUser</TokenIdentifier>
+			<Abstract type="html">Root class that is responsible for all user interaction</Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

@@ -10,6 +10,9 @@
 
 @class Results;
 @class NYTMovieSearch;
+/**
+ *  A Model object representing a search result that is associated with the user's favourites
+ */
 @interface MovieSearch : NSManagedObject
 
 @property (nonatomic, retain) NSString *status;

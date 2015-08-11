@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/InteractWithModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/InteractWithModel</TokenIdentifier>
+			<Abstract type="html">Root class that is used whenever we want to convert a regular data model to a core data model object and vice versa</Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initResultFromModel:</TokenIdentifier>
+			<Abstract type="html">Initializes a results -movie- core data model object from a regular model object</Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (Results *)initResultFromModel:(NYTResults *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The model object to convert from</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A fully configured core data model object ready to be used</Abstract></ReturnValue>
+			<Anchor>//api/name/initResultFromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

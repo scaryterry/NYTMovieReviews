@@ -11,6 +11,7 @@
 #import "DataModels.h"
 
 @implementation UITableViewCell (APICell)
+
 -(void)configureWithResult:(NYTResults *)result
 {
     //check reuseIdentifier so that we can display different content for each cell
@@ -44,7 +45,6 @@
     //    }
     
 }
-
 
 -(void)configureWithFavourite:(Results *)result
 {

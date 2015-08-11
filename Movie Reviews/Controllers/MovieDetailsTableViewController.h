@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 @class Results,NYTResults;
-
+/**
+ *  The controller that will display all of the information for the selected movie
+ */
 @interface MovieDetailsTableViewController : UITableViewController
+/**
+ *  The selected movie from the online search results
+ */
 @property (strong, nonatomic) NYTResults *onlineSelection;
+/**
+ *  The selected movie from the favourites
+ */
 @property (strong, nonatomic) Results *offlineSelection;
 
-//@property (strong, nonatomic) NYTResults *selectedMovie;
 @end

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/cellTypeCount.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/cellTypeCount</TokenIdentifier>
+			<Abstract type="html">Used to indicate wether we will display all cell types or we wont show the reviews cell</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+            
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/cellTypeCountAll</TokenIdentifier>
+            <Abstract type="html">Indicates to use all cell types
+     </Abstract>
+            <Declaration>cellTypeCountAll</Declaration>
+            
+            <DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/cellTypeCountNoReview</TokenIdentifier>
+            <Abstract type="html">Indicates that the review cell wont be used
+     </Abstract>
+            <Declaration>cellTypeCountNoReview</Declaration>
+            
+            <DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+	</File>
+</Tokens>

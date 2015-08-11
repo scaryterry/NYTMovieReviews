@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 
 @class NYTLink, NYTMultimedia;
-
+/**
+ *  A Model object representing a movie from parsed from the JSON response of the NYT Movie reviews API
+ */
 @interface NYTResults : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, copy) NSString *capsuleReview;

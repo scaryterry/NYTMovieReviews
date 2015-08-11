@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #define tagActivityIndicatorView 228484894
 #define nilCenterActivityIndicatorView CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX))
-
+/**
+ *  Helper category on UIView that deals with user interaction - displaying activity indicator, rotating a view(like an update button) etc
+ */
 @interface UIView (Additions)
 
 - (void)startViewRotation;

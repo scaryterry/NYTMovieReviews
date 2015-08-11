@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MovieSearch.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieSearch</TokenIdentifier>
+			<Abstract type="html">A Model object representing a search result that is associated with the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

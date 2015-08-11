@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  A Model object representing the search results parsed from the JSON response of the NYT Movie reviews API
+ */
 @interface NYTMovieSearch : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, copy) NSString *status;

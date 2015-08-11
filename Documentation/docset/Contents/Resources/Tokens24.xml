@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/sectionType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/sectionType</TokenIdentifier>
+			<Abstract type="html">Used to to define the type of section in the tableview</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+            
+			
+			<NodeRef refid="24"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/sectionTypeMovieInfo</TokenIdentifier>
+            <Abstract type="html">Indicates that the section is for the movie info that uses the custom cells
+     </Abstract>
+            <Declaration>sectionTypeMovieInfo</Declaration>
+            
+            <DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+            
+            <NodeRef refid="24"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/sectionTypeMovieLinks</TokenIdentifier>
+            <Abstract type="html">Indicates that the section is for the movie links that uses a default tableviewcell
+     </Abstract>
+            <Declaration>sectionTypeMovieLinks</Declaration>
+            
+            <DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+            
+            <NodeRef refid="24"/>
+        </Token>
+        
+	</File>
+</Tokens>

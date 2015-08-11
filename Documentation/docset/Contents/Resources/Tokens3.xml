@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/InteractWithAPI.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/InteractWithAPI</TokenIdentifier>
+			<Abstract type="html">Class responsible for interfacing with online API and parse the JSON response into a model object</Abstract>
+			<DeclaredIn>InteractWithAPI.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithAPI/searchNYTForMovie:completion:</TokenIdentifier>
+			<Abstract type="html">The method that searches the NYT for a movie</Abstract>
+			<DeclaredIn>InteractWithAPI.h</DeclaredIn>
+			
+			<Declaration>+ (void)searchNYTForMovie:(NSString *)movieName completion:(RetrievalCompleteBlock)completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>movieName</Name>
+					<Abstract type="html">The name of the movie we want to search for</Abstract>
+				</Parameter><Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">The completion block which returns the search results or an error with the description of what went wrong</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/searchNYTForMovie:completion:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

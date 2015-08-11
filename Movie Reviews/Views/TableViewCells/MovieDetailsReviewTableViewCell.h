@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class NYTResults,Results;
+/**
+ *  The cell that will be used to display the avialable review for a movie
+ */
 @interface MovieDetailsReviewTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticHeader;

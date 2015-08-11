@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		43CD7F961B7A1AC300D56E2C /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 43CD7F971B7A1AC300D56E2C /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				43CD7F9A1B7A1ACE00D56E2C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		320EBE8299917BBC16D49AF4 /* libPods-Movie Reviews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F15EE6641F552F8CB6D0DC91 /* libPods-Movie Reviews.a */; };
 		433807411B74D52A00EB9122 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807401B74D52A00EB9122 /* NSDictionary+Additions.m */; };
@@ -423,6 +437,9 @@
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 4394F7BB1B74BD44008D4B35;
 					};
+					43CD7F961B7A1AC300D56E2C = {
+						CreatedOnToolsVersion = 6.4;
+					};
 				};
 			};
 			buildConfigurationList = 4394F7B71B74BD44008D4B35 /* Build configuration list for PBXProject "Movie Reviews" */;
@@ -440,6 +457,7 @@
 			targets = (
 				4394F7BB1B74BD44008D4B35 /* Movie Reviews */,
 				4394F7D71B74BD44008D4B35 /* Movie ReviewsTests */,
+				43CD7F961B7A1AC300D56E2C /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -469,6 +487,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43CD7F9A1B7A1ACE00D56E2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Christos_Christodoulou\";\ncompanyID=\"com.testCompany\";\ncompanyURL=\"http://www.linkedin.com/pub/christos-christodoulou/52/185/b0\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--ignore \"Pods\" \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-warn-invalid-crossref \\\n--exit-threshold 0 \\\n\"${PROJECT_DIR}\"";
+		};
 		4DC0F894F9AB5B83E9F5F3FF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -723,6 +754,20 @@
 			};
 			name = Release;
 		};
+		43CD7F981B7A1AC300D56E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43CD7F991B7A1AC300D56E2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -749,6 +794,15 @@
 			buildConfigurations = (
 				4394F7E61B74BD44008D4B35 /* Debug */,
 				4394F7E71B74BD44008D4B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43CD7F971B7A1AC300D56E2C /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43CD7F981B7A1AC300D56E2C /* Debug */,
+				43CD7F991B7A1AC300D56E2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

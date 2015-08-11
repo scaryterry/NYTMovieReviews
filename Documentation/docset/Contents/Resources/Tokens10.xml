@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MovieOfflineFavouritesTableViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieOfflineFavouritesTableViewController</TokenIdentifier>
+			<Abstract type="html">The Controller responsible for displaying the user&apos;s favourites, it used an NSFetchedResults controller to query core data</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/saveContext</TokenIdentifier>
+			<Abstract type="html">Is used to persist the current core data context to disk</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)saveContext</Declaration>
+			
+			
+			<Anchor>//api/name/saveContext</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/setFetchedResultsController:</TokenIdentifier>
+			<Abstract type="html">Interfaces with core data to return the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController</Declaration>
+			
+			
+			<Anchor>//api/name/fetchedResultsController</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/fetchedResultsController</TokenIdentifier>
+			<Abstract type="html">Interfaces with core data to return the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController</Declaration>
+			
+			
+			<Anchor>//api/name/fetchedResultsController</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieOfflineFavouritesTableViewController/fetchedResultsController</TokenIdentifier>
+			<Abstract type="html">Interfaces with core data to return the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController</Declaration>
+			
+			
+			<Anchor>//api/name/fetchedResultsController</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/setHeightCell:</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/heightCell</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieOfflineFavouritesTableViewController/heightCell</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

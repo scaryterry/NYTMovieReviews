@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MovieSearchTableViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieSearchTableViewController</TokenIdentifier>
+			<Abstract type="html">The Controller with which users can search the NYT Movie Reviews API and view the results. It uses the deprecated searchDisplayController to maintain compatibility with iOS 7. Search occurs 0.4 seconds after each letter is typed, if another letter is typed in those 0.4 seconds then the previous search request gets cancelled. This way the search doesnt send any requests we dont want it to.</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setupConnectivityCheck</TokenIdentifier>
+			<Abstract type="html">Sets up a block that responds with any changes to internet connectivity so that the app will respond accordingly</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupConnectivityCheck</Declaration>
+			
+			
+			<Anchor>//api/name/setupConnectivityCheck</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setHeightCell:</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/heightCell</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/heightCell</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

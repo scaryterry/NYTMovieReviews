@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class NYTResults,Results;
+/**
+ *  The cell that will be used to display additional information for a movie
+ */
 @interface MovieDetailsDescriptionTableViewCell : UITableViewCell
 
 

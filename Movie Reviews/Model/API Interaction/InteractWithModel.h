@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 @class NYTResults, NYTMovieSearch,Results, MovieSearch,RelatedUrls,NYTRelatedUrls,Multimedia,NYTMultimedia;
+/**
+ Root class that is used whenever we want to convert a regular data model to a core data model object and vice versa
+ */
 @interface InteractWithModel : NSObject
 
 //The methods below can parse a regular model object that came in from the NYT API to a coreData model object //
+
+/**
+ *  Initializes a results -movie- core data model object from a regular model object
+ *
+ *  @param result The model object to convert from
+ *
+ *  @return A fully configured core data model object ready to be used
+ */
 + (Results *)initResultFromModel:(NYTResults *)result;
 + (Results *)initResultFromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch;
 + (MovieSearch *)initMovieSearchFromModel:(NYTMovieSearch *)movieSearch;;

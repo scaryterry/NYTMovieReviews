@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/Christos420/Library/Developer/Shared/Documentation/DocSets/com.testCompany.Movie-Reviews.docset
+Time: 2015-08-11 15:10:14 +0000

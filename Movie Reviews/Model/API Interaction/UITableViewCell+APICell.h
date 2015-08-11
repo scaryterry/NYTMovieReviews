@@ -25,7 +25,23 @@ static NSString *const CellIdentifierMovieDetailsOverview = @"MovieDetailsOvervi
 static NSString *const CellIdentifierMovieList = @"MovieListTableViewCell";
 
 @class NYTResults,Results;
+/**
+ *  Class used by any tableview that wants to display a favourite or a search result. All that we have to do is set the correct reuse identifier for the cell we want to configure.
+ */
 @interface UITableViewCell (APICell)
+
+/**
+ *  Used by any tableview that wants to configure a cell with a movie search result from the NYT API
+ *
+ *  @param result The datasource the cells will be configured with
+ */
 -(void)configureWithResult:(NYTResults *)result;
+
+/**
+ *  Used by any tableview that wants to configure a cell with a movie from favourites stored with core data
+ *
+ *  @param result The datasource the cells will be configured with
+ */
 -(void)configureWithFavourite:(Results *)result;
+
 @end

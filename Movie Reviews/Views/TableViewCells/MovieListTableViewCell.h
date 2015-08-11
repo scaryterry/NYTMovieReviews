@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class NYTResults,Results;
+/**
+ *  The cell that will be used throughout the app whenever a list with a lot of cells is required 
+ */
 @interface MovieListTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticReview;

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIDevice+Additions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIDevice(Additions)</TokenIdentifier>
+			<Abstract type="html">Helper category to get different info about the device.</Abstract>
+			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIDevice/isiPad</TokenIdentifier>
+			<Abstract type="html">Tells whether the current device is an iPad.</Abstract>
+			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)isiPad</Declaration>
+			
+			
+			<Anchor>//api/name/isiPad</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIDevice/deviceModel</TokenIdentifier>
+			<Abstract type="html">Returns the current device model.</Abstract>
+			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)deviceModel</Declaration>
+			
+			
+			<Anchor>//api/name/deviceModel</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIDevice/majorSystemVersion</TokenIdentifier>
+			<Abstract type="html">Returns the major version of the operating system.</Abstract>
+			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			
+			<Declaration>+ (NSInteger)majorSystemVersion</Declaration>
+			
+			
+			<Anchor>//api/name/majorSystemVersion</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

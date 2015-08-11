@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UITableViewCell+APICell.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UITableViewCell(APICell)</TokenIdentifier>
+			<Abstract type="html">Class used by any tableview that wants to display a favourite or a search result. All that we have to do is set the correct reuse identifier for the cell we want to configure.</Abstract>
+			<DeclaredIn>UITableViewCell+APICell.h</DeclaredIn>
+            
+			
+			<NodeRef refid="19"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/configureWithResult:</TokenIdentifier>
+			<Abstract type="html">Used by any tableview that wants to configure a cell with a movie search result from the NYT API</Abstract>
+			<DeclaredIn>UITableViewCell+APICell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureWithResult:(NYTResults *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The datasource the cells will be configured with</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureWithResult:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/configureWithFavourite:</TokenIdentifier>
+			<Abstract type="html">Used by any tableview that wants to configure a cell with a movie from favourites stored with core data</Abstract>
+			<DeclaredIn>UITableViewCell+APICell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureWithFavourite:(Results *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The datasource the cells will be configured with</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureWithFavourite:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

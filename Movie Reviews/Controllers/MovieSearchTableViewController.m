@@ -32,6 +32,9 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 @property (nonatomic, strong) NSManagedObjectContext *savingContext;
 @property (nonatomic, readonly, getter=shouldDisplayFavourites)BOOL displayFavourites;
 #warning iOS7 autoheight 1/4
+/**
+ *  Is used to automatically calculate the cell height on iOS7
+ */
 @property (strong, nonatomic) UITableViewCell *heightCell;
 @end
 
@@ -44,41 +47,6 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     [self setupInterface];
     [self performSelector:@selector(setupConnectivityCheck) withObject:nil afterDelay:0.3f];
     //some delay needed when checking for internet connection so that we can give Reachability a chance to get an accurate reading
-
-//    self.oldSearch = [Results MR_findAll];
-//    self.result = [Results MR_createEntity];
-//    NSMutableArray *savedStuff = [NSMutableArray new];
-//    if (self.oldSearch.count > 0)
-//    {
-//        {
-//            self.saved = [MovieSearch MR_createEntity];
-//            
-//            for (Results *result in [Results MR_findAll]) {
-//                if ([result isKindOfClass:[Results class]])
-//                {
-//                    if (result.displayTitle)
-//                    {
-//                        [savedStuff addObject:result];
-//                    }
-//                    NSLog(@"old result : %@",result.displayTitle);
-//                }
-//                
-//            }
-//            self.saved.results = [NSSet setWithArray:savedStuff];
-//            [self.tableView reloadData];
-////            self.movieSearch = [NYTMovieSearch modelObjectWithDictionary:savedStuff];
-//
-//            //        Results *result = [Results MR_createEntity];
-//            
-//        }
-//        NSLog(@"old result : %@",savedStuff);
-//
-//    }
-
-    //    NSLog(@"old results : %@",[self.oldSearch description]);
-    
-    
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)didReceiveMemoryWarning {
@@ -128,20 +96,14 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    self.searchResults = self.movieSearch.results[indexPath.row];
-//    [NSManagedObjectContext MR_resetDefaultContext];
-//    self.result = [InteractWithModel initResultFromModel:result];
-//    NSLog(@"self.result :%@",self.result);
     [self performSegueWithIdentifier:SegueIdentifierOpenSearchDetails sender:nil];
-//    [self saveContext];
-    
-
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [cell animateCellScrolling];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100.0f;
@@ -170,7 +132,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     [self.heightCell configureWithResult:self.movieSearch.results[indexPath.row]];
     
 #warning iOS7 autoheight 4/4
-    CGFloat cellHeight = [self.heightCell returnCellAutoHeightForTableView:tableView];
+    CGFloat cellHeight = [self.heightCell returnCellAutoHeight];
     // Add an extra point to the height to account for the cell separator, which is added between the bottom
     // of the cell's contentView and the bottom of the table view cell.
     cellHeight += 1;
@@ -249,7 +211,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
          [self.activeTable hideActivityIndicator];
          if (error)
          {
-             NSLog(@"error: %@",[error localizedDescription]);
+             [AlertUser showError:error.localizedDescription customTitle:nil];
          }
          else if (searchResults)
          {
@@ -308,6 +270,10 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
         self.heightCell  = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifierMovieList];
     }
 }
+
+/**
+ *  Sets up a block that responds with any changes to internet connectivity so that the app will respond accordingly
+ */
 - (void)setupConnectivityCheck
 {
     [self.tableView reloadData];
@@ -329,9 +295,6 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
                  break;
                  
              case AFNetworkReachabilityStatusReachableViaWWAN:
-                 // AFNetworkReachabilityStatusReachableViaWWAN = 1
-                 NSLog(@"The reachability status is reachable via WWAN");
-//                 break;
                  
              case AFNetworkReachabilityStatusReachableViaWiFi:
                  NSLog(@"The reachability status is reachable via WiFi");

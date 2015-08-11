@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 @class NYTResults;
 @class Results;
+/**
+ *  The header cell for a movie, contains several different types of information
+ */
 @interface MovieDetailsHeaderTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick;

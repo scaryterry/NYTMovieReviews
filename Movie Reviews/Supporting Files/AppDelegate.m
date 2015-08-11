@@ -24,6 +24,9 @@
     return YES;
 }
 
+/**
+ *  Uses UIAppearance methods to customize elements throughout the app
+ */
 -(void)setupGlobalUIPreferences
 {
     //set title colour for all navigation contollers

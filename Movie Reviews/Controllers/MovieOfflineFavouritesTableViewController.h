@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  The Controller responsible for displaying the user's favourites, it used an NSFetchedResults controller to query core data
+ */
 @interface MovieOfflineFavouritesTableViewController : UITableViewController
 
 @end

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIView+Additions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIView(Additions)</TokenIdentifier>
+			<Abstract type="html">Helper category on UIView that deals with user interaction - displaying activity indicator, rotating a view(like an update button) etc</Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

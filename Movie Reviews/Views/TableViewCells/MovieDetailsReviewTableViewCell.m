@@ -10,6 +10,7 @@
 #import "NYTResults.h"
 #import "Results.h"
 #import "UITableViewCell+Additions.h"
+
 @implementation MovieDetailsReviewTableViewCell
 
 - (void)awakeFromNib {
