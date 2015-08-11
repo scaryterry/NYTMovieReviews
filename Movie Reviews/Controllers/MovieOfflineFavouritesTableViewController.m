@@ -25,7 +25,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
 
 @interface MovieOfflineFavouritesTableViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate,NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) MovieSearch *resultsDataSource;
+
 
 #warning iOS7 autoheight 1/4
 @property (strong, nonatomic) UITableViewCell *heightCell;
@@ -44,7 +44,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,36 +53,84 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
 }
 
 #pragma mark - Table view data source
+
 - (NSFetchedResultsController *)fetchedResultsController {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-//    _fetchedResultsController.fetchRequest.returnsDistinctResults = true;
     _fetchedResultsController = [Results MR_fetchAllSortedBy:@"displayTitle" ascending:true withPredicate:nil groupBy:nil delegate:self];
-    
     return _fetchedResultsController;
+}
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     //by registering for the _fetchedResultsControllerDelegate whenever an update happens the table gets reloaded so that it always displays current data
+    [self.tableView endUpdates];
+//    [self.tableView reloadData];
+}
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+ atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
     
-    [self.tableView reloadData];
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
 }
 
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)theIndexPath
+     forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+//    UITableView *tableView = controller == self.fetchedResultsController ? self.tableView : self.searchDisplayController.searchResultsTableView;
+    
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:theIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [[self.tableView cellForRowAtIndexPath:theIndexPath] configureWithFavourite:anObject];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:theIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[_fetchedResultsController sections] count];
+    return self.fetchedResultsController.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    NSInteger  rowCount = [self.fetchedResultsController.sections[section] numberOfObjects];
+    return rowCount;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierMovieList forIndexPath:indexPath];
+    
     Results *result = [self.fetchedResultsController objectAtIndexPath:indexPath];
-
     [cell configureWithFavourite:result];
     // Configure the cell...
     
@@ -96,7 +144,11 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:SegueIdentifierOpenFavouritesDetails sender:nil];
+    if (!tableView.isEditing)
+    {
+        [self performSegueWithIdentifier:SegueIdentifierOpenFavouritesDetails sender:nil];
+
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,39 +190,26 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     return cellHeight;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [[self.fetchedResultsController objectAtIndexPath:indexPath] MR_deleteEntity];
+        [self saveContext];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Navigation
 
@@ -181,24 +220,9 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     if ([segue.identifier isEqualToString:SegueIdentifierOpenFavouritesDetails])
     {
         MovieDetailsTableViewController *detailsController = segue.destinationViewController;
-        Results *result = [self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        Results *result = [self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
 //        detailsController.selectedMovie = [InteractWithModel initResultFromCoreDataModel:result] ;
         detailsController.offlineSelection = result;
-//        detailsController.selectedMovie = (NYTResults *)result;
-
-//        NSMutableArray *urlArray = [NSMutableArray new];
-//        for (RelatedUrls *url in result.relatedUrls)
-//        {
-//            NSLog(@"url %@", url.suggestedLinkText);
-//            NYTRelatedUrls *newUrl = [NYTRelatedUrls new];
-//            newUrl.suggestedLinkText = url.suggestedLinkText;
-//            newUrl.type = url.type;
-//            newUrl.url = url.url;
-//            [urlArray addObject:newUrl];
-//        }
-//        detailsController.selectedMovie.relatedUrls = urlArray;
-        
-        
     }
 }
 #pragma mark - Setup Methods
@@ -210,16 +234,11 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
     self.fetchedResultsController.delegate = self;
-#warning Search cell change 3/3
-    //unessesary with default search cell so delete below
-    self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 100.0f;
-    self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
-    //self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
-    
 }
 - (void)setupTableViewCellType
 {
     [self.tableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
+    [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
 #warning iOS7 autoheight 2/4
     if ([UIDevice majorSystemVersion] < 8 )
     {
@@ -236,6 +255,7 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
     }
 
 }
+
 #pragma mark - Empty TableView methods - DZNEmptyDataSetDelegate methods
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
@@ -260,6 +280,19 @@ static NSString *const SegueIdentifierOpenFavouritesDetails = @"openFavouriteDet
                                  NSParagraphStyleAttributeName: paragraph};
     
     return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (void)saveContext
+{
+    //    NSLog(@"seoname:2 %@",self.result.seoName);
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+        if (success) {
+            NSLog(@"You successfully saved your context.");
+        } else if (error) {
+            [AlertUser showError:error.description customTitle:@"Error Removing From Favourites"];
+            NSLog(@"Error saving context: %@", error.description);
+        }
+    }];
 }
 
 @end

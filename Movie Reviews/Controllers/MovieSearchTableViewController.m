@@ -27,7 +27,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
 @property (nonatomic, strong) NYTMovieSearch *movieSearch;
 //@property (nonatomic, strong) NYTResults *searchResults;
 @property (nonatomic, strong)NSString *searchTerm;
-@property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;
+@property (nonatomic, strong,readonly,getter=getActiveTable)UITableView *activeTable;// we can simply call the method directly but this way we get to use the dot nottation as we do for accessing the regular tableview
 @property (nonatomic, readonly,getter=getAlertPosition)CGPoint alertPosition;
 @property (nonatomic, strong) NSManagedObjectContext *savingContext;
 @property (nonatomic, readonly, getter=shouldDisplayFavourites)BOOL displayFavourites;
@@ -331,10 +331,11 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
              case AFNetworkReachabilityStatusReachableViaWWAN:
                  // AFNetworkReachabilityStatusReachableViaWWAN = 1
                  NSLog(@"The reachability status is reachable via WWAN");
-                 break;
+//                 break;
                  
              case AFNetworkReachabilityStatusReachableViaWiFi:
                  NSLog(@"The reachability status is reachable via WiFi");
+                 [self.tableView reloadData];
                  break;
                  
              default:
@@ -369,5 +370,8 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 
-
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
 @end
