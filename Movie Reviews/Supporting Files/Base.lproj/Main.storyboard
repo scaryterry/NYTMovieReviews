@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1541" y="560"/>
         </scene>
-        <!--NYT Movie Search-->
+        <!--Movie Search Table View Controller-->
         <scene sceneID="LXN-cg-MYn">
             <objects>
                 <tableViewController id="pH3-po-rhW" customClass="MovieSearchTableViewController" sceneMemberID="viewController">
@@ -161,7 +161,14 @@
                             <outlet property="delegate" destination="pH3-po-rhW" id="cOn-Cp-hom"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NYT Movie Search" id="WBy-yR-nNQ"/>
+                    <navigationItem key="navigationItem" id="iZJ-uQ-Atq">
+                        <barButtonItem key="leftBarButtonItem" image="info-acks" id="Sxs-7l-tNg">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="performOpenInfo:" destination="pH3-po-rhW" id="D5c-l4-twz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="GzE-m6-875" id="oGm-pP-WL8"/>
                         <segue destination="IL6-Xj-l6K" kind="show" identifier="openSearchDetails" id="pui-HA-Zz4"/>
@@ -221,7 +228,10 @@
             <point key="canvasLocation" x="733" y="560"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info-acks" width="26" height="26"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o8K-sl-d7h"/>
+        <segue reference="pui-HA-Zz4"/>
     </inferredMetricsTieBreakers>
 </document>

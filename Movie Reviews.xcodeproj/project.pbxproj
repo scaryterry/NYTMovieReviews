@@ -34,6 +34,7 @@
 		4338075D1B74EE9100EB9122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4338075A1B74EE9100EB9122 /* Main.storyboard */; };
 		4338075F1B74EEA200EB9122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4338075E1B74EEA200EB9122 /* Images.xcassets */; };
 		433807681B75206F00EB9122 /* MovieSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433807671B75206F00EB9122 /* MovieSearchTableViewController.m */; };
+		434069881B7A649300526C58 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 434069871B7A649300526C58 /* Pods-acknowledgements.plist */; };
 		434B85461B77910C00BE0F14 /* UITableViewCell+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 434B85451B77910C00BE0F14 /* UITableViewCell+Additions.m */; };
 		438287B81B7567B500EBA58D /* AlertUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287B71B7567B500EBA58D /* AlertUser.m */; };
 		438287BB1B75682F00EBA58D /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 438287BA1B75682F00EBA58D /* UIView+Additions.m */; };
@@ -98,6 +99,7 @@
 		4338075E1B74EEA200EB9122 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Supporting Files/Images.xcassets"; sourceTree = "<group>"; };
 		433807661B75206F00EB9122 /* MovieSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchTableViewController.h; sourceTree = "<group>"; };
 		433807671B75206F00EB9122 /* MovieSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchTableViewController.m; sourceTree = "<group>"; };
+		434069871B7A649300526C58 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		434B85441B77910C00BE0F14 /* UITableViewCell+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Additions.h"; sourceTree = "<group>"; };
 		434B85451B77910C00BE0F14 /* UITableViewCell+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Additions.m"; sourceTree = "<group>"; };
 		438287B61B7567B500EBA58D /* AlertUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUser.h; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		4394F7BF1B74BD44008D4B35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				434069871B7A649300526C58 /* Pods-acknowledgements.plist */,
 				4338075E1B74EEA200EB9122 /* Images.xcassets */,
 				433807581B74EE9100EB9122 /* LaunchScreen.xib */,
 				4338075A1B74EE9100EB9122 /* Main.storyboard */,
@@ -470,6 +473,7 @@
 				4338075F1B74EEA200EB9122 /* Images.xcassets in Resources */,
 				4338075C1B74EE9100EB9122 /* LaunchScreen.xib in Resources */,
 				4396F20A1B7756F4000C5A4E /* MovieListTableViewCell.xib in Resources */,
+				434069881B7A649300526C58 /* Pods-acknowledgements.plist in Resources */,
 				4396F1F61B771C82000C5A4E /* MovieDetailsHeaderTableViewCell.xib in Resources */,
 				4338075D1B74EE9100EB9122 /* Main.storyboard in Resources */,
 				4396F2001B771D76000C5A4E /* MovieDetailsDescriptionTableViewCell.xib in Resources */,
@@ -498,7 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Christos_Christodoulou\";\ncompanyID=\"com.testCompany\";\ncompanyURL=\"http://www.linkedin.com/pub/christos-christodoulou/52/185/b0\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--ignore \"Pods\" \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-warn-invalid-crossref \\\n--exit-threshold 0 \\\n\"${PROJECT_DIR}\"";
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Christos_Christodoulou\";\ncompanyID=\"com.testCompany\";\ncompanyURL=\"http://www.linkedin.com/pub/christos-christodoulou/52/185/b0\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--ignore \"Pods\" \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--install-docset \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--warn-invalid-crossref \\\n--verbose 5 \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
 		};
 		4DC0F894F9AB5B83E9F5F3FF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

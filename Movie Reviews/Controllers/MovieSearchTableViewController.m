@@ -18,7 +18,7 @@
 #import "UITableViewCell+APICell.h"
 #import "UIScrollView+EmptyDataSet.h"
 #import "MovieDetailsTableViewController.h"
-//#import "UITableViewCell+Additions.h"
+#import "VTAcknowledgementsViewController.h"
 #import "UIDevice+Additions.h"
 
 static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
@@ -155,7 +155,17 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
         
     }
 }
-
+/**
+ *  Presents the acknowledgements screen which is populated via a .plist which automatically gets generated when the pod install command is run in the project folder
+ *
+ *  @param sender The Button launched this method - leftBarButton in this case
+ */
+- (IBAction)performOpenInfo:(id)sender
+{
+    VTAcknowledgementsViewController *viewController = [VTAcknowledgementsViewController acknowledgementsViewController];
+    viewController.headerText = NSLocalizedString(@"Open Source software used throughout this app:", nil); // optional
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 
 #pragma mark - UISearchDisplayDelegate Methods
 - (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView
@@ -179,6 +189,7 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     // We want it to be no so that we reload it only after the asynchronous movie search has finished
     return NO;
 }
+
 
 #pragma mark - UISearchDisplayController Helper Methods
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -250,16 +261,12 @@ static NSString *const SegueIdentifierOpenSearchDetails = @"openSearchDetails";
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
     
-#warning Search cell change 3/3
-//unessesary with default search cell so delete below as well as their respective delegate methods
-    self.searchDisplayController.searchResultsTableView.estimatedRowHeight = 100.0f;
-    self.searchDisplayController.searchResultsTableView.rowHeight = UITableViewAutomaticDimension;
 //self.savingContext = [NSManagedObjectContext MR_rootSavingContext];
 
 }
 - (void)setupTableViewCellType
 {
-#warning Search cell change 2/3
+#warning Search cell change 2/2
     [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:CellIdentifierMovieList bundle:[NSBundle mainBundle]]  forCellReuseIdentifier:CellIdentifierMovieList];
     //to use the default search cells uncomment below and delete the above line
     //    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifierSearch];
