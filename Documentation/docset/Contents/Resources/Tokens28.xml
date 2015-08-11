@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UITableView+Additions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UITableView(Additions)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UITableView+Additions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableView/showTableMessage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UITableView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)showTableMessage:(NSString *)text</Declaration>
+			
+			
+			<Anchor>//api/name/showTableMessage:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableView/showTableMessage:atPosition:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UITableView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)showTableMessage:(NSString *)text atPosition:(CGPoint)position</Declaration>
+			
+			
+			<Anchor>//api/name/showTableMessage:atPosition:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

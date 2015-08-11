@@ -1,16 +1,374 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MovieDetailsReviewTableViewCell.html">
+	<File path="Classes/MovieDetailsHeaderTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MovieDetailsReviewTableViewCell</TokenIdentifier>
-			<Abstract type="html">The cell that will be used to display the avialable review for a movie</Abstract>
-			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieDetailsHeaderTableViewCell</TokenIdentifier>
+			<Abstract type="html">The header cell for a movie, contains several different types of information</Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setLabelTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelTitle</Declaration>
+			
+			
+			<Anchor>//api/name/labelTitle</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/labelTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelTitle</Declaration>
+			
+			
+			<Anchor>//api/name/labelTitle</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/labelTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelTitle</Declaration>
+			
+			
+			<Anchor>//api/name/labelTitle</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setLabelCriticsPick:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/labelCriticsPick</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/labelCriticsPick</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/labelCriticsPick</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/labelCriticsPick</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/labelCriticsPick</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setLabelReviewer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/labelReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/labelReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setLabelRating:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelRating</Declaration>
+			
+			
+			<Anchor>//api/name/labelRating</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/labelRating</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelRating</Declaration>
+			
+			
+			<Anchor>//api/name/labelRating</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/labelRating</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelRating</Declaration>
+			
+			
+			<Anchor>//api/name/labelRating</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setLabelStaticReviewer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewer</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/labelStaticReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewer</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/labelStaticReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewer</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setLabelStaticRating:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticRating</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticRating</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/labelStaticRating</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticRating</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticRating</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/labelStaticRating</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticRating</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticRating</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setAllLabels:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
+			
+			
+			<Anchor>//api/name/allLabels</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/allLabels</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
+			
+			
+			<Anchor>//api/name/allLabels</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsHeaderTableViewCell/allLabels</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
+			
+			
+			<Anchor>//api/name/allLabels</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/configureHeaderCellWithResult:</TokenIdentifier>
+			<Abstract type="html">Sets the cell&apos;s labels from the online search results</Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureHeaderCellWithResult:(NYTResults *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The selected movie</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureHeaderCellWithResult:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/configureHeaderCellWithFavourite:</TokenIdentifier>
+			<Abstract type="html">Sets the cell&apos;s labels from the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureHeaderCellWithFavourite:(Results *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The selected movie</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureHeaderCellWithFavourite:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/awakeFromNib</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)awakeFromNib</Declaration>
+			
+			
+			<Anchor>//api/name/awakeFromNib</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/setSelected:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)setSelected:(BOOL)selected animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/setSelected:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/addText:toLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)addText:(NSString *)text toLabel:(UILabel *)label</Declaration>
+			
+			
+			<Anchor>//api/name/addText:toLabel:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/toggleVisibilityOfLabel:visibilityStatus:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)toggleVisibilityOfLabel:(UILabel *)label visibilityStatus:(BOOL)shouldHideLabel</Declaration>
+			
+			
+			<Anchor>//api/name/toggleVisibilityOfLabel:visibilityStatus:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/removeLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)removeLabel:(UILabel *)label</Declaration>
+			
+			
+			<Anchor>//api/name/removeLabel:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsHeaderTableViewCell/layoutSubviews</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsHeaderTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)layoutSubviews</Declaration>
+			
+			
+			<Anchor>//api/name/layoutSubviews</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
 		
         
 	</File>

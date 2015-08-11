@@ -21,8 +21,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticRating;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
-
+/**
+ *  Sets the cell's labels from the online search results
+ *
+ *  @param result The selected movie
+ */
 -(void)configureHeaderCellWithResult:(NYTResults *)result;
+
+/**
+ *  Sets the cell's labels from the user's favourites
+ *
+ *  @param result The selected movie
+ */
 -(void)configureHeaderCellWithFavourite:(Results *)result;
 
 @end

@@ -17,8 +17,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelReviewSummary;
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer;
 @property (weak, nonatomic) IBOutlet UILabel *labelReviewer;
-
+/**
+ *  Sets the cell's labels from the online search results
+ *
+ *  @param result The selected movie
+ */
 -(void)configureReviewCellWithResult:(NYTResults *)result;
+
+/**
+ *  Sets the cell's labels from the user's favourites
+ *
+ *  @param result The selected movie
+ */
 -(void)configureReviewCellWithFavourite:(Results *)result;
 
 @end

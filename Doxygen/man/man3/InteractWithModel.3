@@ -1,0 +1,94 @@
+.TH "InteractWithModel" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InteractWithModel \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <InteractWithModel\&.h>\fP
+.PP
+Inherits NSObject\&.
+.SS "Class Methods"
+
+.in +1c
+.ti -1c
+.RI "(\fBResults\fP *) + \fBinitResultFromModel:\fP"
+.br
+.ti -1c
+.RI "(\fBResults\fP *) + \fBinitResultFromModel:originatingSearch:\fP"
+.br
+.ti -1c
+.RI "(\fBMovieSearch\fP *) + \fBinitMovieSearchFromModel:\fP"
+.br
+.ti -1c
+.RI "(\fBMultimedia\fP *) + \fBinitMultimediaFromModel:\fP"
+.br
+.ti -1c
+.RI "(\fBRelatedUrls\fP *) + \fBinitRelatedUrlsFromModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBsetLinkForDataModel:fromModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBsetMultimediaForDataModel:fromModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBsetResourcesForDataModel:fromModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBaddRelatedUrlsToCoreDataModel:fromModel:\fP"
+.br
+.ti -1c
+.RI "(\fBNYTResults\fP *) + \fBinitResultFromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(\fBNYTMovieSearch\fP *) + \fBinitMovieSearchFromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(\fBNYTMultimedia\fP *) + \fBinitMultimediaFromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(\fBNYTRelatedUrls\fP *) + \fBinitRelatedUrlsFromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBsetLinkForRegularModel:fromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBsetMultimediaForRegularModel:fromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBsetResourcesForRegularModel:fromCoreDataModel:\fP"
+.br
+.ti -1c
+.RI "(void) + \fBaddRelatedUrlsToRegularModel:fromCoreDataModel:\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Root class that is used whenever we want to convert a regular data model to a core data model object and vice versa 
+.PP
+Definition at line 14 of file InteractWithModel\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "+ (\fBResults\fP *) initResultFromModel: (\fBNYTResults\fP *) result"
+Initializes a results -movie- core data model object from a regular model object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The model object to convert from
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A fully configured core data model object ready to be used 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file InteractWithModel\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

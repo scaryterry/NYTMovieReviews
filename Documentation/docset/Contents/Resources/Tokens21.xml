@@ -1,16 +1,760 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UIView+Additions.html">
+	<File path="Classes/NYTResults.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UIView(Additions)</TokenIdentifier>
-			<Abstract type="html">Helper category on UIView that deals with user interaction - displaying activity indicator, rotating a view(like an update button) etc</Abstract>
-			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NYTResults</TokenIdentifier>
+			<Abstract type="html">A Model object representing a movie from parsed from the JSON response of the NYT Movie reviews API</Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
             
 			
 			<NodeRef refid="21"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setCapsuleReview:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *capsuleReview</Declaration>
+			
+			
+			<Anchor>//api/name/capsuleReview</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/capsuleReview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *capsuleReview</Declaration>
+			
+			
+			<Anchor>//api/name/capsuleReview</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/capsuleReview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *capsuleReview</Declaration>
+			
+			
+			<Anchor>//api/name/capsuleReview</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setDateUpdated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *dateUpdated</Declaration>
+			
+			
+			<Anchor>//api/name/dateUpdated</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/dateUpdated</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *dateUpdated</Declaration>
+			
+			
+			<Anchor>//api/name/dateUpdated</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/dateUpdated</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *dateUpdated</Declaration>
+			
+			
+			<Anchor>//api/name/dateUpdated</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setSummaryShort:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *summaryShort</Declaration>
+			
+			
+			<Anchor>//api/name/summaryShort</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/summaryShort</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *summaryShort</Declaration>
+			
+			
+			<Anchor>//api/name/summaryShort</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/summaryShort</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *summaryShort</Declaration>
+			
+			
+			<Anchor>//api/name/summaryShort</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setHeadline:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *headline</Declaration>
+			
+			
+			<Anchor>//api/name/headline</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/headline</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *headline</Declaration>
+			
+			
+			<Anchor>//api/name/headline</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/headline</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *headline</Declaration>
+			
+			
+			<Anchor>//api/name/headline</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setThousandBest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *thousandBest</Declaration>
+			
+			
+			<Anchor>//api/name/thousandBest</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/thousandBest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *thousandBest</Declaration>
+			
+			
+			<Anchor>//api/name/thousandBest</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/thousandBest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *thousandBest</Declaration>
+			
+			
+			<Anchor>//api/name/thousandBest</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setByline:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *byline</Declaration>
+			
+			
+			<Anchor>//api/name/byline</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/byline</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *byline</Declaration>
+			
+			
+			<Anchor>//api/name/byline</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/byline</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *byline</Declaration>
+			
+			
+			<Anchor>//api/name/byline</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setDvdReleaseDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *dvdReleaseDate</Declaration>
+			
+			
+			<Anchor>//api/name/dvdReleaseDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/dvdReleaseDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *dvdReleaseDate</Declaration>
+			
+			
+			<Anchor>//api/name/dvdReleaseDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/dvdReleaseDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *dvdReleaseDate</Declaration>
+			
+			
+			<Anchor>//api/name/dvdReleaseDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setLink:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NYTLink *link</Declaration>
+			
+			
+			<Anchor>//api/name/link</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/link</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NYTLink *link</Declaration>
+			
+			
+			<Anchor>//api/name/link</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/link</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NYTLink *link</Declaration>
+			
+			
+			<Anchor>//api/name/link</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setMpaaRating:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *mpaaRating</Declaration>
+			
+			
+			<Anchor>//api/name/mpaaRating</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/mpaaRating</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *mpaaRating</Declaration>
+			
+			
+			<Anchor>//api/name/mpaaRating</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/mpaaRating</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *mpaaRating</Declaration>
+			
+			
+			<Anchor>//api/name/mpaaRating</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setMultimedia:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NYTMultimedia *multimedia</Declaration>
+			
+			
+			<Anchor>//api/name/multimedia</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/multimedia</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NYTMultimedia *multimedia</Declaration>
+			
+			
+			<Anchor>//api/name/multimedia</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/multimedia</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NYTMultimedia *multimedia</Declaration>
+			
+			
+			<Anchor>//api/name/multimedia</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setPublicationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *publicationDate</Declaration>
+			
+			
+			<Anchor>//api/name/publicationDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/publicationDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *publicationDate</Declaration>
+			
+			
+			<Anchor>//api/name/publicationDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/publicationDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *publicationDate</Declaration>
+			
+			
+			<Anchor>//api/name/publicationDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setOpeningDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *openingDate</Declaration>
+			
+			
+			<Anchor>//api/name/openingDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/openingDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *openingDate</Declaration>
+			
+			
+			<Anchor>//api/name/openingDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/openingDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *openingDate</Declaration>
+			
+			
+			<Anchor>//api/name/openingDate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setDisplayTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *displayTitle</Declaration>
+			
+			
+			<Anchor>//api/name/displayTitle</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/displayTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *displayTitle</Declaration>
+			
+			
+			<Anchor>//api/name/displayTitle</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/displayTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *displayTitle</Declaration>
+			
+			
+			<Anchor>//api/name/displayTitle</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setRelatedUrls:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSArray *relatedUrls</Declaration>
+			
+			
+			<Anchor>//api/name/relatedUrls</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/relatedUrls</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSArray *relatedUrls</Declaration>
+			
+			
+			<Anchor>//api/name/relatedUrls</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/relatedUrls</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSArray *relatedUrls</Declaration>
+			
+			
+			<Anchor>//api/name/relatedUrls</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setSortName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *sortName</Declaration>
+			
+			
+			<Anchor>//api/name/sortName</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/sortName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *sortName</Declaration>
+			
+			
+			<Anchor>//api/name/sortName</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/sortName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *sortName</Declaration>
+			
+			
+			<Anchor>//api/name/sortName</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setSeoName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *seoName</Declaration>
+			
+			
+			<Anchor>//api/name/seoName</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/seoName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *seoName</Declaration>
+			
+			
+			<Anchor>//api/name/seoName</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/seoName</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *seoName</Declaration>
+			
+			
+			<Anchor>//api/name/seoName</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setCriticsPick:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *criticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/criticsPick</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/criticsPick</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *criticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/criticsPick</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/criticsPick</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *criticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/criticsPick</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/setNytMovieId:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *nytMovieId</Declaration>
+			
+			
+			<Anchor>//api/name/nytMovieId</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/nytMovieId</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *nytMovieId</Declaration>
+			
+			
+			<Anchor>//api/name/nytMovieId</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResults/nytMovieId</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *nytMovieId</Declaration>
+			
+			
+			<Anchor>//api/name/nytMovieId</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NYTResults/modelObjectWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/modelObjectWithDictionary:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/dictionaryRepresentation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryRepresentation</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/description</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.m</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/objectOrNilForKey:fromDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.m</DeclaredIn>
+			
+			<Declaration>- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/objectOrNilForKey:fromDictionary:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/initWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.m</DeclaredIn>
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/encodeWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.m</DeclaredIn>
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResults/copyWithZone:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResults.m</DeclaredIn>
+			
+			<Declaration>- (id)copyWithZone:(NSZone *)zone</Declaration>
+			
+			
+			<Anchor>//api/name/copyWithZone:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
 		
         
 	</File>

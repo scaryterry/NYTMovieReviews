@@ -1,0 +1,110 @@
+\section{Movie\+List\+Table\+View\+Cell Class Reference}
+\label{interface_movie_list_table_view_cell}\index{Movie\+List\+Table\+View\+Cell@{Movie\+List\+Table\+View\+Cell}}
+
+
+{\ttfamily \#import $<$Movie\+List\+Table\+View\+Cell.\+h$>$}
+
+Inheritance diagram for Movie\+List\+Table\+View\+Cell\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_movie_list_table_view_cell}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+() -\/ {\bfseries I\+B\+Outlet\+Collection}\label{interface_movie_list_table_view_cell_a9f256300832d40c99cdeb55af273e533}
+
+\item 
+(void) -\/ {\bf configure\+List\+Cell\+With\+Result\+:}
+\item 
+(void) -\/ {\bf configure\+List\+Cell\+With\+Favourite\+:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Title}\label{interface_movie_list_table_view_cell_a8f4f5f7219eafd760153840aa4c2056a}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Static\+Review}\label{interface_movie_list_table_view_cell_a3df08b2d4caedae11058f3662b1a8a0f}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Review}\label{interface_movie_list_table_view_cell_a254097694c7c36ca9f9974c5de7d6d8d}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Static\+By}\label{interface_movie_list_table_view_cell_acd2db877f06738d59ff7466920844ed4}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Reviewer}\label{interface_movie_list_table_view_cell_aadefdf9e3b454a89e4f6211a0bae171d}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Static\+Review\+Date}\label{interface_movie_list_table_view_cell_a9cb1f8445fbf52d82de111b1364d8893}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Review\+Date}\label{interface_movie_list_table_view_cell_a5815112884bca82cd69d2e890ebcf01b}
+
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ {\bfseries label\+Critics\+Pick}\label{interface_movie_list_table_view_cell_a0f8d56f6686109a1bea27b0a9c156eb2}
+
+\item 
+I\+B\+Outlet N\+S\+Layout\+Constraint $\ast$ {\bfseries constraint\+Review\+To\+Date}\label{interface_movie_list_table_view_cell_a41e2278501e7d217272a9376cf403709}
+
+\item 
+I\+B\+Outlet N\+S\+Layout\+Constraint $\ast$ {\bfseries constraint\+Review\+Label\+To\+Date}\label{interface_movie_list_table_view_cell_aaabeb006f6834ca22161e3d29a927f2e}
+
+\item 
+I\+B\+Outlet N\+S\+Layout\+Constraint $\ast$ {\bfseries constraint\+Crtitics\+To\+Reviewer}\label{interface_movie_list_table_view_cell_a10aa2075f805a98a517bf9324e30663b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The cell that will be used throughout the app whenever a list with a lot of cells is required 
+
+Definition at line 14 of file Movie\+List\+Table\+View\+Cell.\+h.
+
+
+
+\subsection{Method Documentation}
+\index{Movie\+List\+Table\+View\+Cell@{Movie\+List\+Table\+View\+Cell}!configure\+List\+Cell\+With\+Favourite\+:@{configure\+List\+Cell\+With\+Favourite\+:}}
+\index{configure\+List\+Cell\+With\+Favourite\+:@{configure\+List\+Cell\+With\+Favourite\+:}!Movie\+List\+Table\+View\+Cell@{Movie\+List\+Table\+View\+Cell}}
+\subsubsection[{configure\+List\+Cell\+With\+Favourite\+:(\+Results $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) configure\+List\+Cell\+With\+Favourite\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Results} $\ast$)}]{result}
+\end{DoxyParamCaption}
+}\label{interface_movie_list_table_view_cell_a9141652218d676d4e5af54a4d67f4440}
+Sets the cell\textquotesingle{}s labels from the user\textquotesingle{}s favourites
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The selected movie \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Movie\+List\+Table\+View\+Cell.\+m.
+
+\index{Movie\+List\+Table\+View\+Cell@{Movie\+List\+Table\+View\+Cell}!configure\+List\+Cell\+With\+Result\+:@{configure\+List\+Cell\+With\+Result\+:}}
+\index{configure\+List\+Cell\+With\+Result\+:@{configure\+List\+Cell\+With\+Result\+:}!Movie\+List\+Table\+View\+Cell@{Movie\+List\+Table\+View\+Cell}}
+\subsubsection[{configure\+List\+Cell\+With\+Result\+:(\+N\+Y\+T\+Results $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) configure\+List\+Cell\+With\+Result\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf N\+Y\+T\+Results} $\ast$)}]{result}
+\end{DoxyParamCaption}
+}\label{interface_movie_list_table_view_cell_a08358fe62d5cc388851ee1e42ffc0d2f}
+Sets the cell\textquotesingle{}s labels from the online search results
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The selected movie \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Movie\+List\+Table\+View\+Cell.\+m.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Movie Reviews/\+Views/\+Table\+View\+Cells/Movie\+List\+Table\+View\+Cell.\+h\item 
+Movie Reviews/\+Views/\+Table\+View\+Cells/Movie\+List\+Table\+View\+Cell.\+m\end{DoxyCompactItemize}

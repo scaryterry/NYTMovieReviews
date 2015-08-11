@@ -1,0 +1,65 @@
+.TH "InteractWithAPI" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InteractWithAPI \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <InteractWithAPI\&.h>\fP
+.PP
+Inherits NSObject\&.
+.SS "Class Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) + \fBsearchNYTForMovie:completion:\fP"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(^ \fBRetrievalCompleteBlock\fP) (\fBNYTMovieSearch\fP *searchResults, NSError *error)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class responsible for interfacing with online API and parse the JSON response into a model object 
+.PP
+Definition at line 14 of file InteractWithAPI\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "\- (typedef void(^ RetrievalCompleteBlock) (\fBNYTMovieSearch\fP *searchResults, NSError *error))\fC [protected]\fP"
+Contains the response of the NYT API\&. By fetching the response in a block we are able to keep the UI from locking up while the method that fetches the results runs and it makes it trivial to be certain when the method has finished even though its run asynchronously
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsearchResults\fP The response of the server after its being parsed to a local data model object 
+.br
+\fIerror\fP If the error is not nil then it indicates that an issue has arisen and the calling method should take it into account 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file InteractWithAPI\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "+ (void) searchNYTForMovie: (NSString *) movieName(\fBRetrievalCompleteBlock\fP) completion"
+The method that searches the NYT for a movie
+.PP
+\fBParameters:\fP
+.RS 4
+\fImovieName\fP The name of the movie we want to search for 
+.br
+\fIcompletion\fP The completion block which returns the search results or an error with the description of what went wrong 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file InteractWithAPI\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

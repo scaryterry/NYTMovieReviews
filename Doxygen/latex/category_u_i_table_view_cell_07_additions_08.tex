@@ -1,0 +1,69 @@
+\section{U\+I\+Table\+View\+Cell(Additions) Category Reference}
+\label{category_u_i_table_view_cell_07_additions_08}\index{U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}}
+
+
+{\ttfamily \#import $<$U\+I\+Table\+View\+Cell+\+Additions.\+h$>$}
+
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ {\bf fix\+Cell\+Layout}
+\item 
+(C\+G\+Float) -\/ {\bf return\+Cell\+Auto\+Height}
+\item 
+(void) -\/ {\bf animate\+Cell\+Scrolling}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Category on table\+View\+Cell with additional helper methods. 
+
+Definition at line 14 of file U\+I\+Table\+View\+Cell+\+Additions.\+h.
+
+
+
+\subsection{Method Documentation}
+\index{U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}!animate\+Cell\+Scrolling@{animate\+Cell\+Scrolling}}
+\index{animate\+Cell\+Scrolling@{animate\+Cell\+Scrolling}!U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}}
+\subsubsection[{animate\+Cell\+Scrolling()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) animate\+Cell\+Scrolling 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{category_u_i_table_view_cell_07_additions_08_a754ae6b47f9bda38daa1f13037a434c5}
+Method that changes how the cells get presented on screen, should be called from the will\+Display\+Cell table\+View Delegate method !!\+F\+I\+X for issue \#1 Cell position wrong-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+Definition at line 30 of file U\+I\+Table\+View\+Cell+\+Additions.\+m.
+
+\index{U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}!fix\+Cell\+Layout@{fix\+Cell\+Layout}}
+\index{fix\+Cell\+Layout@{fix\+Cell\+Layout}!U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}}
+\subsubsection[{fix\+Cell\+Layout()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) fix\+Cell\+Layout 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{category_u_i_table_view_cell_07_additions_08_a64238568138ecbbf04dcf7c2b66f21ff}
+This method needs to be called when configuring each cell, its the only way to ensure that all the elements in the cell are sized correctly 
+
+Definition at line 13 of file U\+I\+Table\+View\+Cell+\+Additions.\+m.
+
+\index{U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}!return\+Cell\+Auto\+Height@{return\+Cell\+Auto\+Height}}
+\index{return\+Cell\+Auto\+Height@{return\+Cell\+Auto\+Height}!U\+I\+Table\+View\+Cell(\+Additions)@{U\+I\+Table\+View\+Cell(\+Additions)}}
+\subsubsection[{return\+Cell\+Auto\+Height()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\+G\+Float) return\+Cell\+Auto\+Height 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{category_u_i_table_view_cell_07_additions_08_a6e60752fa86ec9813008e7ed773f0d44}
+Category method used on i\+O\+S7 to calculate and return the cell height using autolayout
+
+\begin{DoxyReturn}{Returns}
+The calculated height of the cell 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file U\+I\+Table\+View\+Cell+\+Additions.\+m.
+
+
+
+The documentation for this category was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Movie Reviews/\+Helper Classes/\+Categories/U\+I\+Table\+View\+Cell+\+Additions.\+h\item 
+Movie Reviews/\+Helper Classes/\+Categories/U\+I\+Table\+View\+Cell+\+Additions.\+m\end{DoxyCompactItemize}

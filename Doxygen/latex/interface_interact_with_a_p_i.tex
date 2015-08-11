@@ -1,0 +1,78 @@
+\section{Interact\+With\+A\+P\+I Class Reference}
+\label{interface_interact_with_a_p_i}\index{Interact\+With\+A\+P\+I@{Interact\+With\+A\+P\+I}}
+
+
+{\ttfamily \#import $<$Interact\+With\+A\+P\+I.\+h$>$}
+
+Inheritance diagram for Interact\+With\+A\+P\+I\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_interact_with_a_p_i}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) + {\bf search\+N\+Y\+T\+For\+Movie\+:completion\+:}
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($^\wedge$ {\bf Retrieval\+Complete\+Block}) ({\bf N\+Y\+T\+Movie\+Search} $\ast$search\+Results, N\+S\+Error $\ast$error)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class responsible for interfacing with online A\+P\+I and parse the J\+S\+O\+N response into a model object 
+
+Definition at line 14 of file Interact\+With\+A\+P\+I.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{Interact\+With\+A\+P\+I@{Interact\+With\+A\+P\+I}!Retrieval\+Complete\+Block@{Retrieval\+Complete\+Block}}
+\index{Retrieval\+Complete\+Block@{Retrieval\+Complete\+Block}!Interact\+With\+A\+P\+I@{Interact\+With\+A\+P\+I}}
+\subsubsection[{Retrieval\+Complete\+Block}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (typedef void($^\wedge$ Retrieval\+Complete\+Block) ({\bf N\+Y\+T\+Movie\+Search} $\ast$search\+Results, N\+S\+Error $\ast$error))\hspace{0.3cm}{\ttfamily [protected]}}\label{interface_interact_with_a_p_i_ad6ad18eac8eaf03e8b124a72bd4cee23}
+Contains the response of the N\+Y\+T A\+P\+I. By fetching the response in a block we are able to keep the U\+I from locking up while the method that fetches the results runs and it makes it trivial to be certain when the method has finished even though its run asynchronously
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Results} & The response of the server after its being parsed to a local data model object \\
+\hline
+{\em error} & If the error is not nil then it indicates that an issue has arisen and the calling method should take it into account \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Interact\+With\+A\+P\+I.\+h.
+
+
+
+\subsection{Method Documentation}
+\index{Interact\+With\+A\+P\+I@{Interact\+With\+A\+P\+I}!search\+N\+Y\+T\+For\+Movie\+:completion\+:@{search\+N\+Y\+T\+For\+Movie\+:completion\+:}}
+\index{search\+N\+Y\+T\+For\+Movie\+:completion\+:@{search\+N\+Y\+T\+For\+Movie\+:completion\+:}!Interact\+With\+A\+P\+I@{Interact\+With\+A\+P\+I}}
+\subsubsection[{search\+N\+Y\+T\+For\+Movie\+:completion\+:(\+N\+S\+String $\ast$movie\+Name,[completion] Retrieval\+Complete\+Block completion)}]{\setlength{\rightskip}{0pt plus 5cm}+ (void) search\+N\+Y\+T\+For\+Movie\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String $\ast$)}]{movie\+Name}
+\item[{completion:({\bf Retrieval\+Complete\+Block})}]{completion}
+\end{DoxyParamCaption}
+}\label{interface_interact_with_a_p_i_a512b4795d15c104d7fd0076ef12c2979}
+The method that searches the N\+Y\+T for a movie
+
+
+\begin{DoxyParams}{Parameters}
+{\em movie\+Name} & The name of the movie we want to search for \\
+\hline
+{\em completion} & The completion block which returns the search results or an error with the description of what went wrong \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Interact\+With\+A\+P\+I.\+m.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Movie Reviews/\+Model/\+A\+P\+I Interaction/Interact\+With\+A\+P\+I.\+h\item 
+Movie Reviews/\+Model/\+A\+P\+I Interaction/Interact\+With\+A\+P\+I.\+m\end{DoxyCompactItemize}

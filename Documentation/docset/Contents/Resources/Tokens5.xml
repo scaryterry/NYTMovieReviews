@@ -1,16 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MovieDetailsDescriptionTableViewCell.html">
+	<File path="Classes/Link.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MovieDetailsDescriptionTableViewCell</TokenIdentifier>
-			<Abstract type="html">The cell that will be used to display additional information for a movie</Abstract>
-			<DeclaredIn>MovieDetailsDescriptionTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/Link</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
             
 			
 			<NodeRef refid="5"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/setType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Link/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/setUrl:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/url</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Link/url</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/setSuggestedLinkText:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/suggestedLinkText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Link/suggestedLinkText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/setResults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Results *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Link/results</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Results *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Link/results</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Link.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Results *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
 		
         
 	</File>

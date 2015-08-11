@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NYTResults.html">
+	<File path="Classes/Movie_ReviewsTests.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NYTResults</TokenIdentifier>
-			<Abstract type="html">A Model object representing a movie from parsed from the JSON response of the NYT Movie reviews API</Abstract>
-			<DeclaredIn>NYTResults.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/Movie_ReviewsTests</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Movie_ReviewsTests.m</DeclaredIn>
             
 			
 			<NodeRef refid="14"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Movie_ReviewsTests/setUp</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Movie_ReviewsTests.m</DeclaredIn>
+			
+			<Declaration>- (void)setUp</Declaration>
+			
+			
+			<Anchor>//api/name/setUp</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Movie_ReviewsTests/tearDown</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Movie_ReviewsTests.m</DeclaredIn>
+			
+			<Declaration>- (void)tearDown</Declaration>
+			
+			
+			<Anchor>//api/name/tearDown</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Movie_ReviewsTests/testExample</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Movie_ReviewsTests.m</DeclaredIn>
+			
+			<Declaration>- (void)testExample</Declaration>
+			
+			
+			<Anchor>//api/name/testExample</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Movie_ReviewsTests/testPerformanceExample</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Movie_ReviewsTests.m</DeclaredIn>
+			
+			<Declaration>- (void)testPerformanceExample</Declaration>
+			
+			
+			<Anchor>//api/name/testPerformanceExample</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
 		
         
 	</File>

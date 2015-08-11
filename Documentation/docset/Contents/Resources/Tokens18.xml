@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UIDevice+Additions.html">
+	<File path="Classes/NYTMultimedia.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UIDevice(Additions)</TokenIdentifier>
-			<Abstract type="html">Helper category to get different info about the device.</Abstract>
-			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NYTMultimedia</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
             
 			
 			<NodeRef refid="18"/>
@@ -13,38 +13,134 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIDevice/isiPad</TokenIdentifier>
-			<Abstract type="html">Tells whether the current device is an iPad.</Abstract>
-			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/setResource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
 			
-			<Declaration>+ (BOOL)isiPad</Declaration>
+			<Declaration>@property (nonatomic, copy) NYTResource *resource</Declaration>
 			
 			
-			<Anchor>//api/name/isiPad</Anchor>
+			<Anchor>//api/name/resource</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIDevice/deviceModel</TokenIdentifier>
-			<Abstract type="html">Returns the current device model.</Abstract>
-			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/resource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)deviceModel</Declaration>
+			<Declaration>@property (nonatomic, copy) NYTResource *resource</Declaration>
 			
 			
-			<Anchor>//api/name/deviceModel</Anchor>
+			<Anchor>//api/name/resource</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIDevice/majorSystemVersion</TokenIdentifier>
-			<Abstract type="html">Returns the major version of the operating system.</Abstract>
-			<DeclaredIn>UIDevice+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTMultimedia/resource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
 			
-			<Declaration>+ (NSInteger)majorSystemVersion</Declaration>
+			<Declaration>@property (nonatomic, copy) NYTResource *resource</Declaration>
 			
 			
-			<Anchor>//api/name/majorSystemVersion</Anchor>
+			<Anchor>//api/name/resource</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NYTMultimedia/modelObjectWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/modelObjectWithDictionary:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/dictionaryRepresentation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryRepresentation</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/description</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.m</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/objectOrNilForKey:fromDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.m</DeclaredIn>
+			
+			<Declaration>- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/objectOrNilForKey:fromDictionary:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/initWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.m</DeclaredIn>
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/encodeWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.m</DeclaredIn>
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTMultimedia/copyWithZone:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTMultimedia.m</DeclaredIn>
+			
+			<Declaration>- (id)copyWithZone:(NSZone *)zone</Declaration>
+			
+			
+			<Anchor>//api/name/copyWithZone:</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		

@@ -1,16 +1,677 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MovieListTableViewCell.html">
+	<File path="Classes/MovieDetailsTableViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MovieListTableViewCell</TokenIdentifier>
-			<Abstract type="html">The cell that will be used throughout the app whenever a list with a lot of cells is required</Abstract>
-			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieDetailsTableViewController</TokenIdentifier>
+			<Abstract type="html">The controller that will display all of the information for the selected movie</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="9"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setOnlineSelection:</TokenIdentifier>
+			<Abstract type="html">The selected movie from the online search results</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NYTResults *onlineSelection</Declaration>
+			
+			
+			<Anchor>//api/name/onlineSelection</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/onlineSelection</TokenIdentifier>
+			<Abstract type="html">The selected movie from the online search results</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NYTResults *onlineSelection</Declaration>
+			
+			
+			<Anchor>//api/name/onlineSelection</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/onlineSelection</TokenIdentifier>
+			<Abstract type="html">The selected movie from the online search results</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) NYTResults *onlineSelection</Declaration>
+			
+			
+			<Anchor>//api/name/onlineSelection</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setOfflineSelection:</TokenIdentifier>
+			<Abstract type="html">The selected movie from the favourites</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) Results *offlineSelection</Declaration>
+			
+			
+			<Anchor>//api/name/offlineSelection</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/offlineSelection</TokenIdentifier>
+			<Abstract type="html">The selected movie from the favourites</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) Results *offlineSelection</Declaration>
+			
+			
+			<Anchor>//api/name/offlineSelection</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/offlineSelection</TokenIdentifier>
+			<Abstract type="html">The selected movie from the favourites</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) Results *offlineSelection</Declaration>
+			
+			
+			<Anchor>//api/name/offlineSelection</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/viewDidLoad</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)viewDidLoad</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidLoad</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/viewWillAppear:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)viewWillAppear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewWillAppear:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/didReceiveMemoryWarning</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)didReceiveMemoryWarning</Declaration>
+			
+			
+			<Anchor>//api/name/didReceiveMemoryWarning</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/numberOfSectionsInTableView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfSectionsInTableView:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableView:numberOfRowsInSection:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:numberOfRowsInSection:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableView:cellForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:cellForRowAtIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableView:didSelectRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:didSelectRowAtIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableView:willDisplayCell:forRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:willDisplayCell:forRowAtIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableView:estimatedHeightForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:estimatedHeightForRowAtIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableView:heightForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:heightForRowAtIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/tableViewCellHeightForiOS7:calculateHeightForIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableViewCellHeightForiOS7:(UITableView *)tableView calculateHeightForIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewCellHeightForiOS7:calculateHeightForIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/configureOverviewSectionWithResult:forCell:atIndexPath:</TokenIdentifier>
+			<Abstract type="html">Configures the overview section cells from online search results</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The online search result with the movie we want to display information for</Abstract>
+				</Parameter><Parameter>
+					<Name>cell</Name>
+					<Abstract type="html">The cell that will get configured</Abstract>
+				</Parameter><Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">The indexPath of the cell we want to configure</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureOverviewSectionWithResult:forCell:atIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/configureOverviewSectionWithFavourite:forCell:atIndexPath:</TokenIdentifier>
+			<Abstract type="html">Configures the overview section cells from favourites</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)configureOverviewSectionWithFavourite:(Results *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The result from favourites with the movie we want to display information for</Abstract>
+				</Parameter><Parameter>
+					<Name>cell</Name>
+					<Abstract type="html">The cell that will get configured</Abstract>
+				</Parameter><Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">The indexPath of the cell we want to configure</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureOverviewSectionWithFavourite:forCell:atIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/isCapsuleReviewAvailable</TokenIdentifier>
+			<Abstract type="html">Using this we determine how many cells the table will display, if there isnt a capsule review available then we dont want to display a blank cell</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isCapsuleReviewAvailable</Declaration>
+			
+			<ReturnValue><Abstract type="html">Wether the selected movie has a small review available.</Abstract></ReturnValue>
+			<Anchor>//api/name/isCapsuleReviewAvailable</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/getMovieCellReuseIdentifierForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html">Is used to return the cell identifier the current indexPath is supposed to have</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSString *)getMovieCellReuseIdentifierForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">The indexPath of the cell about to be configured</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The cell identifier for a cell based on the indexPath</Abstract></ReturnValue>
+			<Anchor>//api/name/getMovieCellReuseIdentifierForRowAtIndexPath:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setupInterface</TokenIdentifier>
+			<Abstract type="html">Sets up properties that relate to the user interface in general</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupInterface</Declaration>
+			
+			
+			<Anchor>//api/name/setupInterface</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setupTableViewCellType</TokenIdentifier>
+			<Abstract type="html">Registers the custom cell types the tableview will use</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupTableViewCellType</Declaration>
+			
+			
+			<Anchor>//api/name/setupTableViewCellType</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setupBarButton</TokenIdentifier>
+			<Abstract type="html">Sets up the bar button that can be used to save or remove from favourites</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupBarButton</Declaration>
+			
+			
+			<Anchor>//api/name/setupBarButton</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/isMovieInFavourites</TokenIdentifier>
+			<Abstract type="html">Custom getter for property that checks if the movie is in favourites already.</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isMovieInFavourites</Declaration>
+			
+			<ReturnValue><Abstract type="html">Yes Or No value depending if the movie is in favourites or not</Abstract></ReturnValue>
+			<Anchor>//api/name/isMovieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/performAddRemoveFavourite:</TokenIdentifier>
+			<Abstract type="html">Attempts to add or remove the movie from favourites depending if its in favourites or not</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (IBAction)performAddRemoveFavourite:(id)sender</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sender</Name>
+					<Abstract type="html">The button that triggered this</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/performAddRemoveFavourite:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/performOpenMovieLink:</TokenIdentifier>
+			<Abstract type="html">Opens the selected link from the sectionTypeMovieLinks section in a browser within the app</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)performOpenMovieLink:(NSString *)link</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>link</Name>
+					<Abstract type="html">The string representation of the URL about to be displayed</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/performOpenMovieLink:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/saveContext</TokenIdentifier>
+			<Abstract type="html">Is used to persist the current core data context to disk</Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)saveContext</Declaration>
+			
+			
+			<Anchor>//api/name/saveContext</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setCapsuleReviewAvailable:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable</Declaration>
+			
+			
+			<Anchor>//api/name/capsuleReviewAvailable</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/isCapsuleReviewAvailable</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable</Declaration>
+			
+			
+			<Anchor>//api/name/capsuleReviewAvailable</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/capsuleReviewAvailable</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isCapsuleReviewAvailable) BOOL capsuleReviewAvailable</Declaration>
+			
+			
+			<Anchor>//api/name/capsuleReviewAvailable</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setMovieInFavourites:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isMovieInFavourites) BOOL movieInFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/movieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/isMovieInFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isMovieInFavourites) BOOL movieInFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/movieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/movieInFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isMovieInFavourites) BOOL movieInFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/movieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setInitialCheckIsMovieInFavourites:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL const initialCheckIsMovieInFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/initialCheckIsMovieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/initialCheckIsMovieInFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL const initialCheckIsMovieInFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/initialCheckIsMovieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/initialCheckIsMovieInFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL const initialCheckIsMovieInFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/initialCheckIsMovieInFavourites</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setItemToSave:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) Results *itemToSave</Declaration>
+			
+			
+			<Anchor>//api/name/itemToSave</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/itemToSave</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) Results *itemToSave</Declaration>
+			
+			
+			<Anchor>//api/name/itemToSave</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/itemToSave</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) Results *itemToSave</Declaration>
+			
+			
+			<Anchor>//api/name/itemToSave</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setBarButtonAddRemove:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonAddRemove</Declaration>
+			
+			
+			<Anchor>//api/name/barButtonAddRemove</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/barButtonAddRemove</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonAddRemove</Declaration>
+			
+			
+			<Anchor>//api/name/barButtonAddRemove</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/barButtonAddRemove</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonAddRemove</Declaration>
+			
+			
+			<Anchor>//api/name/barButtonAddRemove</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setHeightCellHeader:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellHeader</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellHeader</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/heightCellHeader</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellHeader</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellHeader</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/heightCellHeader</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellHeader</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellHeader</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setHeightCellReviews:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellReviews</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellReviews</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/heightCellReviews</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellReviews</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellReviews</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/heightCellReviews</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellReviews</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellReviews</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setHeightCellDetails:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellDetails</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellDetails</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/heightCellDetails</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellDetails</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellDetails</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/heightCellDetails</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCellDetails</Declaration>
+			
+			
+			<Anchor>//api/name/heightCellDetails</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
 		
         
 	</File>

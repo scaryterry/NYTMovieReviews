@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MovieDetailsTableViewController.html">
+	<File path="Classes/MovieDetailsReviewTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MovieDetailsTableViewController</TokenIdentifier>
-			<Abstract type="html">The controller that will display all of the information for the selected movie</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieDetailsReviewTableViewCell</TokenIdentifier>
+			<Abstract type="html">The cell that will be used to display the avialable review for a movie</Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="8"/>
@@ -13,243 +13,288 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setOnlineSelection:</TokenIdentifier>
-			<Abstract type="html">The selected movie from the online search results</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/setAllLabels:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) NYTResults *onlineSelection</Declaration>
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
 			
 			
-			<Anchor>//api/name/onlineSelection</Anchor>
+			<Anchor>//api/name/allLabels</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/onlineSelection</TokenIdentifier>
-			<Abstract type="html">The selected movie from the online search results</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/allLabels</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) NYTResults *onlineSelection</Declaration>
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
 			
 			
-			<Anchor>//api/name/onlineSelection</Anchor>
+			<Anchor>//api/name/allLabels</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/onlineSelection</TokenIdentifier>
-			<Abstract type="html">The selected movie from the online search results</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsReviewTableViewCell/allLabels</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) NYTResults *onlineSelection</Declaration>
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
 			
 			
-			<Anchor>//api/name/onlineSelection</Anchor>
+			<Anchor>//api/name/allLabels</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setOfflineSelection:</TokenIdentifier>
-			<Abstract type="html">The selected movie from the favourites</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/setLabelStaticHeader:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) Results *offlineSelection</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticHeader</Declaration>
 			
 			
-			<Anchor>//api/name/offlineSelection</Anchor>
+			<Anchor>//api/name/labelStaticHeader</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/offlineSelection</TokenIdentifier>
-			<Abstract type="html">The selected movie from the favourites</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/labelStaticHeader</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) Results *offlineSelection</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticHeader</Declaration>
 			
 			
-			<Anchor>//api/name/offlineSelection</Anchor>
+			<Anchor>//api/name/labelStaticHeader</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsTableViewController/offlineSelection</TokenIdentifier>
-			<Abstract type="html">The selected movie from the favourites</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsReviewTableViewCell/labelStaticHeader</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) Results *offlineSelection</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticHeader</Declaration>
 			
 			
-			<Anchor>//api/name/offlineSelection</Anchor>
+			<Anchor>//api/name/labelStaticHeader</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/configureOverviewSectionWithResult:forCell:atIndexPath:</TokenIdentifier>
-			<Abstract type="html">Configures the overview section cells from online search results</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/setLabelReviewSummary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>- (void)configureOverviewSectionWithResult:(NYTResults *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewSummary</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewSummary</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/labelReviewSummary</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewSummary</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewSummary</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsReviewTableViewCell/labelReviewSummary</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewSummary</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewSummary</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/setLabelStaticReviewer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewer</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/labelStaticReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewer</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsReviewTableViewCell/labelStaticReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewer</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/setLabelReviewer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/labelReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieDetailsReviewTableViewCell/labelReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/configureReviewCellWithResult:</TokenIdentifier>
+			<Abstract type="html">Sets the cell&apos;s labels from the online search results</Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureReviewCellWithResult:(NYTResults *)result</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>result</Name>
-					<Abstract type="html">The online search result with the movie we want to display information for</Abstract>
-				</Parameter><Parameter>
-					<Name>cell</Name>
-					<Abstract type="html">The cell that will get configured</Abstract>
-				</Parameter><Parameter>
-					<Name>indexPath</Name>
-					<Abstract type="html">The indexPath of the cell we want to configure</Abstract>
+					<Abstract type="html">The selected movie</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/configureOverviewSectionWithResult:forCell:atIndexPath:</Anchor>
+			<Anchor>//api/name/configureReviewCellWithResult:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/configureOverviewSectionWithFavourite:forCell:atIndexPath:</TokenIdentifier>
-			<Abstract type="html">Configures the overview section cells from favourites</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/configureReviewCellWithFavourite:</TokenIdentifier>
+			<Abstract type="html">Sets the cell&apos;s labels from the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.h</DeclaredIn>
 			
-			<Declaration>- (void)configureOverviewSectionWithFavourite:(Results *)result forCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath</Declaration>
+			<Declaration>- (void)configureReviewCellWithFavourite:(Results *)result</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>result</Name>
-					<Abstract type="html">The result from favourites with the movie we want to display information for</Abstract>
-				</Parameter><Parameter>
-					<Name>cell</Name>
-					<Abstract type="html">The cell that will get configured</Abstract>
-				</Parameter><Parameter>
-					<Name>indexPath</Name>
-					<Abstract type="html">The indexPath of the cell we want to configure</Abstract>
+					<Abstract type="html">The selected movie</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/configureOverviewSectionWithFavourite:forCell:atIndexPath:</Anchor>
+			<Anchor>//api/name/configureReviewCellWithFavourite:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/isCapsuleReviewAvailable</TokenIdentifier>
-			<Abstract type="html">Using this we determine how many cells the table will display, if there isnt a capsule review available then we dont want to display a blank cell</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/awakeFromNib</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.m</DeclaredIn>
 			
-			<Declaration>- (BOOL)isCapsuleReviewAvailable</Declaration>
+			<Declaration>- (void)awakeFromNib</Declaration>
 			
-			<ReturnValue><Abstract type="html">Wether the selected movie has a small review available.</Abstract></ReturnValue>
-			<Anchor>//api/name/isCapsuleReviewAvailable</Anchor>
+			
+			<Anchor>//api/name/awakeFromNib</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/getMovieCellReuseIdentifierForRowAtIndexPath:</TokenIdentifier>
-			<Abstract type="html">Is used to return the cell identifier the current indexPath is supposed to have</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/setSelected:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.m</DeclaredIn>
 			
-			<Declaration>- (NSString *)getMovieCellReuseIdentifierForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>indexPath</Name>
-					<Abstract type="html">The indexPath of the cell about to be configured</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The cell identifier for a cell based on the indexPath</Abstract></ReturnValue>
-			<Anchor>//api/name/getMovieCellReuseIdentifierForRowAtIndexPath:</Anchor>
+			<Declaration>- (void)setSelected:(BOOL)selected animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/setSelected:animated:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setupInterface</TokenIdentifier>
-			<Abstract type="html">Sets up properties that relate to the user interface in general</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/addText:toLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.m</DeclaredIn>
 			
-			<Declaration>- (void)setupInterface</Declaration>
+			<Declaration>- (void)addText:(NSString *)text toLabel:(UILabel *)label</Declaration>
 			
 			
-			<Anchor>//api/name/setupInterface</Anchor>
+			<Anchor>//api/name/addText:toLabel:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setupTableViewCellType</TokenIdentifier>
-			<Abstract type="html">Registers the custom cell types the tableview will use</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/toggleVisibilityOfLabel:visibilityStatus:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.m</DeclaredIn>
 			
-			<Declaration>- (void)setupTableViewCellType</Declaration>
+			<Declaration>- (void)toggleVisibilityOfLabel:(UILabel *)label visibilityStatus:(BOOL)shouldHideLabel</Declaration>
 			
 			
-			<Anchor>//api/name/setupTableViewCellType</Anchor>
+			<Anchor>//api/name/toggleVisibilityOfLabel:visibilityStatus:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/setupBarButton</TokenIdentifier>
-			<Abstract type="html">Sets up the bar button that can be used to save or remove from favourites</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/removeLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.m</DeclaredIn>
 			
-			<Declaration>- (void)setupBarButton</Declaration>
+			<Declaration>- (void)removeLabel:(UILabel *)label</Declaration>
 			
 			
-			<Anchor>//api/name/setupBarButton</Anchor>
+			<Anchor>//api/name/removeLabel:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/isMovieInFavourites</TokenIdentifier>
-			<Abstract type="html">Custom getter for property that checks if the movie is in favourites already.</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsReviewTableViewCell/layoutSubviews</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieDetailsReviewTableViewCell.m</DeclaredIn>
 			
-			<Declaration>- (BOOL)isMovieInFavourites</Declaration>
-			
-			<ReturnValue><Abstract type="html">Yes Or No value depending if the movie is in favourites or not</Abstract></ReturnValue>
-			<Anchor>//api/name/isMovieInFavourites</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/performAddRemoveFavourite:</TokenIdentifier>
-			<Abstract type="html">Attempts to add or remove the movie from favourites depending if its in favourites or not</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
-			
-			<Declaration>- (IBAction)performAddRemoveFavourite:(id)sender</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>sender</Name>
-					<Abstract type="html">The button that triggered this</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/performAddRemoveFavourite:</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/performOpenMovieLink:</TokenIdentifier>
-			<Abstract type="html">Opens the selected link from the sectionTypeMovieLinks section in a browser within the app</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
-			
-			<Declaration>- (void)performOpenMovieLink:(NSString *)link</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>link</Name>
-					<Abstract type="html">The string representation of the URL about to be displayed</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/performOpenMovieLink:</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieDetailsTableViewController/saveContext</TokenIdentifier>
-			<Abstract type="html">Is used to persist the current core data context to disk</Abstract>
-			<DeclaredIn>MovieDetailsTableViewController.m</DeclaredIn>
-			
-			<Declaration>- (void)saveContext</Declaration>
+			<Declaration>- (void)layoutSubviews</Declaration>
 			
 			
-			<Anchor>//api/name/saveContext</Anchor>
+			<Anchor>//api/name/layoutSubviews</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		

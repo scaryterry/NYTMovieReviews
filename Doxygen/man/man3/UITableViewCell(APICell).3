@@ -1,0 +1,53 @@
+.TH "UITableViewCell(APICell)" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UITableViewCell(APICell) \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <UITableViewCell+APICell\&.h>\fP
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) \- \fBconfigureWithResult:\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureWithFavourite:\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class used by any tableview that wants to display a favourite or a search result\&. All that we have to do is set the correct reuse identifier for the cell we want to configure\&. 
+.PP
+Definition at line 31 of file UITableViewCell+APICell\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) configureWithFavourite: (\fBResults\fP *) result"
+Used by any tableview that wants to configure a cell with a movie from favourites stored with core data
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The datasource the cells will be configured with 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file UITableViewCell+APICell\&.m\&.
+.SS "\- (void) configureWithResult: (\fBNYTResults\fP *) result"
+Used by any tableview that wants to configure a cell with a movie search result from the NYT API
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The datasource the cells will be configured with 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file UITableViewCell+APICell\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

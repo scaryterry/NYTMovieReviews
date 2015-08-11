@@ -1,0 +1,74 @@
+.TH "MovieDetailsReviewTableViewCell" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MovieDetailsReviewTableViewCell \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <MovieDetailsReviewTableViewCell\&.h>\fP
+.PP
+Inherits UITableViewCell\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "() \- \fBIBOutletCollection\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureReviewCellWithResult:\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureReviewCellWithFavourite:\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticHeader\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReviewSummary\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticReviewer\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReviewer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The cell that will be used to display the avialable review for a movie 
+.PP
+Definition at line 14 of file MovieDetailsReviewTableViewCell\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) configureReviewCellWithFavourite: (\fBResults\fP *) result"
+Sets the cell's labels from the user's favourites
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file MovieDetailsReviewTableViewCell\&.m\&.
+.SS "\- (void) configureReviewCellWithResult: (\fBNYTResults\fP *) result"
+Sets the cell's labels from the online search results
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file MovieDetailsReviewTableViewCell\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UITableViewCell+Additions.html">
+	<File path="Classes/NYTResource.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UITableViewCell(Additions)</TokenIdentifier>
-			<Abstract type="html">Category on tableViewCell with additional helper methods.</Abstract>
-			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NYTResource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
             
 			
 			<NodeRef refid="20"/>
@@ -13,38 +13,242 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/fixCellLayout</TokenIdentifier>
-			<Abstract type="html">This method needs to be called when configuring each cell, its the only way to ensure that all the elements in the cell are sized correctly</Abstract>
-			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/setSrc:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
 			
-			<Declaration>- (void)fixCellLayout</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *src</Declaration>
 			
 			
-			<Anchor>//api/name/fixCellLayout</Anchor>
+			<Anchor>//api/name/src</Anchor>
             <NodeRef refid="20"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/returnCellAutoHeight</TokenIdentifier>
-			<Abstract type="html">Category method used on iOS7 to calculate and return the cell height using autolayout</Abstract>
-			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/src</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
 			
-			<Declaration>- (CGFloat)returnCellAutoHeight</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *src</Declaration>
 			
-			<ReturnValue><Abstract type="html">The calculated height of the cell</Abstract></ReturnValue>
-			<Anchor>//api/name/returnCellAutoHeight</Anchor>
+			
+			<Anchor>//api/name/src</Anchor>
             <NodeRef refid="20"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/animateCellScrolling</TokenIdentifier>
-			<Abstract type="html">Method that changes how the cells get presented on screen, should be called from the willDisplayCell tableView Delegate method</Abstract>
-			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResource/src</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
 			
-			<Declaration>- (void)animateCellScrolling</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *src</Declaration>
 			
 			
-			<Anchor>//api/name/animateCellScrolling</Anchor>
+			<Anchor>//api/name/src</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/setWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/width</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResource/width</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *width</Declaration>
+			
+			
+			<Anchor>//api/name/width</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/setType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResource/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/setHeight:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/height</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTResource/height</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *height</Declaration>
+			
+			
+			<Anchor>//api/name/height</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NYTResource/modelObjectWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/modelObjectWithDictionary:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/dictionaryRepresentation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryRepresentation</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/description</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.m</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/objectOrNilForKey:fromDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.m</DeclaredIn>
+			
+			<Declaration>- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/objectOrNilForKey:fromDictionary:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/initWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.m</DeclaredIn>
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/encodeWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.m</DeclaredIn>
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTResource/copyWithZone:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTResource.m</DeclaredIn>
+			
+			<Declaration>- (id)copyWithZone:(NSZone *)zone</Declaration>
+			
+			
+			<Anchor>//api/name/copyWithZone:</Anchor>
             <NodeRef refid="20"/>
 		</Token>
 		

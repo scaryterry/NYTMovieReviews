@@ -26,21 +26,31 @@
 						<NodeRef refid="13"/>
 						<NodeRef refid="14"/>
 						<NodeRef refid="15"/>
-						
-					</Subnodes>
-				</Node>
-				
-				
-				<Node>
-					<Name></Name>
-					<Path>index.html</Path>
-					<Subnodes>
 						<NodeRef refid="16"/>
 						<NodeRef refid="17"/>
 						<NodeRef refid="18"/>
 						<NodeRef refid="19"/>
 						<NodeRef refid="20"/>
 						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
+						<NodeRef refid="23"/>
+						<NodeRef refid="24"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node>
+					<Name></Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="25"/>
+						<NodeRef refid="26"/>
+						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
+						<NodeRef refid="29"/>
+						<NodeRef refid="30"/>
+						<NodeRef refid="31"/>
 						
 					</Subnodes>
 				</Node>
@@ -51,9 +61,9 @@
 					<Name></Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="22"/>
-						<NodeRef refid="23"/>
-						<NodeRef refid="24"/>
+						<NodeRef refid="32"/>
+						<NodeRef refid="33"/>
+						<NodeRef refid="34"/>
 						
 					</Subnodes>
 				</Node>
@@ -66,6 +76,28 @@
 		<Node id="1" type="file" documentType="reference">
             <Name>AlertUser</Name>
             <Path>Classes/AlertUser.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/AlertUser.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/AlertUser.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/AlertUser.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
             
         </Node>
 		<Node id="2" type="file" documentType="reference">
@@ -82,6 +114,12 @@
                     <Path>Classes/AppDelegate.html</Path>
                     <Name>Tasks</Name>
                     <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/AppDelegate.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
                 </Node>
                 
                 
@@ -150,21 +188,132 @@
             
         </Node>
 		<Node id="5" type="file" documentType="reference">
-            <Name>MovieDetailsDescriptionTableViewCell</Name>
-            <Path>Classes/MovieDetailsDescriptionTableViewCell.html</Path>
+            <Name>Link</Name>
+            <Path>Classes/Link.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/Link.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/Link.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/Link.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
             
         </Node>
 		<Node id="6" type="file" documentType="reference">
-            <Name>MovieDetailsHeaderTableViewCell</Name>
-            <Path>Classes/MovieDetailsHeaderTableViewCell.html</Path>
+            <Name>MovieDetailsDescriptionTableViewCell</Name>
+            <Path>Classes/MovieDetailsDescriptionTableViewCell.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/MovieDetailsDescriptionTableViewCell.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/MovieDetailsDescriptionTableViewCell.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/MovieDetailsDescriptionTableViewCell.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/MovieDetailsDescriptionTableViewCell.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
             
         </Node>
 		<Node id="7" type="file" documentType="reference">
-            <Name>MovieDetailsReviewTableViewCell</Name>
-            <Path>Classes/MovieDetailsReviewTableViewCell.html</Path>
+            <Name>MovieDetailsHeaderTableViewCell</Name>
+            <Path>Classes/MovieDetailsHeaderTableViewCell.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/MovieDetailsHeaderTableViewCell.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/MovieDetailsHeaderTableViewCell.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/MovieDetailsHeaderTableViewCell.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/MovieDetailsHeaderTableViewCell.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
             
         </Node>
 		<Node id="8" type="file" documentType="reference">
+            <Name>MovieDetailsReviewTableViewCell</Name>
+            <Path>Classes/MovieDetailsReviewTableViewCell.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/MovieDetailsReviewTableViewCell.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/MovieDetailsReviewTableViewCell.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/MovieDetailsReviewTableViewCell.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/MovieDetailsReviewTableViewCell.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="9" type="file" documentType="reference">
             <Name>MovieDetailsTableViewController</Name>
             <Path>Classes/MovieDetailsTableViewController.html</Path>
             
@@ -197,12 +346,40 @@
             </Subnodes>
             
         </Node>
-		<Node id="9" type="file" documentType="reference">
+		<Node id="10" type="file" documentType="reference">
             <Name>MovieListTableViewCell</Name>
             <Path>Classes/MovieListTableViewCell.html</Path>
             
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/MovieListTableViewCell.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/MovieListTableViewCell.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/MovieListTableViewCell.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/MovieListTableViewCell.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
         </Node>
-		<Node id="10" type="file" documentType="reference">
+		<Node id="11" type="file" documentType="reference">
             <Name>MovieOfflineFavouritesTableViewController</Name>
             <Path>Classes/MovieOfflineFavouritesTableViewController.html</Path>
             
@@ -235,12 +412,40 @@
             </Subnodes>
             
         </Node>
-		<Node id="11" type="file" documentType="reference">
+		<Node id="12" type="file" documentType="reference">
             <Name>MovieSearch</Name>
             <Path>Classes/MovieSearch.html</Path>
             
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/MovieSearch.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/MovieSearch.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/MovieSearch.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/MovieSearch.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
         </Node>
-		<Node id="12" type="file" documentType="reference">
+		<Node id="13" type="file" documentType="reference">
             <Name>MovieSearchTableViewController</Name>
             <Path>Classes/MovieSearchTableViewController.html</Path>
             
@@ -273,23 +478,383 @@
             </Subnodes>
             
         </Node>
-		<Node id="13" type="file" documentType="reference">
-            <Name>NYTMovieSearch</Name>
-            <Path>Classes/NYTMovieSearch.html</Path>
-            
-        </Node>
 		<Node id="14" type="file" documentType="reference">
-            <Name>NYTResults</Name>
-            <Path>Classes/NYTResults.html</Path>
+            <Name>Movie_ReviewsTests</Name>
+            <Path>Classes/Movie_ReviewsTests.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/Movie_ReviewsTests.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/Movie_ReviewsTests.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/Movie_ReviewsTests.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
             
         </Node>
 		<Node id="15" type="file" documentType="reference">
+            <Name>Multimedia</Name>
+            <Path>Classes/Multimedia.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/Multimedia.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/Multimedia.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/Multimedia.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="16" type="file" documentType="reference">
+            <Name>NYTLink</Name>
+            <Path>Classes/NYTLink.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/NYTLink.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/NYTLink.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/NYTLink.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTLink.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTLink.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="17" type="file" documentType="reference">
+            <Name>NYTMovieSearch</Name>
+            <Path>Classes/NYTMovieSearch.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/NYTMovieSearch.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/NYTMovieSearch.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/NYTMovieSearch.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTMovieSearch.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTMovieSearch.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="18" type="file" documentType="reference">
+            <Name>NYTMultimedia</Name>
+            <Path>Classes/NYTMultimedia.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/NYTMultimedia.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/NYTMultimedia.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/NYTMultimedia.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTMultimedia.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTMultimedia.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="19" type="file" documentType="reference">
+            <Name>NYTRelatedUrls</Name>
+            <Path>Classes/NYTRelatedUrls.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/NYTRelatedUrls.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/NYTRelatedUrls.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/NYTRelatedUrls.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTRelatedUrls.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTRelatedUrls.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="20" type="file" documentType="reference">
+            <Name>NYTResource</Name>
+            <Path>Classes/NYTResource.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/NYTResource.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/NYTResource.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/NYTResource.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTResource.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTResource.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="21" type="file" documentType="reference">
+            <Name>NYTResults</Name>
+            <Path>Classes/NYTResults.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/NYTResults.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/NYTResults.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/NYTResults.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTResults.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/NYTResults.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="22" type="file" documentType="reference">
+            <Name>RelatedUrls</Name>
+            <Path>Classes/RelatedUrls.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/RelatedUrls.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/RelatedUrls.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/RelatedUrls.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="23" type="file" documentType="reference">
+            <Name>Resource</Name>
+            <Path>Classes/Resource.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/Resource.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/Resource.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/Resource.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="24" type="file" documentType="reference">
             <Name>Results</Name>
             <Path>Classes/Results.html</Path>
             
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/Results.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/Results.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/Results.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/Results.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
         </Node>
 		
-		<Node id="16" type="file" documentType="reference">
+		<Node id="25" type="file" documentType="reference">
             <Name>NSDictionary(Additions)</Name>
             <Path>Categories/NSDictionary+Additions.html</Path>
             
@@ -316,7 +881,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="17" type="file" documentType="reference">
+		<Node id="26" type="file" documentType="reference">
             <Name>NSError(Additions)</Name>
             <Path>Categories/NSError+Additions.html</Path>
             
@@ -343,7 +908,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="18" type="file" documentType="reference">
+		<Node id="27" type="file" documentType="reference">
             <Name>UIDevice(Additions)</Name>
             <Path>Categories/UIDevice+Additions.html</Path>
             
@@ -370,7 +935,34 @@
             </Subnodes>
             
         </Node>
-		<Node id="19" type="file" documentType="reference">
+		<Node id="28" type="file" documentType="reference">
+            <Name>UITableView(Additions)</Name>
+            <Path>Categories/UITableView+Additions.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Categories/UITableView+Additions.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Categories/UITableView+Additions.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Categories/UITableView+Additions.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="29" type="file" documentType="reference">
             <Name>UITableViewCell(APICell)</Name>
             <Path>Categories/UITableViewCell+APICell.html</Path>
             
@@ -397,7 +989,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="20" type="file" documentType="reference">
+		<Node id="30" type="file" documentType="reference">
             <Name>UITableViewCell(Additions)</Name>
             <Path>Categories/UITableViewCell+Additions.html</Path>
             
@@ -424,24 +1016,46 @@
             </Subnodes>
             
         </Node>
-		<Node id="21" type="file" documentType="reference">
+		<Node id="31" type="file" documentType="reference">
             <Name>UIView(Additions)</Name>
             <Path>Categories/UIView+Additions.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Categories/UIView+Additions.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Categories/UIView+Additions.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Categories/UIView+Additions.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
             
         </Node>
 		
         
-        <Node id="22" type="file" documentType="reference">
+        <Node id="32" type="file" documentType="reference">
             <Name>cellType</Name>
             <Path>Constants/cellType.html</Path>
             
         </Node>
-		<Node id="23" type="file" documentType="reference">
+		<Node id="33" type="file" documentType="reference">
             <Name>cellTypeCount</Name>
             <Path>Constants/cellTypeCount.html</Path>
             
         </Node>
-		<Node id="24" type="file" documentType="reference">
+		<Node id="34" type="file" documentType="reference">
             <Name>sectionType</Name>
             <Path>Constants/sectionType.html</Path>
             

@@ -1,0 +1,80 @@
+.TH "MovieDetailsHeaderTableViewCell" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MovieDetailsHeaderTableViewCell \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <MovieDetailsHeaderTableViewCell\&.h>\fP
+.PP
+Inherits UITableViewCell\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "() \- \fBIBOutletCollection\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureHeaderCellWithResult:\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureHeaderCellWithFavourite:\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelTitle\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelCriticsPick\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReviewer\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelRating\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticReviewer\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticRating\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The header cell for a movie, contains several different types of information 
+.PP
+Definition at line 15 of file MovieDetailsHeaderTableViewCell\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) configureHeaderCellWithFavourite: (\fBResults\fP *) result"
+Sets the cell's labels from the user's favourites
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file MovieDetailsHeaderTableViewCell\&.m\&.
+.SS "\- (void) configureHeaderCellWithResult: (\fBNYTResults\fP *) result"
+Sets the cell's labels from the online search results
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file MovieDetailsHeaderTableViewCell\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

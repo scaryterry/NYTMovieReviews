@@ -1,0 +1,83 @@
+.TH "MovieDetailsDescriptionTableViewCell" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MovieDetailsDescriptionTableViewCell \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <MovieDetailsDescriptionTableViewCell\&.h>\fP
+.PP
+Inherits UITableViewCell\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "() \- \fBIBOutletCollection\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureDescriptionCellWithResult:\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureDescriptionCellWithFavourite:\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticHeader\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticTitle\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelTitle\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticReleaseDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReleaseDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticDVDReleaseDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelDVDReleaseDate\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The cell that will be used to display additional information for a movie 
+.PP
+Definition at line 14 of file MovieDetailsDescriptionTableViewCell\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) configureDescriptionCellWithFavourite: (\fBResults\fP *) result"
+Sets the cell's labels from the user's favourites
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file MovieDetailsDescriptionTableViewCell\&.m\&.
+.SS "\- (void) configureDescriptionCellWithResult: (\fBNYTResults\fP *) result"
+Sets the cell's labels from the online search results
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file MovieDetailsDescriptionTableViewCell\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

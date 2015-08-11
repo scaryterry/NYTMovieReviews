@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MovieOfflineFavouritesTableViewController.html">
+	<File path="Classes/MovieListTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MovieOfflineFavouritesTableViewController</TokenIdentifier>
-			<Abstract type="html">The Controller responsible for displaying the user&apos;s favourites, it used an NSFetchedResults controller to query core data</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieListTableViewCell</TokenIdentifier>
+			<Abstract type="html">The cell that will be used throughout the app whenever a list with a lot of cells is required</Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="10"/>
@@ -13,86 +13,540 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/saveContext</TokenIdentifier>
-			<Abstract type="html">Is used to persist the current core data context to disk</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>- (void)saveContext</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelTitle</Declaration>
 			
 			
-			<Anchor>//api/name/saveContext</Anchor>
+			<Anchor>//api/name/labelTitle</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/setFetchedResultsController:</TokenIdentifier>
-			<Abstract type="html">Interfaces with core data to return the user&apos;s favourites</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelTitle</Declaration>
 			
 			
-			<Anchor>//api/name/fetchedResultsController</Anchor>
+			<Anchor>//api/name/labelTitle</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/fetchedResultsController</TokenIdentifier>
-			<Abstract type="html">Interfaces with core data to return the user&apos;s favourites</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelTitle</Declaration>
 			
 			
-			<Anchor>//api/name/fetchedResultsController</Anchor>
+			<Anchor>//api/name/labelTitle</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MovieOfflineFavouritesTableViewController/fetchedResultsController</TokenIdentifier>
-			<Abstract type="html">Interfaces with core data to return the user&apos;s favourites</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelStaticReview:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReview</Declaration>
 			
 			
-			<Anchor>//api/name/fetchedResultsController</Anchor>
+			<Anchor>//api/name/labelStaticReview</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/setHeightCell:</TokenIdentifier>
-			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelStaticReview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReview</Declaration>
 			
 			
-			<Anchor>//api/name/heightCell</Anchor>
+			<Anchor>//api/name/labelStaticReview</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieOfflineFavouritesTableViewController/heightCell</TokenIdentifier>
-			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelStaticReview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReview</Declaration>
 			
 			
-			<Anchor>//api/name/heightCell</Anchor>
+			<Anchor>//api/name/labelStaticReview</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MovieOfflineFavouritesTableViewController/heightCell</TokenIdentifier>
-			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
-			<DeclaredIn>MovieOfflineFavouritesTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelReview:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReview</Declaration>
 			
 			
-			<Anchor>//api/name/heightCell</Anchor>
+			<Anchor>//api/name/labelReview</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelReview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReview</Declaration>
+			
+			
+			<Anchor>//api/name/labelReview</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelReview</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReview</Declaration>
+			
+			
+			<Anchor>//api/name/labelReview</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelStaticBy:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticBy</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticBy</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelStaticBy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticBy</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticBy</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelStaticBy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticBy</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticBy</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelReviewer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewer</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelStaticReviewDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewDate</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelStaticReviewDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewDate</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelStaticReviewDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelStaticReviewDate</Declaration>
+			
+			
+			<Anchor>//api/name/labelStaticReviewDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelReviewDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewDate</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelReviewDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewDate</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelReviewDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelReviewDate</Declaration>
+			
+			
+			<Anchor>//api/name/labelReviewDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setLabelCriticsPick:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/labelCriticsPick</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/labelCriticsPick</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/labelCriticsPick</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/labelCriticsPick</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet UILabel *labelCriticsPick</Declaration>
+			
+			
+			<Anchor>//api/name/labelCriticsPick</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setAllLabels:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
+			
+			
+			<Anchor>//api/name/allLabels</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/allLabels</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
+			
+			
+			<Anchor>//api/name/allLabels</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/allLabels</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) IBOutletCollection ( UILabel ) NSArray *allLabels</Declaration>
+			
+			
+			<Anchor>//api/name/allLabels</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setConstraintReviewToDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewToDate</Declaration>
+			
+			
+			<Anchor>//api/name/constraintReviewToDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/constraintReviewToDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewToDate</Declaration>
+			
+			
+			<Anchor>//api/name/constraintReviewToDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/constraintReviewToDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewToDate</Declaration>
+			
+			
+			<Anchor>//api/name/constraintReviewToDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setConstraintReviewLabelToDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewLabelToDate</Declaration>
+			
+			
+			<Anchor>//api/name/constraintReviewLabelToDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/constraintReviewLabelToDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewLabelToDate</Declaration>
+			
+			
+			<Anchor>//api/name/constraintReviewLabelToDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/constraintReviewLabelToDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewLabelToDate</Declaration>
+			
+			
+			<Anchor>//api/name/constraintReviewLabelToDate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setConstraintCrtiticsToReviewer:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintCrtiticsToReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/constraintCrtiticsToReviewer</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/constraintCrtiticsToReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintCrtiticsToReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/constraintCrtiticsToReviewer</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieListTableViewCell/constraintCrtiticsToReviewer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintCrtiticsToReviewer</Declaration>
+			
+			
+			<Anchor>//api/name/constraintCrtiticsToReviewer</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/configureListCellWithResult:</TokenIdentifier>
+			<Abstract type="html">Sets the cell&apos;s labels from the online search results</Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureListCellWithResult:(NYTResults *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The selected movie</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureListCellWithResult:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/configureListCellWithFavourite:</TokenIdentifier>
+			<Abstract type="html">Sets the cell&apos;s labels from the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieListTableViewCell.h</DeclaredIn>
+			
+			<Declaration>- (void)configureListCellWithFavourite:(Results *)result</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>result</Name>
+					<Abstract type="html">The selected movie</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureListCellWithFavourite:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/awakeFromNib</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)awakeFromNib</Declaration>
+			
+			
+			<Anchor>//api/name/awakeFromNib</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/setSelected:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)setSelected:(BOOL)selected animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/setSelected:animated:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/addText:toLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)addText:(NSString *)text toLabel:(UILabel *)label</Declaration>
+			
+			
+			<Anchor>//api/name/addText:toLabel:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/toggleVisibilityOfLabel:visibilityStatus:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)toggleVisibilityOfLabel:(UILabel *)label visibilityStatus:(BOOL)shouldHideLabel</Declaration>
+			
+			
+			<Anchor>//api/name/toggleVisibilityOfLabel:visibilityStatus:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/removeLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)removeLabel:(UILabel *)label</Declaration>
+			
+			
+			<Anchor>//api/name/removeLabel:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieListTableViewCell/layoutSubviews</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieListTableViewCell.m</DeclaredIn>
+			
+			<Declaration>- (void)layoutSubviews</Declaration>
+			
+			
+			<Anchor>//api/name/layoutSubviews</Anchor>
             <NodeRef refid="10"/>
 		</Token>
 		

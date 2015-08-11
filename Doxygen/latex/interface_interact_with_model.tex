@@ -1,0 +1,102 @@
+\section{Interact\+With\+Model Class Reference}
+\label{interface_interact_with_model}\index{Interact\+With\+Model@{Interact\+With\+Model}}
+
+
+{\ttfamily \#import $<$Interact\+With\+Model.\+h$>$}
+
+Inheritance diagram for Interact\+With\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_interact_with_model}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+({\bf Results} $\ast$) + {\bf init\+Result\+From\+Model\+:}
+\item 
+({\bf Results} $\ast$) + {\bfseries init\+Result\+From\+Model\+:originating\+Search\+:}\label{interface_interact_with_model_a2b0b425a788e8dbfe5970ddd344c594a}
+
+\item 
+({\bf Movie\+Search} $\ast$) + {\bfseries init\+Movie\+Search\+From\+Model\+:}\label{interface_interact_with_model_a2e505dc10dc486915dd5d8766c39eb56}
+
+\item 
+({\bf Multimedia} $\ast$) + {\bfseries init\+Multimedia\+From\+Model\+:}\label{interface_interact_with_model_a25de369d43f2353b503de44b057da369}
+
+\item 
+({\bf Related\+Urls} $\ast$) + {\bfseries init\+Related\+Urls\+From\+Model\+:}\label{interface_interact_with_model_a3671ffeebfbf678be79fcb82c16e05a5}
+
+\item 
+(void) + {\bfseries set\+Link\+For\+Data\+Model\+:from\+Model\+:}\label{interface_interact_with_model_abc58a7e0799c221e1b903c1620c851bf}
+
+\item 
+(void) + {\bfseries set\+Multimedia\+For\+Data\+Model\+:from\+Model\+:}\label{interface_interact_with_model_a61f558c005fff5e0e90f562e470a7c2d}
+
+\item 
+(void) + {\bfseries set\+Resources\+For\+Data\+Model\+:from\+Model\+:}\label{interface_interact_with_model_ad7279eba22ca006c1a7ec5535b21950f}
+
+\item 
+(void) + {\bfseries add\+Related\+Urls\+To\+Core\+Data\+Model\+:from\+Model\+:}\label{interface_interact_with_model_a387f1a6ef89ab0df554650d084fcc512}
+
+\item 
+({\bf N\+Y\+T\+Results} $\ast$) + {\bfseries init\+Result\+From\+Core\+Data\+Model\+:}\label{interface_interact_with_model_a5530492870c3adfc95da4cd7397fdb68}
+
+\item 
+({\bf N\+Y\+T\+Movie\+Search} $\ast$) + {\bfseries init\+Movie\+Search\+From\+Core\+Data\+Model\+:}\label{interface_interact_with_model_a8277734331938744a8c6d75c418058ef}
+
+\item 
+({\bf N\+Y\+T\+Multimedia} $\ast$) + {\bfseries init\+Multimedia\+From\+Core\+Data\+Model\+:}\label{interface_interact_with_model_abcdbaff0ef490677acca6945784a95ce}
+
+\item 
+({\bf N\+Y\+T\+Related\+Urls} $\ast$) + {\bfseries init\+Related\+Urls\+From\+Core\+Data\+Model\+:}\label{interface_interact_with_model_a05c23897decc00f338f61e2526f849a6}
+
+\item 
+(void) + {\bfseries set\+Link\+For\+Regular\+Model\+:from\+Core\+Data\+Model\+:}\label{interface_interact_with_model_a3945195cca526d852c5e22ec1fa50bff}
+
+\item 
+(void) + {\bfseries set\+Multimedia\+For\+Regular\+Model\+:from\+Core\+Data\+Model\+:}\label{interface_interact_with_model_aff8123fe58a2a3f824ad88c2a16b6dc5}
+
+\item 
+(void) + {\bfseries set\+Resources\+For\+Regular\+Model\+:from\+Core\+Data\+Model\+:}\label{interface_interact_with_model_a7a748a4510b58469041321d497224293}
+
+\item 
+(void) + {\bfseries add\+Related\+Urls\+To\+Regular\+Model\+:from\+Core\+Data\+Model\+:}\label{interface_interact_with_model_ab7bc144d10a0c8ff0570c312c38f707d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Root class that is used whenever we want to convert a regular data model to a core data model object and vice versa 
+
+Definition at line 14 of file Interact\+With\+Model.\+h.
+
+
+
+\subsection{Method Documentation}
+\index{Interact\+With\+Model@{Interact\+With\+Model}!init\+Result\+From\+Model\+:@{init\+Result\+From\+Model\+:}}
+\index{init\+Result\+From\+Model\+:@{init\+Result\+From\+Model\+:}!Interact\+With\+Model@{Interact\+With\+Model}}
+\subsubsection[{init\+Result\+From\+Model\+:(\+N\+Y\+T\+Results $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Results} $\ast$) init\+Result\+From\+Model\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf N\+Y\+T\+Results} $\ast$)}]{result}
+\end{DoxyParamCaption}
+}\label{interface_interact_with_model_abdb7dd4432c563fa4e8123f774711570}
+Initializes a results -\/movie-\/ core data model object from a regular model object
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The model object to convert from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully configured core data model object ready to be used 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Interact\+With\+Model.\+m.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Movie Reviews/\+Model/\+A\+P\+I Interaction/Interact\+With\+Model.\+h\item 
+Movie Reviews/\+Model/\+A\+P\+I Interaction/Interact\+With\+Model.\+m\end{DoxyCompactItemize}

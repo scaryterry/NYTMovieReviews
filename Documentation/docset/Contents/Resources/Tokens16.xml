@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSDictionary+Additions.html">
+	<File path="Classes/NYTLink.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSDictionary(Additions)</TokenIdentifier>
-			<Abstract type="html">Helper category class that is used in conjuction with the NSError+Additions category throughout the app whenever we want to inform the user that no internet activity is present; may be an overkill as a category, but as more custom errors are needed by the app, this category should make it much easier to maintain them all</Abstract>
-			<DeclaredIn>NSDictionary+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NYTLink</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
             
 			
 			<NodeRef refid="16"/>
@@ -13,14 +13,206 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSDictionary/errorDictionaryNoInternet</TokenIdentifier>
-			<Abstract type="html">Creates an NSDictionary that describes that we dont have internet *</Abstract>
-			<DeclaredIn>NSDictionary+Additions.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/setType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
 			
-			<Declaration>- (NSDictionary *)errorDictionaryNoInternet</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
 			
-			<ReturnValue><Abstract type="html">The dictionary describing that no internet is present as well as all the relevant info a user might need</Abstract></ReturnValue>
-			<Anchor>//api/name/errorDictionaryNoInternet</Anchor>
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTLink/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/setUrl:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/url</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTLink/url</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/setSuggestedLinkText:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/suggestedLinkText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTLink/suggestedLinkText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NYTLink/modelObjectWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/modelObjectWithDictionary:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/dictionaryRepresentation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryRepresentation</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/description</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.m</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/objectOrNilForKey:fromDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.m</DeclaredIn>
+			
+			<Declaration>- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/objectOrNilForKey:fromDictionary:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/initWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.m</DeclaredIn>
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/encodeWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.m</DeclaredIn>
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTLink/copyWithZone:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTLink.m</DeclaredIn>
+			
+			<Declaration>- (id)copyWithZone:(NSZone *)zone</Declaration>
+			
+			
+			<Anchor>//api/name/copyWithZone:</Anchor>
             <NodeRef refid="16"/>
 		</Token>
 		

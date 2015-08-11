@@ -23,8 +23,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelReleaseDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelStaticDVDReleaseDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelDVDReleaseDate;
-
+/**
+ *  Sets the cell's labels from the online search results
+ *
+ *  @param result The selected movie
+ */
 -(void)configureDescriptionCellWithResult:(NYTResults *)result;
+
+/**
+ *  Sets the cell's labels from the user's favourites
+ *
+ *  @param result The selected movie
+ */
 -(void)configureDescriptionCellWithFavourite:(Results *)result;
 
 @end

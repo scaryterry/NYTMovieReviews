@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UITableViewCell+Additions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UITableViewCell(Additions)</TokenIdentifier>
+			<Abstract type="html">Category on tableViewCell with additional helper methods.</Abstract>
+			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/fixCellLayout</TokenIdentifier>
+			<Abstract type="html">This method needs to be called when configuring each cell, its the only way to ensure that all the elements in the cell are sized correctly</Abstract>
+			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)fixCellLayout</Declaration>
+			
+			
+			<Anchor>//api/name/fixCellLayout</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/returnCellAutoHeight</TokenIdentifier>
+			<Abstract type="html">Category method used on iOS7 to calculate and return the cell height using autolayout</Abstract>
+			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)returnCellAutoHeight</Declaration>
+			
+			<ReturnValue><Abstract type="html">The calculated height of the cell</Abstract></ReturnValue>
+			<Anchor>//api/name/returnCellAutoHeight</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/animateCellScrolling</TokenIdentifier>
+			<Abstract type="html">Method that changes how the cells get presented on screen, should be called from the willDisplayCell tableView Delegate method</Abstract>
+			<DeclaredIn>UITableViewCell+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)animateCellScrolling</Declaration>
+			
+			
+			<Anchor>//api/name/animateCellScrolling</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

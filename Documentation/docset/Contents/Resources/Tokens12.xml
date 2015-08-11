@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MovieSearchTableViewController.html">
+	<File path="Classes/MovieSearch.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MovieSearchTableViewController</TokenIdentifier>
-			<Abstract type="html">The Controller with which users can search the NYT Movie Reviews API and view the results. It uses the deprecated searchDisplayController to maintain compatibility with iOS 7. Search occurs 0.4 seconds after each letter is typed, if another letter is typed in those 0.4 seconds then the previous search request gets cancelled. This way the search doesnt send any requests we dont want it to.</Abstract>
-			<DeclaredIn>MovieSearchTableViewController.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieSearch</TokenIdentifier>
+			<Abstract type="html">A Model object representing a search result that is associated with the user&apos;s favourites</Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
             
 			
 			<NodeRef refid="12"/>
@@ -13,50 +13,194 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setupConnectivityCheck</TokenIdentifier>
-			<Abstract type="html">Sets up a block that responds with any changes to internet connectivity so that the app will respond accordingly</Abstract>
-			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/setStatus:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
 			
-			<Declaration>- (void)setupConnectivityCheck</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *status</Declaration>
 			
 			
-			<Anchor>//api/name/setupConnectivityCheck</Anchor>
+			<Anchor>//api/name/status</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setHeightCell:</TokenIdentifier>
-			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
-			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/status</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *status</Declaration>
 			
 			
-			<Anchor>//api/name/heightCell</Anchor>
+			<Anchor>//api/name/status</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/heightCell</TokenIdentifier>
-			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
-			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearch/status</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *status</Declaration>
 			
 			
-			<Anchor>//api/name/heightCell</Anchor>
+			<Anchor>//api/name/status</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/heightCell</TokenIdentifier>
-			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
-			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/setCopyright:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
 			
-			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *copyright</Declaration>
 			
 			
-			<Anchor>//api/name/heightCell</Anchor>
+			<Anchor>//api/name/copyright</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/copyright</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *copyright</Declaration>
+			
+			
+			<Anchor>//api/name/copyright</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearch/copyright</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSString *copyright</Declaration>
+			
+			
+			<Anchor>//api/name/copyright</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/setNumResults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSNumber *numResults</Declaration>
+			
+			
+			<Anchor>//api/name/numResults</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/numResults</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSNumber *numResults</Declaration>
+			
+			
+			<Anchor>//api/name/numResults</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearch/numResults</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSNumber *numResults</Declaration>
+			
+			
+			<Anchor>//api/name/numResults</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/setResults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSSet *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/results</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSSet *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearch/results</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) NSSet *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/addResultsObject:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>- (void)addResultsObject:(Results *)value</Declaration>
+			
+			
+			<Anchor>//api/name/addResultsObject:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/removeResultsObject:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>- (void)removeResultsObject:(Results *)value</Declaration>
+			
+			
+			<Anchor>//api/name/removeResultsObject:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/addResults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>- (void)addResults:(NSSet *)value</Declaration>
+			
+			
+			<Anchor>//api/name/addResults:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearch/removeResults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearch.h</DeclaredIn>
+			
+			<Declaration>- (void)removeResults:(NSSet *)value</Declaration>
+			
+			
+			<Anchor>//api/name/removeResults:</Anchor>
             <NodeRef refid="12"/>
 		</Token>
 		

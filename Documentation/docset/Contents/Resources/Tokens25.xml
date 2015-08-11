@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="">
+	<File path="Categories/NSDictionary+Additions.html">
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSDictionary(Additions)</TokenIdentifier>
+			<Abstract type="html">Helper category class that is used in conjuction with the NSError+Additions category throughout the app whenever we want to inform the user that no internet activity is present; may be an overkill as a category, but as more custom errors are needed by the app, this category should make it much easier to maintain them all</Abstract>
+			<DeclaredIn>NSDictionary+Additions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="25"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSDictionary/errorDictionaryNoInternet</TokenIdentifier>
+			<Abstract type="html">Creates an NSDictionary that describes that we dont have internet *</Abstract>
+			<DeclaredIn>NSDictionary+Additions.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)errorDictionaryNoInternet</Declaration>
+			
+			<ReturnValue><Abstract type="html">The dictionary describing that no internet is present as well as all the relevant info a user might need</Abstract></ReturnValue>
+			<Anchor>//api/name/errorDictionaryNoInternet</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
 		
         
 	</File>

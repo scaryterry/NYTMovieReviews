@@ -1,16 +1,597 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/NYTMovieSearch.html">
+	<File path="Classes/MovieSearchTableViewController.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/NYTMovieSearch</TokenIdentifier>
-			<Abstract type="html">A Model object representing the search results parsed from the JSON response of the NYT Movie reviews API</Abstract>
-			<DeclaredIn>NYTMovieSearch.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MovieSearchTableViewController</TokenIdentifier>
+			<Abstract type="html">The Controller with which users can search the NYT Movie Reviews API and view the results. It uses the deprecated searchDisplayController to maintain compatibility with iOS 7. Search occurs 0.4 seconds after each letter is typed, if another letter is typed in those 0.4 seconds then the previous search request gets cancelled. This way the search doesnt send any requests we dont want it to.</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/viewDidLoad</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)viewDidLoad</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidLoad</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/didReceiveMemoryWarning</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)didReceiveMemoryWarning</Declaration>
+			
+			
+			<Anchor>//api/name/didReceiveMemoryWarning</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/numberOfSectionsInTableView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfSectionsInTableView:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:numberOfRowsInSection:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:numberOfRowsInSection:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:cellForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:cellForRowAtIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:willSelectRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:willSelectRowAtIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:didSelectRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:didSelectRowAtIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:willDisplayCell:forRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:willDisplayCell:forRowAtIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:estimatedHeightForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:estimatedHeightForRowAtIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableView:heightForRowAtIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:heightForRowAtIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/tableViewCellHeightForiOS7:calculateHeightForIndexPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableViewCellHeightForiOS7:(UITableView *)tableView calculateHeightForIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewCellHeightForiOS7:calculateHeightForIndexPath:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/prepareForSegue:sender:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/prepareForSegue:sender:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/performOpenInfo:</TokenIdentifier>
+			<Abstract type="html">Presents the acknowledgements screen which is populated via a .plist which automatically gets generated when the pod install command is run in the project folder</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (IBAction)performOpenInfo:(id)sender</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sender</Name>
+					<Abstract type="html">The Button launched this method - leftBarButton in this case</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/performOpenInfo:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/searchDisplayController:willHideSearchResultsTableView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView</Declaration>
+			
+			
+			<Anchor>//api/name/searchDisplayController:willHideSearchResultsTableView:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/searchBarShouldEndEditing:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar</Declaration>
+			
+			
+			<Anchor>//api/name/searchBarShouldEndEditing:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/searchDisplayController:shouldReloadTableForSearchString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString</Declaration>
+			
+			
+			<Anchor>//api/name/searchDisplayController:shouldReloadTableForSearchString:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/filterContentForSearchText:scope:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope</Declaration>
+			
+			
+			<Anchor>//api/name/filterContentForSearchText:scope:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/searchForMovie:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)searchForMovie:(NSString *)movieName</Declaration>
+			
+			
+			<Anchor>//api/name/searchForMovie:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/getActiveTable</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (UITableView *)getActiveTable</Declaration>
+			
+			
+			<Anchor>//api/name/getActiveTable</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/getAlertPosition</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (CGPoint)getAlertPosition</Declaration>
+			
+			
+			<Anchor>//api/name/getAlertPosition</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/shouldDisplayFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)shouldDisplayFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/shouldDisplayFavourites</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setupInterface</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupInterface</Declaration>
+			
+			
+			<Anchor>//api/name/setupInterface</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setupTableViewCellType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupTableViewCellType</Declaration>
+			
+			
+			<Anchor>//api/name/setupTableViewCellType</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setupConnectivityCheck</TokenIdentifier>
+			<Abstract type="html">Sets up a block that responds with any changes to internet connectivity so that the app will respond accordingly</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)setupConnectivityCheck</Declaration>
+			
+			
+			<Anchor>//api/name/setupConnectivityCheck</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/titleForEmptyDataSet:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView</Declaration>
+			
+			
+			<Anchor>//api/name/titleForEmptyDataSet:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/descriptionForEmptyDataSet:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionForEmptyDataSet:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/emptyDataSetShouldAllowScroll:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView</Declaration>
+			
+			
+			<Anchor>//api/name/emptyDataSetShouldAllowScroll:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setMovieSearch:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NYTMovieSearch *movieSearch</Declaration>
+			
+			
+			<Anchor>//api/name/movieSearch</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/movieSearch</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NYTMovieSearch *movieSearch</Declaration>
+			
+			
+			<Anchor>//api/name/movieSearch</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/movieSearch</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NYTMovieSearch *movieSearch</Declaration>
+			
+			
+			<Anchor>//api/name/movieSearch</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setSearchTerm:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *searchTerm</Declaration>
+			
+			
+			<Anchor>//api/name/searchTerm</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/searchTerm</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *searchTerm</Declaration>
+			
+			
+			<Anchor>//api/name/searchTerm</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/searchTerm</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *searchTerm</Declaration>
+			
+			
+			<Anchor>//api/name/searchTerm</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setActiveTable:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly, getter=getActiveTable) UITableView *activeTable</Declaration>
+			
+			
+			<Anchor>//api/name/activeTable</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/getActiveTable</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly, getter=getActiveTable) UITableView *activeTable</Declaration>
+			
+			
+			<Anchor>//api/name/activeTable</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/activeTable</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly, getter=getActiveTable) UITableView *activeTable</Declaration>
+			
+			
+			<Anchor>//api/name/activeTable</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setAlertPosition:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=getAlertPosition) CGPoint alertPosition</Declaration>
+			
+			
+			<Anchor>//api/name/alertPosition</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/getAlertPosition</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=getAlertPosition) CGPoint alertPosition</Declaration>
+			
+			
+			<Anchor>//api/name/alertPosition</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/alertPosition</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=getAlertPosition) CGPoint alertPosition</Declaration>
+			
+			
+			<Anchor>//api/name/alertPosition</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setSavingContext:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSManagedObjectContext *savingContext</Declaration>
+			
+			
+			<Anchor>//api/name/savingContext</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/savingContext</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSManagedObjectContext *savingContext</Declaration>
+			
+			
+			<Anchor>//api/name/savingContext</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/savingContext</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSManagedObjectContext *savingContext</Declaration>
+			
+			
+			<Anchor>//api/name/savingContext</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setDisplayFavourites:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=shouldDisplayFavourites) BOOL displayFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/displayFavourites</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/shouldDisplayFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=shouldDisplayFavourites) BOOL displayFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/displayFavourites</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/displayFavourites</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=shouldDisplayFavourites) BOOL displayFavourites</Declaration>
+			
+			
+			<Anchor>//api/name/displayFavourites</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/setHeightCell:</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MovieSearchTableViewController/heightCell</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MovieSearchTableViewController/heightCell</TokenIdentifier>
+			<Abstract type="html">Is used to automatically calculate the cell height on iOS7</Abstract>
+			<DeclaredIn>MovieSearchTableViewController.m</DeclaredIn>
+			
+			<Declaration>@property (strong, nonatomic) UITableViewCell *heightCell</Declaration>
+			
+			
+			<Anchor>//api/name/heightCell</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
 		
         
 	</File>

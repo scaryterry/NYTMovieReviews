@@ -1,16 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/Results.html">
+	<File path="Classes/Multimedia.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/Results</TokenIdentifier>
-			<Abstract type="html">A Model object representing a movie that is associated with the user&apos;s favourites</Abstract>
-			<DeclaredIn>Results.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/Multimedia</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Multimedia/setResource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Resource *resource</Declaration>
+			
+			
+			<Anchor>//api/name/resource</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Multimedia/resource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Resource *resource</Declaration>
+			
+			
+			<Anchor>//api/name/resource</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Multimedia/resource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Resource *resource</Declaration>
+			
+			
+			<Anchor>//api/name/resource</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Multimedia/setResults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Results *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Multimedia/results</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Results *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/Multimedia/results</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>Multimedia.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, retain) Results *results</Declaration>
+			
+			
+			<Anchor>//api/name/results</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
 		
         
 	</File>

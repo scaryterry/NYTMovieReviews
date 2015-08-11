@@ -1,0 +1,39 @@
+.TH "NSDictionary(Additions)" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NSDictionary(Additions) \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <NSDictionary+Additions\&.h>\fP
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(NSDictionary *) \- \fBerrorDictionaryNoInternet\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helper category class that is used in conjuction with the NSError+Additions category throughout the app whenever we want to inform the user that no internet activity is present; may be an overkill as a category, but as more custom errors are needed by the app, this category should make it much easier to maintain them all 
+.PP
+Definition at line 13 of file NSDictionary+Additions\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (NSDictionary *) errorDictionaryNoInternet "
+Creates an NSDictionary that describes that we dont have internet * 
+.PP
+\fBReturns:\fP
+.RS 4
+The dictionary describing that no internet is present as well as all the relevant info a user might need 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file NSDictionary+Additions\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

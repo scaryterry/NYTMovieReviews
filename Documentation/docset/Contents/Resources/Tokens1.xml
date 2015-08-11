@@ -12,6 +12,150 @@
 		</Token>
 		
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/disableUserInteractionWithView:displayActivityIndicator:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)disableUserInteractionWithView:(UIView *)view displayActivityIndicator:(BOOL)displayIndicator</Declaration>
+			
+			
+			<Anchor>//api/name/disableUserInteractionWithView:displayActivityIndicator:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/enableUserInteractionWithView:hideActivityIndicator:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)enableUserInteractionWithView:(UIView *)view hideActivityIndicator:(BOOL)hideIndicator</Declaration>
+			
+			
+			<Anchor>//api/name/enableUserInteractionWithView:hideActivityIndicator:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/setUserInteractionOfView:to:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)setUserInteractionOfView:(UIView *)view to:(BOOL)interactionStatus</Declaration>
+			
+			
+			<Anchor>//api/name/setUserInteractionOfView:to:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/hideActivityIndicatorFromView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)hideActivityIndicatorFromView:(UIView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/hideActivityIndicatorFromView:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/showActivityIndicatorInCenterOfView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)showActivityIndicatorInCenterOfView:(UIView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/showActivityIndicatorInCenterOfView:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/showActivityIndicatorInView:withCenter:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)showActivityIndicatorInView:(UIView *)view withCenter:(CGPoint)customCenter</Declaration>
+			
+			
+			<Anchor>//api/name/showActivityIndicatorInView:withCenter:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/showInitialProgressHUDAddedTo:withMessage:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (MBProgressHUD *)showInitialProgressHUDAddedTo:(UIView *)view withMessage:(NSString *)message animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/showInitialProgressHUDAddedTo:withMessage:animated:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/modifyProgressHUDInView:withMessage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (MBProgressHUD *)modifyProgressHUDInView:(UIView *)view withMessage:(NSString *)message</Declaration>
+			
+			
+			<Anchor>//api/name/modifyProgressHUDInView:withMessage:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/showFinalProgressHUDAddedTo:withMessage:isSuccessFull:dismissAfterDelay:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)showFinalProgressHUDAddedTo:(UIView *)view withMessage:(NSString *)message isSuccessFull:(BOOL)success dismissAfterDelay:(NSTimeInterval)delay animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/showFinalProgressHUDAddedTo:withMessage:isSuccessFull:dismissAfterDelay:animated:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/hideProgressHUDForView:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)hideProgressHUDForView:(UIView *)view animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/hideProgressHUDForView:animated:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/showError:customTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)showError:(NSString *)error customTitle:(NSString *)sentTitleMessage</Declaration>
+			
+			
+			<Anchor>//api/name/showError:customTitle:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AlertUser/showSuccess:customTitleMessage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AlertUser.h</DeclaredIn>
+			
+			<Declaration>+ (void)showSuccess:(NSString *)sentSuccessMessage customTitleMessage:(NSString *)customTitleMessage</Declaration>
+			
+			
+			<Anchor>//api/name/showSuccess:customTitleMessage:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
         
 	</File>
 </Tokens>

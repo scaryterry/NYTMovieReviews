@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIView+Additions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIView(Additions)</TokenIdentifier>
+			<Abstract type="html">Helper category on UIView that deals with user interaction - displaying activity indicator, rotating a view(like an update button) etc</Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/startViewRotation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)startViewRotation</Declaration>
+			
+			
+			<Anchor>//api/name/startViewRotation</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/stopViewRotation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)stopViewRotation</Declaration>
+			
+			
+			<Anchor>//api/name/stopViewRotation</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/setUserInteractionTo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)setUserInteractionTo:(BOOL)interactionStatus</Declaration>
+			
+			
+			<Anchor>//api/name/setUserInteractionTo:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/hideActivityIndicator</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)hideActivityIndicator</Declaration>
+			
+			
+			<Anchor>//api/name/hideActivityIndicator</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/showActivityIndicatorInCenter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)showActivityIndicatorInCenter</Declaration>
+			
+			
+			<Anchor>//api/name/showActivityIndicatorInCenter</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/showActivityIndicatorWithCenter:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.h</DeclaredIn>
+			
+			<Declaration>- (void)showActivityIndicatorWithCenter:(CGPoint)customCenter</Declaration>
+			
+			
+			<Anchor>//api/name/showActivityIndicatorWithCenter:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/applyRotation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+Additions.m</DeclaredIn>
+			
+			<Declaration>- (void)applyRotation</Declaration>
+			
+			
+			<Anchor>//api/name/applyRotation</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

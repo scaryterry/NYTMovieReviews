@@ -1,0 +1,28 @@
+var dir_39b7a2f16d8bb207ce5a94853759f064 =
+[
+    [ "DataModels.h", "_data_models_8h_source.html", null ],
+    [ "Link.h", "_link_8h_source.html", null ],
+    [ "Link.m", "_link_8m_source.html", null ],
+    [ "MovieSearch.h", "_movie_search_8h_source.html", null ],
+    [ "MovieSearch.m", "_movie_search_8m_source.html", null ],
+    [ "Multimedia.h", "_multimedia_8h_source.html", null ],
+    [ "Multimedia.m", "_multimedia_8m_source.html", null ],
+    [ "NYTLink.h", "_n_y_t_link_8h_source.html", null ],
+    [ "NYTLink.m", "_n_y_t_link_8m_source.html", null ],
+    [ "NYTMovieSearch.h", "_n_y_t_movie_search_8h_source.html", null ],
+    [ "NYTMovieSearch.m", "_n_y_t_movie_search_8m_source.html", null ],
+    [ "NYTMultimedia.h", "_n_y_t_multimedia_8h_source.html", null ],
+    [ "NYTMultimedia.m", "_n_y_t_multimedia_8m_source.html", null ],
+    [ "NYTRelatedUrls.h", "_n_y_t_related_urls_8h_source.html", null ],
+    [ "NYTRelatedUrls.m", "_n_y_t_related_urls_8m_source.html", null ],
+    [ "NYTResource.h", "_n_y_t_resource_8h_source.html", null ],
+    [ "NYTResource.m", "_n_y_t_resource_8m_source.html", null ],
+    [ "NYTResults.h", "_n_y_t_results_8h_source.html", null ],
+    [ "NYTResults.m", "_n_y_t_results_8m_source.html", null ],
+    [ "RelatedUrls.h", "_related_urls_8h_source.html", null ],
+    [ "RelatedUrls.m", "_related_urls_8m_source.html", null ],
+    [ "Resource.h", "_resource_8h_source.html", null ],
+    [ "Resource.m", "_resource_8m_source.html", null ],
+    [ "Results.h", "_results_8h_source.html", null ],
+    [ "Results.m", "_results_8m_source.html", null ]
+];

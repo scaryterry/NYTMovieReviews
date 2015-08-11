@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UITableViewCell+APICell.html">
+	<File path="Classes/NYTRelatedUrls.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UITableViewCell(APICell)</TokenIdentifier>
-			<Abstract type="html">Class used by any tableview that wants to display a favourite or a search result. All that we have to do is set the correct reuse identifier for the cell we want to configure.</Abstract>
-			<DeclaredIn>UITableViewCell+APICell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/NYTRelatedUrls</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
             
 			
 			<NodeRef refid="19"/>
@@ -13,36 +13,206 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/configureWithResult:</TokenIdentifier>
-			<Abstract type="html">Used by any tableview that wants to configure a cell with a movie search result from the NYT API</Abstract>
-			<DeclaredIn>UITableViewCell+APICell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/setType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
 			
-			<Declaration>- (void)configureWithResult:(NYTResults *)result</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>result</Name>
-					<Abstract type="html">The datasource the cells will be configured with</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
 			
-			<Anchor>//api/name/configureWithResult:</Anchor>
+			
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="19"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UITableViewCell/configureWithFavourite:</TokenIdentifier>
-			<Abstract type="html">Used by any tableview that wants to configure a cell with a movie from favourites stored with core data</Abstract>
-			<DeclaredIn>UITableViewCell+APICell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
 			
-			<Declaration>- (void)configureWithFavourite:(Results *)result</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>result</Name>
-					<Abstract type="html">The datasource the cells will be configured with</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
 			
-			<Anchor>//api/name/configureWithFavourite:</Anchor>
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTRelatedUrls/type</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/setUrl:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/url</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTRelatedUrls/url</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *url</Declaration>
+			
+			
+			<Anchor>//api/name/url</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/setSuggestedLinkText:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/suggestedLinkText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NYTRelatedUrls/suggestedLinkText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *suggestedLinkText</Declaration>
+			
+			
+			<Anchor>//api/name/suggestedLinkText</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/NYTRelatedUrls/modelObjectWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/modelObjectWithDictionary:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/dictionaryRepresentation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)dictionaryRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryRepresentation</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/description</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.m</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/objectOrNilForKey:fromDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.m</DeclaredIn>
+			
+			<Declaration>- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict</Declaration>
+			
+			
+			<Anchor>//api/name/objectOrNilForKey:fromDictionary:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/initWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.m</DeclaredIn>
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/encodeWithCoder:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.m</DeclaredIn>
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NYTRelatedUrls/copyWithZone:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NYTRelatedUrls.m</DeclaredIn>
+			
+			<Declaration>- (id)copyWithZone:(NSZone *)zone</Declaration>
+			
+			
+			<Anchor>//api/name/copyWithZone:</Anchor>
             <NodeRef refid="19"/>
 		</Token>
 		

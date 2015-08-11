@@ -29,6 +29,198 @@
             <NodeRef refid="4"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initResultFromModel:originatingSearch:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (Results *)initResultFromModel:(NYTResults *)result originatingSearch:(NYTMovieSearch *)movieSearch</Declaration>
+			
+			
+			<Anchor>//api/name/initResultFromModel:originatingSearch:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initMovieSearchFromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (MovieSearch *)initMovieSearchFromModel:(NYTMovieSearch *)movieSearch</Declaration>
+			
+			
+			<Anchor>//api/name/initMovieSearchFromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initMultimediaFromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (Multimedia *)initMultimediaFromModel:(NYTMultimedia *)model</Declaration>
+			
+			
+			<Anchor>//api/name/initMultimediaFromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initRelatedUrlsFromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (RelatedUrls *)initRelatedUrlsFromModel:(NYTRelatedUrls *)relatedUrlsOrigin</Declaration>
+			
+			
+			<Anchor>//api/name/initRelatedUrlsFromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/setLinkForDataModel:fromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLinkForDataModel:(Results *)coreDataModel fromModel:(NYTResults *)result</Declaration>
+			
+			
+			<Anchor>//api/name/setLinkForDataModel:fromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/setMultimediaForDataModel:fromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)setMultimediaForDataModel:(Results *)coreDataModel fromModel:(NYTResults *)result</Declaration>
+			
+			
+			<Anchor>//api/name/setMultimediaForDataModel:fromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/setResourcesForDataModel:fromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)setResourcesForDataModel:(Multimedia *)multimediaModel fromModel:(NYTResults *)result</Declaration>
+			
+			
+			<Anchor>//api/name/setResourcesForDataModel:fromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/addRelatedUrlsToCoreDataModel:fromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)addRelatedUrlsToCoreDataModel:(Results *)coreDataModel fromModel:(NYTResults *)result</Declaration>
+			
+			
+			<Anchor>//api/name/addRelatedUrlsToCoreDataModel:fromModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initResultFromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (NYTResults *)initResultFromCoreDataModel:(Results *)result</Declaration>
+			
+			
+			<Anchor>//api/name/initResultFromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initMovieSearchFromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (NYTMovieSearch *)initMovieSearchFromCoreDataModel:(MovieSearch *)movieSearch</Declaration>
+			
+			
+			<Anchor>//api/name/initMovieSearchFromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initMultimediaFromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (NYTMultimedia *)initMultimediaFromCoreDataModel:(Multimedia *)model</Declaration>
+			
+			
+			<Anchor>//api/name/initMultimediaFromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/initRelatedUrlsFromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (NYTRelatedUrls *)initRelatedUrlsFromCoreDataModel:(RelatedUrls *)relatedUrlsOrigin</Declaration>
+			
+			
+			<Anchor>//api/name/initRelatedUrlsFromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/setLinkForRegularModel:fromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLinkForRegularModel:(NYTResults *)regularModel fromCoreDataModel:(Results *)result</Declaration>
+			
+			
+			<Anchor>//api/name/setLinkForRegularModel:fromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/setMultimediaForRegularModel:fromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)setMultimediaForRegularModel:(NYTResults *)regularModel fromCoreDataModel:(Results *)result</Declaration>
+			
+			
+			<Anchor>//api/name/setMultimediaForRegularModel:fromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/setResourcesForRegularModel:fromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)setResourcesForRegularModel:(NYTMultimedia *)multimediaModel fromCoreDataModel:(Results *)result</Declaration>
+			
+			
+			<Anchor>//api/name/setResourcesForRegularModel:fromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/InteractWithModel/addRelatedUrlsToRegularModel:fromCoreDataModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>InteractWithModel.h</DeclaredIn>
+			
+			<Declaration>+ (void)addRelatedUrlsToRegularModel:(NYTResults *)regularModel fromCoreDataModel:(Results *)result</Declaration>
+			
+			
+			<Anchor>//api/name/addRelatedUrlsToRegularModel:fromCoreDataModel:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
         
 	</File>
 </Tokens>

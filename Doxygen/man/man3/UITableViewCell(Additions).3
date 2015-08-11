@@ -1,0 +1,53 @@
+.TH "UITableViewCell(Additions)" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UITableViewCell(Additions) \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <UITableViewCell+Additions\&.h>\fP
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) \- \fBfixCellLayout\fP"
+.br
+.ti -1c
+.RI "(CGFloat) \- \fBreturnCellAutoHeight\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBanimateCellScrolling\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Category on tableViewCell with additional helper methods\&. 
+.PP
+Definition at line 14 of file UITableViewCell+Additions\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) animateCellScrolling "
+Method that changes how the cells get presented on screen, should be called from the willDisplayCell tableView Delegate method !!FIX for issue #1 Cell position wrong------------ 
+.PP
+Definition at line 30 of file UITableViewCell+Additions\&.m\&.
+.SS "\- (void) fixCellLayout "
+This method needs to be called when configuring each cell, its the only way to ensure that all the elements in the cell are sized correctly 
+.PP
+Definition at line 13 of file UITableViewCell+Additions\&.m\&.
+.SS "\- (CGFloat) returnCellAutoHeight "
+Category method used on iOS7 to calculate and return the cell height using autolayout
+.PP
+\fBReturns:\fP
+.RS 4
+The calculated height of the cell 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file UITableViewCell+Additions\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

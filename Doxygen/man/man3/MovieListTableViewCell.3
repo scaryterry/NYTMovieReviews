@@ -1,0 +1,95 @@
+.TH "MovieListTableViewCell" 3 "Tue Aug 11 2015" "Movie Reviews" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MovieListTableViewCell \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <MovieListTableViewCell\&.h>\fP
+.PP
+Inherits UITableViewCell\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "() \- \fBIBOutletCollection\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureListCellWithResult:\fP"
+.br
+.ti -1c
+.RI "(void) \- \fBconfigureListCellWithFavourite:\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelTitle\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticReview\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReview\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticBy\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReviewer\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelStaticReviewDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelReviewDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet UILabel * \fBlabelCriticsPick\fP"
+.br
+.ti -1c
+.RI "IBOutlet NSLayoutConstraint * \fBconstraintReviewToDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet NSLayoutConstraint * \fBconstraintReviewLabelToDate\fP"
+.br
+.ti -1c
+.RI "IBOutlet NSLayoutConstraint * \fBconstraintCrtiticsToReviewer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The cell that will be used throughout the app whenever a list with a lot of cells is required 
+.PP
+Definition at line 14 of file MovieListTableViewCell\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) configureListCellWithFavourite: (\fBResults\fP *) result"
+Sets the cell's labels from the user's favourites
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file MovieListTableViewCell\&.m\&.
+.SS "\- (void) configureListCellWithResult: (\fBNYTResults\fP *) result"
+Sets the cell's labels from the online search results
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresult\fP The selected movie 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file MovieListTableViewCell\&.m\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Movie Reviews from the source code\&.

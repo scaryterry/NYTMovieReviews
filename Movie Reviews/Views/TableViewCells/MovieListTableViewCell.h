@@ -25,7 +25,18 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintReviewLabelToDate;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintCrtiticsToReviewer;
+/**
+ *  Sets the cell's labels from the online search results
+ *
+ *  @param result The selected movie
+ */
 -(void)configureListCellWithResult:(NYTResults *)result;
+
+/**
+ *  Sets the cell's labels from the user's favourites
+ *
+ *  @param result The selected movie
+ */
 -(void)configureListCellWithFavourite:(Results *)result;
 
 @end
